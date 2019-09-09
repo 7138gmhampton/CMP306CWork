@@ -33,12 +33,12 @@
         $counter = 0;
 
         foreach ($summaries as $poison) {
-            if ($counter % 3 == 0) 
+            if ($counter % 4 == 0) 
                 echo '<div class="row">';
-            echo '  <div class="col-4">';
+            echo '  <div class="col-3">';
             buildPoisonCard($poison[0],$poison[1],$poison[2],$poison[3]);
             echo '  </div>';
-            if ($counter % 3 == 2)
+            if ($counter % 4 == 3)
                 echo '</div>';
 
             ++$counter;
