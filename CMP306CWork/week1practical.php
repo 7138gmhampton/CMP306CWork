@@ -21,6 +21,13 @@
     include 'parts/mainbar.html';
     ?>
 
+    <!--Summary Cards-->
+    <div class="container">
+        <?php
+
+        ?>
+    </div>
+
     <footer>
         <p>Gareth M. Hampton</p>
         <p>0407435</p>
