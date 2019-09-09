@@ -24,7 +24,9 @@
     <!--Summary Cards-->
     <div class="container">
         <?php
+        require 'scripts/server/database.php';
 
+        //$database = new Database();
         ?>
     </div>
 
