@@ -20,5 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="general_styles.css" />
+    <Content Include="parts\mainbar.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="parts\" />
   </ItemGroup>
 </Project>
