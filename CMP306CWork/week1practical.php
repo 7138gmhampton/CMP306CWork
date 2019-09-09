@@ -25,8 +25,24 @@
     <div class="container">
         <?php
         require 'scripts/server/database.php';
+        include 'scripts/server/poison_card_builder.php';
 
         //$database = new Database();
+
+        $summaries = Database::getSummaries();
+        $counter = 0;
+
+        foreach ($summaries as $poison) {
+            if ($counter % 3 == 0) 
+                echo '<div class="row">';
+            echo '  <div class="col-4">';
+            buildPoisonCard($poison[0],$poison[1],$poison[2],$poison[3]);
+            echo '  </div>';
+            if ($counter % 3 == 2)
+                echo '</div>';
+
+            ++$counter;
+        }
         ?>
     </div>
 
