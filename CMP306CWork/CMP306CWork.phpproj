@@ -17,12 +17,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="index.php" />
+    <Compile Include="scripts\server\poison_card_builder.php" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="general_styles.css" />
     <Content Include="parts\mainbar.html" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="scripts\" />
     <Folder Include="parts\" />
+    <Folder Include="scripts\server\" />
   </ItemGroup>
 </Project>
