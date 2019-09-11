@@ -22,7 +22,7 @@
     ?>
 
     <!--Summary Cards-->
-    <div class="container">
+    <div class="container-fluid">
         <?php
         require 'scripts/server/database.php';
         include 'scripts/server/poison_card_builder.php';
