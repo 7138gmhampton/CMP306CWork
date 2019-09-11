@@ -2,5 +2,9 @@
 }
 
 .mob-brand {
-    font-size: 2.5em !important;
+    font-size: 5em !important;
+}
+
+.navbar-toggler, .navbar-toggler-icon {
+    padding: 2.5em !important;
 }
