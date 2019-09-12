@@ -33,11 +33,28 @@
         $counter = 0;
         $max_cards_in_row = 3;
 
-        foreach ($summaries as $poison) {
-            if ($counter % $max_cards_in_row == 0) 
+        //foreach ($summaries as $poison) {
+        //    if ($counter % $max_cards_in_row == 0)
+        //        echo '<div class="row">';
+        //    echo '  <div class="col-lg">';
+        //    buildPoisonCard($poison[0],$poison[1],$poison[2],$poison[3]);
+        //    echo '  </div>';
+        //    if ($counter % $max_cards_in_row == $max_cards_in_row-1)
+        //        echo '</div>';
+
+        //    ++$counter;
+        //}
+
+        include 'scripts/server/article_card_builder.php';
+
+        $groups = Database::getArticleGroups();
+        $counter = 0;
+
+        foreach ($groups as $group) {
+            if ($counter % $max_cards_in_row == 0)
                 echo '<div class="row">';
             echo '  <div class="col-lg">';
-            buildPoisonCard($poison[0],$poison[1],$poison[2],$poison[3]);
+            buildArticleCard($group[0],$group[1],$group[2],$group[3]);
             echo '  </div>';
             if ($counter % $max_cards_in_row == $max_cards_in_row-1)
                 echo '</div>';
