@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="author" content="Gareth M. Hampton" />
 
-    <title></title>
+    <title>CMP306 Week 1 Comments</title>
 
     <link rel="stylesheet" type="text/css" href="general_styles.css" />
     <!--Bootstrap-->
@@ -17,8 +17,13 @@
 </head>
 <body>
     <!--Mainbar-->
-
+    <?php
+    include 'parts/mainbar.html';
+    ?>
     <!--Title-->
+    <!--<div class="container">
+        <h1 class="h1">Week 1 Tutorial and Evaluation</h1>
+    </div>-->
 
     <!--Text Body-->
     
