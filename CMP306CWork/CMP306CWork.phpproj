@@ -19,6 +19,7 @@
     <Compile Include="index.php" />
     <Compile Include="scripts\server\database.php" />
     <Compile Include="scripts\server\poison_card_builder.php" />
+    <Compile Include="week1comments.php" />
     <Compile Include="week1practical.php" />
   </ItemGroup>
   <ItemGroup>
