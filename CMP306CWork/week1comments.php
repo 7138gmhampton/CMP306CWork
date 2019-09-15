@@ -39,6 +39,8 @@
             screens classed as large or bigger can be set to rearrange the items in 2 columns 
             for medium screens and a single column for anything smaller.
         </p>
+    </div>
+    <div class="container">
         <h2 class="h2">Tutorial Question 2</h2>
         <p>
             Bootstrap has classes that can make deployment of dropdown menus, pagination and 
@@ -48,6 +50,8 @@
             particular the main navbar), the menus will be written in separate PHP/HTML files 
             and then ‘included’ on the required pages using PHP scripting.
         </p>
+    </div>
+    <div class="container">
         <h2 class="h2">Tutorial Question 3</h2>
         <div class="accordion" id="accordianQuestionThree">
             <!--Modal Section-->
