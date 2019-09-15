@@ -21,12 +21,12 @@
     include 'parts/mainbar.html';
     ?>
     <!--Title-->
-    <div class="container">
+    <div class="container mt-5">
         <h1 class="h1">Week 1 Tutorial and Evaluation</h1>
     </div>
 
     <!--Text Body-->
-    <div class="container">
+    <div class="container mt-3 border">
         <h2 class="h2">Tutorial Question 1</h2>
         <p>
             Bootstrap employs a flexible grid: 12 columns within each row and these components 
@@ -40,7 +40,7 @@
             for medium screens and a single column for anything smaller.
         </p>
     </div>
-    <div class="container">
+    <div class="container mt-3 border">
         <h2 class="h2">Tutorial Question 2</h2>
         <p>
             Bootstrap has classes that can make deployment of dropdown menus, pagination and 
@@ -51,7 +51,7 @@
             and then ‘included’ on the required pages using PHP scripting.
         </p>
     </div>
-    <div class="container">
+    <div class="container mt-3 border">
         <h2 class="h2">Tutorial Question 3</h2>
         <div class="accordion" id="accordianQuestionThree">
             <!--Modal Section-->
