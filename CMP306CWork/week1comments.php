@@ -21,9 +21,9 @@
     include 'parts/mainbar.html';
     ?>
     <!--Title-->
-    <!--<div class="container">
+    <div class="container">
         <h1 class="h1">Week 1 Tutorial and Evaluation</h1>
-    </div>-->
+    </div>
 
     <!--Text Body-->
     
