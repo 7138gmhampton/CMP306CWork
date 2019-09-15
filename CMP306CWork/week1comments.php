@@ -83,7 +83,7 @@
                         </button>
                     </h3>
                 </div>
-                <div class="collapse show" id="collapseCarousel"
+                <div class="collapse" id="collapseCarousel"
                     data-parent="#accordianQuestionThree">
                     <div class="card-body">
                         <p>
@@ -106,7 +106,7 @@
                         </button>
                     </h3>
                 </div>
-                <div class="collapse show" id="collapseCard"
+                <div class="collapse" id="collapseCard"
                     data-parent="#accordianQuestionThree">
                     <div class="card-body">
                         <p>
@@ -130,7 +130,7 @@
                         </button>
                     </h3>
                 </div>
-                <div class="collapse show" id="collapseBreadcrumb"
+                <div class="collapse" id="collapseBreadcrumb"
                     data-parent="#accordianQuestionThree">
                     <div class="card-body">
                         <p>
@@ -151,7 +151,7 @@
                         </button>
                     </h3>
                 </div>
-                <div class="collapse show" id="collapseAccordian"
+                <div class="collapse" id="collapseAccordian"
                     data-parent="#accordianQuestionThree">
                     <div class="card-body">
                         <p>
