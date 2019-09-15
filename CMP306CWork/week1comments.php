@@ -27,9 +27,11 @@
 
     <!--Text Body-->
     
-    <footer>
-        <p>Gareth M. Hampton</p>
-        <p>0407435</p>
-    </footer>
+    <div class="container">
+        <footer>
+            <p>Gareth M. Hampton</p>
+            <p>0407435</p>
+        </footer>
+    </div>
 </body>
 </html>
