@@ -5,6 +5,10 @@
     font-size: 5em !important;
 }
 
+.mob-nav-text {
+    font-size: 2.5em !important;
+}
+
 .navbar-toggler, .navbar-toggler-icon {
     padding: 2.5em !important;
 }
