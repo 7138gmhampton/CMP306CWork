@@ -18,14 +18,36 @@
     <!--Main Navbar-->
     <?php
     include 'parts/mainbar.html';
+    //echo '<p>Check</p>';
     ?>
 
     <!--Title Display-->
     <div class="container">
         <?php
         $poison_id = $_GET['id'];
+
+        include 'scripts/server/database.php';
+        include 'scripts/server/poison.php';
+
+       //echo '<p>Check</p>';
+
+        $poison = Database::getPoison($poison_id);
+        //$test = Database::getPoison(2);
+        //$test = Database::getPoisonSummaryClasses();
+
+        //echo '<p>Check '.$test[0]->getName().'</p>';
+
+        //echo $poison->getID();
+
+        //echo '<p>Check</p>';
+
+        echo '<h1 class="h1">'.$poison[0]->getName().'</h1>';
         ?>
     </div>
+
+    <?php
+    echo '<p>Check</p>';
+    ?>
     
 
     <!--Listing of Articles-->
