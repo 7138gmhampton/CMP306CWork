@@ -29,7 +29,7 @@
 
         //$database = new Database();
 
-        $summaries = Database::getSummaries();
+        $summaries = Database::getPoisonSummaries();
         $counter = 0;
         $max_cards_in_row = 4;
 
@@ -37,7 +37,8 @@
             if ($counter % $max_cards_in_row == 0)
                 echo '<div class="row">';
             echo '  <div class="col-lg">';
-            buildPoisonCard($poison[0],$poison[1],$poison[2],$poison[3]);
+            //buildPoisonCard($poison[0],$poison[1],$poison[2],$poison[3]);
+            buildSummaryCard($poison[0],$poison[1],$poison[2],$poison[3],$poison[4],$poison[5]);
             echo '  </div>';
             if ($counter % $max_cards_in_row == $max_cards_in_row-1)
                 echo '</div>';
