@@ -21,6 +21,12 @@
     ?>
 
     <!--Title Display-->
+    <div class="container">
+        <?php
+        $poison_id = $_GET['id'];
+        ?>
+    </div>
+    
 
     <!--Listing of Articles-->
 </body>
