@@ -31,7 +31,7 @@
 
         $summaries = Database::getPoisonSummaries();
         $counter = 0;
-        $max_cards_in_row = 4;
+        $max_cards_in_row = 3;
 
         foreach ($summaries as $poison) {
             if ($counter % $max_cards_in_row == 0)
