@@ -11,7 +11,7 @@ function buildPoisonCard($name, $alt_name, $image, $description)
     echo '</div>';
 }
 
-function buildSummaryCard($name, $alt_name, $description, $pic_source, $pic_title, $pic_alt_text)
+function buildSummaryCard($id,$name, $alt_name, $description, $pic_source, $pic_title, $pic_alt_text)
 {
     echo '<div class="card">';
     echo '  <img class="card-img-top" src="' . $pic_source . '" title="'.$pic_title.'" alt="'.
