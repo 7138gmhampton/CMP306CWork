@@ -20,6 +20,7 @@
     <Compile Include="listing.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
     <Compile Include="scripts\server\database.php" />
+    <Compile Include="scripts\server\poison.php" />
     <Compile Include="scripts\server\poison_card_builder.php" />
     <Compile Include="week1comments.php" />
     <Compile Include="week2practical.php" />
