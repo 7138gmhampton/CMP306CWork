@@ -46,7 +46,7 @@
     </div>
 
     <?php
-    echo '<p>Check</p>';
+    //echo '<p>Check</p>';
     ?>
     
 
