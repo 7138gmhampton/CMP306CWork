@@ -16,6 +16,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="article.php" />
     <Compile Include="index.php" />
     <Compile Include="listing.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
@@ -28,6 +29,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="general_styles.css" />
+    <Content Include="parts\footer.html" />
     <Content Include="parts\mainbar.html" />
   </ItemGroup>
   <ItemGroup>
