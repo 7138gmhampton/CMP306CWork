@@ -22,14 +22,17 @@
 
     <!--Title and Author-->
     <header>
-        <?php
-        require 'scripts/server/database.php';
+        <div class="container">
+            <?php
+            require 'scripts/server/database.php';
 
-        $article_code = $_GET['id'];
-        $article = Database::getArticle($_GET['id']);
+            $article_code = $_GET['id'];
+            $article = Database::getArticle($_GET['id']);
 
-
-        ?>
+            echo '<h1 class="h1">'.$article['title'].'</h1>';
+            echo '<h3 class="h3 text-muted">'.$article['author'].'</h3';
+            ?>
+        </div>
     </header>
     <!--Video (If available)-->
 
