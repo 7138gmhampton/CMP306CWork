@@ -41,7 +41,7 @@
 
         //echo '<p>Check</p>';
 
-        echo '<h1 class="h1">'.$poison[0]->getName().'</h1>';
+        echo '<h1 class="h1">'.$poison[0]->getName().' Articles</h1>';
         ?>
     </div>
 
