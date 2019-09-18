@@ -22,7 +22,14 @@
 
     <!--Title and Author-->
     <header>
+        <?php
+        require 'scripts/server/database.php';
 
+        $article_code = $_GET['id'];
+        $article = Database::getArticle($_GET['id']);
+
+
+        ?>
     </header>
     <!--Video (If available)-->
 
@@ -33,7 +40,8 @@
             <p>Gareth M. Hampton</p>
             <p>0407435</p>
         </footer>
-    </div>-->    <?php
+    </div>-->    
+    <?php
     include 'parts/footer.html';
     ?>
 </body>
