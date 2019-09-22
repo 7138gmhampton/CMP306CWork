@@ -21,7 +21,7 @@ class Poison
     //Other Functions
     public function buildCard()
     {
-        echo '<div class="card m-3">';
+        echo '<div class="card m-3 border">';
         echo '  <img class="card-img-top" src="' . $this->source . '" title="'.
             $this->title.'" alt="'.$this->alttext.'" />';
         echo '  <div class="card-body">';
