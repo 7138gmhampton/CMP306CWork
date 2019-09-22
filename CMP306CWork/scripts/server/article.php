@@ -1,14 +1,14 @@
 <?php
 class Article
 {
-    private $id_no;
+    private $article;
     private $title;
     private $author;
     private $video;
     private $text;
 
     //Access Functions
-    public function getID() { return $this->id_no; }
+    public function getID() { return $this->article; }
     public function getTitle() { return $this->title; }
     public function getAuthor() { return $this->author; }
     public function getVideo() { return $this->video; }
