@@ -25,6 +25,7 @@
     <div class="container-fluid">
         <?php
         require 'scripts/server/database.php';
+        include_once 'scripts/server/poison.php';
         include 'scripts/server/poison_card_builder.php';
 
         //$database = new Database();
@@ -34,19 +35,19 @@
         $counter = 0;
         $max_cards_in_row = 3;
 
-        foreach ($summaries as $poison) {
-            if ($counter % $max_cards_in_row == 0)
-                echo '<div class="row">';
-            echo '  <div class="col-lg">';
-            //buildPoisonCard($poison[0],$poison[1],$poison[2],$poison[3]);
-            //buildSummaryCard($poison[0],$poison[1],$poison[2],$poison[3],$poison[4],$poison[5]);
-            buildPoisonSummaryCard($poison);
-            echo '  </div>';
-            if ($counter % $max_cards_in_row == $max_cards_in_row-1)
-                echo '</div>';
+        //foreach ($summaries as $poison) {
+        //    if ($counter % $max_cards_in_row == 0)
+        //        echo '<div class="row">';
+        //    echo '  <div class="col-lg">';
+        //    //buildPoisonCard($poison[0],$poison[1],$poison[2],$poison[3]);
+        //    //buildSummaryCard($poison[0],$poison[1],$poison[2],$poison[3],$poison[4],$poison[5]);
+        //    buildPoisonSummaryCard($poison);
+        //    echo '  </div>';
+        //    if ($counter % $max_cards_in_row == $max_cards_in_row-1)
+        //        echo '</div>';
 
-            ++$counter;
-        }
+        //    ++$counter;
+        //}
 
         //include 'scripts/server/article_card_builder.php';
 
@@ -64,6 +65,18 @@
 
         //    ++$counter;
         //}
+
+        $counter = 0;
+
+        foreach ($summaries as $poison) {
+            if ($counter % $max_cards_in_row == 0)
+                echo '<div class="card-group">';
+            $poison->buildCard();
+            if ($counter % $max_cards_in_row == $max_cards_in_row - 1)
+                echo '</div>';
+
+            ++$counter;
+        }
         ?>
     </div>
 
