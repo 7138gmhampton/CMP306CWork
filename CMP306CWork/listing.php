@@ -51,5 +51,15 @@
     
 
     <!--Listing of Articles-->
+    <div class="container">
+        <?php
+        include 'scripts/server/article.php';
+
+        $articles = Database::getArticlesForPoison($_GET['id']);
+
+        foreach ($articles as $article)
+            $article->buildCard();
+        ?>
+    </div>
 </body>
 </html>
