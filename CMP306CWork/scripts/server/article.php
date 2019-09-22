@@ -37,7 +37,7 @@ class Article
             $this->title.'</a>';
         echo '      <h6 class="card-subtitle">'.$this->author.'</h6>';
         echo '  </div>';
-        echo '  <div class="card-body>';
+        echo '  <div class="card-body">';
         echo '      <p class="card-text">'.$this->getSummary().'</p>';
         echo '  </div>';
         echo '</div>';
