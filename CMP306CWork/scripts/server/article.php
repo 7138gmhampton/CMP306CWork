@@ -24,7 +24,7 @@ class Article
             $summary = substr($this->text, 0, 197);
             $summary = $summary . '...';
         }
-        else $summary = $text;
+        else $summary = $this->text;
 
         return $summary;
     }
