@@ -28,5 +28,19 @@ class Article
 
         return $summary;
     }
+
+    public function buildCard()
+    {
+        echo '<div class="card">';
+        echo '  <div class="card-header">';
+        echo '      <a class="card-title h5" href ="article.php?id='.$this->article.'">'.
+            $this->title.'</a>';
+        echo '      <h6 class="card-subtitle">'.$this->author.'</h6>';
+        echo '  </div>';
+        echo '  <div class="card-body>';
+        echo '      <p class="card-text">'.$this->getSummary().'</p>';
+        echo '  </div>';
+        echo '</div>';
+    }
 }
 ?>
