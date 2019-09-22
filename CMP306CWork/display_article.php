@@ -37,6 +37,11 @@
     <!--Video (If available)-->
 
     <!--Text of Article-->
+    <div class="container">
+        <?php
+        echo '<p>'.$article['text'].'</p>';
+        ?>
+    </div>
 
     <!--<div class="container">
         <footer>
