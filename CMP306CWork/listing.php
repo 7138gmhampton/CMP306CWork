@@ -61,5 +61,9 @@
             $article->buildCard();
         ?>
     </div>
+
+    <?php
+    include 'parts/footer.html';
+    ?>
 </body>
 </html>
