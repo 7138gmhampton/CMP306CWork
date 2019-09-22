@@ -1,5 +1,5 @@
 <?php
-include 'scripts/server/poison.php';
+include_once 'scripts/server/poison.php';
 
 function buildPoisonCard($name, $alt_name, $image, $description)
 {
