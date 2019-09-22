@@ -16,7 +16,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="article.php" />
+    <Compile Include="display_article.php" />
     <Compile Include="index.php" />
     <Compile Include="listing.php" />
     <Compile Include="scripts\server\article.php" />
