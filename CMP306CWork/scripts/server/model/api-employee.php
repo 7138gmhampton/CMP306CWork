@@ -88,12 +88,17 @@ function updateEmployeeById($id, $text)
 
     //echo $values;
 
+    $bind_string = '';
+
     foreach ($values as $value) {
-        echo $value;
-        mysqli_stmt_bind_param($statement, 's', $value);
+        //echo $value;
+        //mysqli_stmt_bind_param($statement, 's', $value);
+        $bind_string .= 's';
     }
 
-    mysqli_stmt_bind_param($statement, 's', $id);
+    array_push($values, $id);
+    $bind_string .= 's';
+    mysqli_stmt_bind_param($statement, $bind_string, ...$values);
 
     $no_of_rows_affected = mysqli_stmt_execute($statement);
 
