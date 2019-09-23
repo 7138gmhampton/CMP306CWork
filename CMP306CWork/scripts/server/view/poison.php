@@ -38,4 +38,19 @@ class Poison
         echo '</div>';
     }
 }
+
+function collatePoisons()
+{
+    $poison_data = PoisonAPI::getAllPoisons();
+    $array_of_poisons = json_decode($poison_data, true);
+    $all_poisons = array();
+
+    foreach ($array_of_poisons as $poison) {
+        $next_poison = new Poison();
+        foreach ($poison as $key => $value) $next_poison->{$key} = $value;
+        array_push($all_poisons, $next_poison);
+    }
+
+    return $all_poisons;
+}
 ?>
