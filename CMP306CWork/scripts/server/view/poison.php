@@ -11,6 +11,17 @@ class Poison
     private $title;
     private $alttext;
 
+    function __construct($poison, $name, $alternative, $description, $source, $title, $alttext)
+    {
+        $this->poison = $poison;
+        $this->name = $name;
+        $this->alternative = $alternative;
+        $this->description = $description;
+        $this->source = $source;
+        $this->title = $title;
+        $this->alttext = $alttext;
+    }
+
     //Access Functions
     public function getID() { return $this->poison; }
     public function getName() { return $this->name; }
