@@ -86,6 +86,7 @@ include_once '../config.php';
         include_once ROOT.'scripts/server/view/poison.php';
 
         $poisons = collatePoisons();
+        $max_cards_in_row = 3;
         $counter = 0;
 
         foreach ($poisons as $poison) {
