@@ -18,7 +18,7 @@
 <body>
     <!--Main Navbar-->
     <?php
-    include 'parts/mainbar.html';
+    include '../parts/mainbar.html';
     ?>
 
     <!--Summary Cards-->
