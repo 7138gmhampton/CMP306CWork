@@ -18,22 +18,27 @@
 <body>
     <!--Main Navbar-->
     <?php
-    include '../parts/mainbar.html';
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    include 'parts/mainbar.html';
     ?>
 
     <!--Summary Cards-->
     <div class="container-fluid">
         <?php
-        require 'scripts/server/database.php';
-        include_once 'scripts/server/poison.php';
-        include 'scripts/server/poison_card_builder.php';
+        //include_once '../scripts/server/view/poison.php';
+        //include_once '../scripts/server/view/article.php';
+
+        //require 'scripts/server/database.php';
+        //include_once 'scripts/server/poison.php';
+        //include 'scripts/server/poison_card_builder.php';
 
         //$database = new Database();
 
         //$summaries = Database::getPoisonSummaries();
-        $summaries = Database::getPoisonSummaryClasses();
-        $counter = 0;
-        $max_cards_in_row = 3;
+        //$summaries = Database::getPoisonSummaryClasses();
+        //$counter = 0;
+        //$max_cards_in_row = 3;
 
         //foreach ($summaries as $poison) {
         //    if ($counter % $max_cards_in_row == 0)
@@ -66,22 +71,22 @@
         //    ++$counter;
         //}
 
-        $counter = 0;
+        //$counter = 0;
 
-        foreach ($summaries as $poison) {
-            if ($counter % $max_cards_in_row == 0)
-                echo '<div class="card-group">';
-            $poison->buildCard();
-            if ($counter % $max_cards_in_row == $max_cards_in_row - 1)
-                echo '</div>';
+        //foreach ($summaries as $poison) {
+        //    if ($counter % $max_cards_in_row == 0)
+        //        echo '<div class="card-group">';
+        //    $poison->buildCard();
+        //    if ($counter % $max_cards_in_row == $max_cards_in_row - 1)
+        //        echo '</div>';
 
-            ++$counter;
+        //    ++$counter;
         }
         ?>
     </div>
 
     <?php
-    include '../parts/footer.php';
+    include '../parts/footer.html';
     ?>
 </body>
 </html>
