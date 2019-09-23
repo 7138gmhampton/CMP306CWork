@@ -59,8 +59,17 @@ function collatePoisons()
     $all_poisons = array();
 
     foreach ($array_of_poisons as $each_poison) {
-        $next_poison = new Poison();
-        foreach ($each_poison as $key => $value) $next_poison->{$key} = $value;
+        //var_dump($each_poison);
+        $next_poison = new Poison(
+            $each_poison['poison'], 
+            $each_poison['name'], 
+            $each_poison['alternative'], 
+            $each_poison['description'],
+            $each_poison['source'],
+            $each_poison['title'],
+            $each_poison['alttext']);
+        //$next_poison = new Poison();
+        //foreach ($each_poison as $key => $value) $next_poison->{$key} = $value;
         array_push($all_poisons, $next_poison);
     }
 
