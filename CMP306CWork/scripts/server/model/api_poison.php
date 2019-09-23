@@ -25,7 +25,9 @@ class PoisonAPI extends Database
             return null;
         }
 
+        //var_dump($result);
         $response = json_encode($result);
+        //var_dump($response);
 
         return $response;
     }
