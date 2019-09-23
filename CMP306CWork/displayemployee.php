@@ -4,7 +4,7 @@
 <body>
 	<h1>Display An Employee</h1>
     <?php
-	include 'scripts/server/model/api-employee.php';
+	include('scripts/server/model/api-employee.php');
 	$id = $_GET['id'] ;
 	$employeetxt = getEmployeeById($id) ;;
 	$employeejson = json_decode($employeetxt) ;

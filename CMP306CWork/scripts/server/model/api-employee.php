@@ -1,6 +1,6 @@
 <?php
 // Connect to database
-include("../model/connection.php");
+include("connection.php");
 $db = new dbObj();
 $conn =  $db->getConnstring();
 	

@@ -4,9 +4,12 @@
 <body>
 	<h1>Display All Employees</h1>
 	<?php
-    include 'scripts/server/model/api-employee.php';
+    //ini_set('display_errors', 1);
+    //error_reporting(E_ALL);
+
+    include('scripts/server/model/api-employee.php');
 	$employeetxt = getAllEmployees() ;
-	echo $employeetxt ;
+	//echo $employeetxt ;
 	$employeejson = json_decode($employeetxt) ;
 	// var_dump($employeejson) ;
 	for ($i=0 ; $i<sizeof($employeejson) ; $i++) {
