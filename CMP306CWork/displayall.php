@@ -19,6 +19,8 @@
 		echo ">" ;
 		echo $employeejson[$i] -> ename ;
 		echo "</a><br/>" ;
+        echo '<a href="scripts/server/controller/delete_employee.php?id='.$employeejson[$i] -> eno.
+        '">Delete Employee</a><br />';
 	}
 	?> 
 </body>

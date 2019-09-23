@@ -1,9 +1,12 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 // Connect to database
 include("connection.php");
 $db = new dbObj();
 $conn =  $db->getConnstring();
-	
+
 //  function to create an employee
 function createEmployee($txt) {
 	global $conn;
@@ -36,7 +39,7 @@ function getAllEmployees()
 	}
 	return json_encode($rows);
 }
-	
+
 //  function to get a single employee
 function getEmployeeById($id)
 {
@@ -59,6 +62,42 @@ function deleteEmployeeById($id)
     mysqli_stmt_bind_param($statement, 's', $id);
 
     $no_of_rows_affected = mysqli_stmt_execute($statement);
+
+    return $no_of_rows_affected;
+}
+
+function updateEmployeeById($id, $text)
+{
+    global $conn;
+    $updates = json_decode($text, true);
+    $fields = array_keys($updates);
+    $command = 'UPDATE employee SET';
+    $first = true;
+
+    foreach ($fields as $field) {
+        if (!$first) $command .= ',';
+        $command .= ' '.$field.' = ?';
+        $first = false;
+    }
+    $command .= ' WHERE eno = ?';
+
+    echo $command;
+
+    $statement = mysqli_prepare($conn, $command);
+    $values = array_values($updates);
+
+    //echo $values;
+
+    foreach ($values as $value) {
+        echo $value;
+        mysqli_stmt_bind_param($statement, 's', $value);
+    }
+
+    mysqli_stmt_bind_param($statement, 's', $id);
+
+    $no_of_rows_affected = mysqli_stmt_execute($statement);
+
+    echo $no_of_rows_affected;
 
     return $no_of_rows_affected;
 }

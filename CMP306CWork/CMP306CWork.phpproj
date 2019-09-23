@@ -19,11 +19,14 @@
     <Compile Include="displayall.php" />
     <Compile Include="displayemployee.php" />
     <Compile Include="display_article.php" />
+    <Compile Include="employee_update_page.php" />
     <Compile Include="index.php" />
     <Compile Include="listing.php" />
     <Compile Include="scripts\server\article.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
     <Compile Include="scripts\server\controller\createemployeerec.php" />
+    <Compile Include="scripts\server\controller\delete_employee.php" />
+    <Compile Include="scripts\server\controller\update_employee.php" />
     <Compile Include="scripts\server\database.php" />
     <Compile Include="scripts\server\listing_card_builder.php" />
     <Compile Include="scripts\server\model\api-employee.php" />
