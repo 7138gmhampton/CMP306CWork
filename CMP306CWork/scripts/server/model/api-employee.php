@@ -50,4 +50,16 @@ function getEmployeeById($id)
 	$row=mysqli_fetch_array($result) ;  //there is only 1 row
 	return json_encode($row);
 }
+
+function deleteEmployeeById($id)
+{
+    global $conn;
+    $command = 'DELETE FROM employee WHERE eno = ?';
+    $statement = mysqli_prepare($conn, $command);
+    mysqli_stmt_bind_param($statement, 's', $id);
+
+    $no_of_rows_affected = mysqli_stmt_execute($statement);
+
+    return $no_of_rows_affected;
+}
 ?>
