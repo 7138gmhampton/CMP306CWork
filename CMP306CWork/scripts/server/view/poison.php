@@ -1,4 +1,6 @@
 <?php
+include_once ROOT.'scripts/server/model/api_poison.php';
+
 class Poison
 {
     private $poison;
