@@ -15,7 +15,8 @@
     //echo '<form action="scripts/server/controller/update_employee.php?id='.$_GET['id'].
     //    '" method="post">'
     ?>
-    <form action="scripts/server/controller/update_employee.php" method="post">
+    <form action="scripts/server/controller/update_employee.php" method="post" 
+          name="update_employee">
         <!--<label>
             <?php
             //echo 'Employee Number: '.$_GET['id'];
