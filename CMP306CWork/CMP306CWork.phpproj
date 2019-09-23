@@ -16,13 +16,18 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="displayall.php" />
+    <Compile Include="displayemployee.php" />
     <Compile Include="display_article.php" />
     <Compile Include="index.php" />
     <Compile Include="listing.php" />
     <Compile Include="scripts\server\article.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
+    <Compile Include="scripts\server\controller\createemployeerec.php" />
     <Compile Include="scripts\server\database.php" />
     <Compile Include="scripts\server\listing_card_builder.php" />
+    <Compile Include="scripts\server\model\api-employee.php" />
+    <Compile Include="scripts\server\model\connection.php" />
     <Compile Include="scripts\server\poison.php" />
     <Compile Include="scripts\server\poison_card_builder.php" />
     <Compile Include="scripts\server\common.php" />
@@ -31,6 +36,7 @@
     <Compile Include="week1practical.php" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="createemployee.html" />
     <Content Include="general_styles.css" />
     <Content Include="parts\footer.html" />
     <Content Include="parts\mainbar.html" />
@@ -40,5 +46,8 @@
     <Folder Include="scripts\" />
     <Folder Include="parts\" />
     <Folder Include="scripts\server\" />
+    <Folder Include="scripts\server\controller\" />
+    <Folder Include="scripts\server\model\" />
+    <Folder Include="scripts\server\view\" />
   </ItemGroup>
 </Project>
