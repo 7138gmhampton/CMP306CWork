@@ -1,3 +1,8 @@
+<?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+include_once '../config.php';
+?>
 <!DOCTYPE html>
 <html lang="en-gb">
 <head>
@@ -77,6 +82,21 @@
 
         //    ++$counter;
         //}
+
+        include_once ROOT.'scripts/server/view/poison.php';
+
+        $poisons = collatePoisons();
+        $counter = 0;
+
+        foreach ($poisons as $poison) {
+            if ($counter % $max_cards_in_row == 0)
+                echo '<div class="card-group">';
+            $poison->buildCard();
+            if ($counter % $max_cards_in_row == $max_cards_in_row - 1)
+                echo '</div>';
+
+            ++$counter;
+        }
         ?>
     </div>
 
