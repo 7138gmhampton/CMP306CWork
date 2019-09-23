@@ -32,6 +32,7 @@
     <Compile Include="scripts\server\listing_card_builder.php" />
     <Compile Include="scripts\server\model\api-employee.php" />
     <Compile Include="scripts\server\model\api_article.php" />
+    <Compile Include="scripts\server\model\api_poison.php" />
     <Compile Include="scripts\server\model\connection.php" />
     <Compile Include="scripts\server\model\database.php" />
     <Compile Include="scripts\server\poison.php" />
