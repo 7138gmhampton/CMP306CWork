@@ -38,6 +38,7 @@
     <Compile Include="scripts\server\poison_card_builder.php" />
     <Compile Include="scripts\server\common.php" />
     <Compile Include="scripts\server\view\article.php" />
+    <Compile Include="scripts\server\view\poison.php" />
     <Compile Include="week1comments.php" />
     <Compile Include="week2practical.php" />
     <Compile Include="week1practical.php" />
