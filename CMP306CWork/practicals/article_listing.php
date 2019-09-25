@@ -31,12 +31,12 @@ include_once '../config.php';
         <?php
         $poison_id = $_GET['id'];
 
-        include 'scripts/server/database.php';
-        include 'scripts/server/poison.php';
+        //include 'scripts/server/database.php';
+        //include 'scripts/server/poison.php';
 
        //echo '<p>Check</p>';
 
-        $poison = Database::getPoison($poison_id);
+        //$poison = Database::getPoison($poison_id);
         //$test = Database::getPoison(2);
         //$test = Database::getPoisonSummaryClasses();
 
@@ -45,6 +45,8 @@ include_once '../config.php';
         //echo $poison->getID();
 
         //echo '<p>Check</p>';
+
+        include_once ROOT.'scripts/server/view/poison.php';
 
         echo '<h1 class="h1">'.$poison[0]->getName().' Articles</h1>';
         ?>
