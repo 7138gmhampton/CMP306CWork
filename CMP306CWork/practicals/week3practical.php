@@ -84,8 +84,10 @@ include_once '../config.php';
         //}
 
         include_once ROOT.'scripts/server/view/poison.php';
+        include_once ROOT.'scripts/server/view/view_poison.php';
 
-        $poisons = collatePoisons();
+        //$poisons = collatePoisons();
+        $poisons = PoisonView::allPoisons();
         $max_cards_in_row = 3;
         $counter = 0;
 
