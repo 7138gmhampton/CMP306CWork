@@ -7,6 +7,15 @@ class Article
     private $video;
     private $text;
 
+    function __construct($article, $title, $author, $video, $text)
+    {
+        $this->article = $article;
+        $this->title = $title;
+        $this->author = $author;
+        $this->video = $video;
+        $this->text = $text;
+    }
+
     //Access Functions
     public function getID() { return $this->article; }
     public function getTitle() { return $this->title; }
