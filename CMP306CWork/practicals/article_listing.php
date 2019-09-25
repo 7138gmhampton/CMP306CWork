@@ -46,7 +46,10 @@ include_once '../config.php';
 
         //echo '<p>Check</p>';
 
-        include_once ROOT.'scripts/server/view/poison.php';
+        //include_once ROOT.'scripts/server/view/poison.php';
+        include_once ROOT.'scripts/server/view/view_poison.php';
+
+        $poison = PoisonView::singlePoison($_GET['id']);
 
         echo '<h1 class="h1">'.$poison[0]->getName().' Articles</h1>';
         ?>
