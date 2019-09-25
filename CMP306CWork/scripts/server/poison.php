@@ -30,7 +30,7 @@ class Poison
         echo '      <p class="card-text">' . $this->description . '</p>';
         echo '  </div>';
         echo '  <div class="card-body justify-content-center">';
-        echo '      <a class="btn btn-primary" href="listing.php?id='.$this->poison.
+        echo '      <a class="btn btn-primary" href="article_listing.php?id='.$this->poison.
             '">Go to Articles</a>';
         echo '  </div>';
         echo '</div>';
