@@ -51,7 +51,7 @@ include_once '../config.php';
 
         $poison = PoisonView::singlePoison($_GET['id']);
 
-        echo '<h1 class="h1">'.$poison[0]->getName().' Articles</h1>';
+        echo '<h1 class="h1">'.$poison->getName().' Articles</h1>';
         ?>
     </div>
 
