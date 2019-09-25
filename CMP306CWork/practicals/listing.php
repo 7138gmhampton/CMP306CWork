@@ -1,3 +1,6 @@
+<?php
+include_once '../config.php';
+?>
 <!DOCTYPE html>
 <html lang="en-gb">
 <head>
@@ -17,7 +20,7 @@
 <body>
     <!--Main Navbar-->
     <?php
-    include 'parts/mainbar.html';
+    include ROOT.'parts/mainbar.html';
     //echo '<p>Check</p>';
     ?>
 

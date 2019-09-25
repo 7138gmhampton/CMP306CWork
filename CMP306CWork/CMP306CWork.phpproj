@@ -22,7 +22,7 @@
     <Compile Include="display_article.php" />
     <Compile Include="employee_update_page.php" />
     <Compile Include="index.php" />
-    <Compile Include="listing.php" />
+    <Compile Include="practicals\listing.php" />
     <Compile Include="practicals\week3practical.php" />
     <Compile Include="scripts\server\article.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
