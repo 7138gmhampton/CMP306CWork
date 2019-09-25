@@ -42,6 +42,7 @@
     <Compile Include="scripts\server\common.php" />
     <Compile Include="scripts\server\view\article.php" />
     <Compile Include="scripts\server\view\poison.php" />
+    <Compile Include="scripts\server\view\view_article.php" />
     <Compile Include="scripts\server\view\view_poison.php" />
     <Compile Include="week1comments.php" />
     <Compile Include="week2practical.php" />
