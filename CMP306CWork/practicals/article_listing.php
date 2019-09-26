@@ -29,7 +29,7 @@ include_once '../config.php';
     <!--Title Display-->
     <div class="container">
         <?php
-        $poison_id = $_GET['id'];
+        //$poison_id = $_GET['id'];
 
         //include 'scripts/server/database.php';
         //include 'scripts/server/poison.php';
@@ -63,9 +63,13 @@ include_once '../config.php';
     <!--Listing of Articles-->
     <div class="container">
         <?php
-        include 'scripts/server/article.php';
+        //include 'scripts/server/article.php';
 
-        $articles = Database::getArticlesForPoison($_GET['id']);
+        //$articles = Database::getArticlesForPoison($_GET['id']);
+
+        include_once ROOT.'scripts/server/view/view_article.php';
+
+        $articles = ArticleView::articlesForPoison($_GET['id']);
 
         foreach ($articles as $article)
             $article->buildCard();
@@ -73,7 +77,8 @@ include_once '../config.php';
     </div>
 
     <?php
-    include 'parts/footer.html';
+    //include 'parts/footer.html';
+    include_once ROOT.'parts/footer.html';
     ?>
 </body>
 </html>
