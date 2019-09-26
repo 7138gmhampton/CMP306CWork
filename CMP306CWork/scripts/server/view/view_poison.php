@@ -10,13 +10,13 @@ class PoisonView
         $poison_array = json_decode($poison_data, true);
 
         $poison = new Poison(
-            $poison_array['poison'],
-            $poison_array['name'],
-            $poison_array['alternative'],
-            $poison_array['description'],
-            $poison_array['source'],
-            $poison_array['title'],
-            $poison_array['alttext']);
+            $poison_array[0]['poison'],
+            $poison_array[0]['name'],
+            $poison_array[0]['alternative'],
+            $poison_array[0]['description'],
+            $poison_array[0]['source'],
+            $poison_array[0]['title'],
+            $poison_array[0]['alttext']);
 
         return $poison;
     }
