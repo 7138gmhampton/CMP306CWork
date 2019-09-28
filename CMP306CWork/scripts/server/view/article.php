@@ -64,7 +64,8 @@ class Article
         echo '<div class="card">';
         echo '  <div class="row no-gutters">';
         echo '      <div class="col-lg-4">';
-        echo '          <img src="'
+        echo '          <img class="card-img" src="'.$this->image->getSource().'" title ="'.
+                            $this->image->getTitle().'" alt="'.$this->image->getAltText().'" />';
         echo '      </div>';
         echo '      <div class="col-lg-8">';
         echo '          <div class="card-header">';
