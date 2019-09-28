@@ -59,6 +59,7 @@
     <Content Include="parts\footer.html" />
     <Content Include="parts\mainbar.html" />
     <Content Include="scripts\client\common.js" />
+    <Content Include="scripts\client\tab_handler.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
