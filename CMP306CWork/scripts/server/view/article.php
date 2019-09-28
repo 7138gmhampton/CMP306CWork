@@ -30,6 +30,7 @@ class Article
     public function getAuthor() { return $this->author; }
     public function getVideo() { return $this->video; }
     public function getText() { return $this->text; }
+    public function getImage() { return $this->image; }
 
     //Other Functions
     public function getSummary()
