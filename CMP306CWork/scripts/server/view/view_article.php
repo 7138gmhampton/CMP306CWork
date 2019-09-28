@@ -1,5 +1,6 @@
 <?php
 require_once ROOT.'scripts/server/model/api_article.php';
+include_once ROOT.'scripts/server/model/api_image.php';
 require_once ROOT.'scripts/server/view/article.php';
 
 class ArticleView
