@@ -12,13 +12,30 @@ class ArticleView
         $all_articles = array();
 
         foreach ($article_array as $each_article) {
-            $next_article = new Article(
-                $each_article['article'],
-                $each_article['title'],
-                $each_article['author'],
-                $each_article['video'],
-                $each_article['text']);
-            array_push($all_articles, $next_article);
+            $image_data = ImageAPI::getFirstArticleImage($each_article['article']);
+            $image_array = json_decode($image_data, true);
+            if (!$image_array) {
+                $next_article = new Article(
+                    $each_article['article'],
+                    $each_article['title'],
+                    $each_article['author'],
+                    $each_article['video'],
+                    $each_article['text']);
+                array_push($all_articles, $next_article);
+            }
+            else {
+                $next_article = new Article(
+                    $each_article['article'],
+                    $each_article['title'],
+                    $each_article['author'],
+                    $each_article['video'],
+                    $each_article['text'],
+                    $image_array[0]['image'],
+                    $image_array[0]['source'],
+                    $image_array[0]['title'],
+                    $image_array[0]['alttext']);
+                array_push($all_articles, $next_article);
+            }
         }
 
         return $all_articles;
