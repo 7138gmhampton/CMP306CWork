@@ -1,16 +1,10 @@
 ﻿$(document).ready(function ()
 {
-    $('#updateSubmit').click(function ()
-    {
-        let eno = document.forms['update_employee']['eno'].value;
-        let ename = document.forms['update_employee']['ename'].value;
-        let ejob = document.forms['update_employee']['ejob'].value;
+    let url = location.href.replace(/\/$/, '');
 
-        let update = new Object();
+    if (location.hash) {
+        const hash = url.split('#');
 
-        if (!ename == null && !ename == '') update.ename = ename;
-        if (!ejob == null && !ejob == '') update.ejob = ejob;
-
-
-    })
+        $('#navTutorials a[href="#' + hash[1] + '"]').tab('show');
+    }
 })
