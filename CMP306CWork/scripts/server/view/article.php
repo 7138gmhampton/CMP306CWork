@@ -19,7 +19,7 @@ class Article
         $this->video = $video;
         $this->text = $text;
         if ($image_id) {
-            $image_id = new Image($image_id, $source, $img_title, $alttext);
+            $this->image = new Image($image_id, $source, $img_title, $alttext);
         }
         else $this->image = null;
     }
