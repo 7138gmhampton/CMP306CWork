@@ -17,7 +17,7 @@ include_once 'config.php';
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <script src="scripts/client/tab_handler.js"></script>
+    <!--<script src="scripts/client/tab_handler.js"></script>-->
 </head>
 <body>
     <!--Main Navbar-->
@@ -41,7 +41,7 @@ include_once 'config.php';
 
     <!--Tabs Content-->
     <div class="tab-content" id="tabcontentTutorials">
-        <div class="tab-pane fade show active" id="tabWeekOne" role="tabpanel">
+        <div class="tab-pane fade" id="tabWeekOne" role="tabpanel">
             <div class="container mt-3 border">
                 <h2 class="h2">Tutorial Question 1</h2>
                 <p>
@@ -196,6 +196,6 @@ include_once 'config.php';
     include_once ROOT.'parts/footer.html';
     ?>
 
-    <!--<script src="scripts/client/common.js"></script>-->
+    <script src="scripts/client/common.js"></script>
 </body>
 </html>
