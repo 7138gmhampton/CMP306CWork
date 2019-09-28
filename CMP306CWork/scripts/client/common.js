@@ -7,4 +7,7 @@
 
         $('#navTutorials a[href="#' + hash[1] + '"]').tab('show');
     }
+    else $('#navTutorials a[href="#tabWeekOne"]').tab('show');
+
+    $(window).scrollTop(0);
 })
