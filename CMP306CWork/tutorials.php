@@ -26,7 +26,7 @@ include_once 'config.php';
     <!--Tutorials and Evaluations-->
 
     <!--Tabs Nav-->
-    <nav>
+    <nav class="container">
         <div class="nav nav-tabs" id="navTutorials" role="tablist">
             <a class="nav-item nav-link" id="navtabWeekOne" data-toggle="tab" href="#tabWeekOne">
                 Week 1
