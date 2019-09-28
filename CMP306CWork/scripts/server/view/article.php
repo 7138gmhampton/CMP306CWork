@@ -1,4 +1,6 @@
 <?php
+include_once ROOT.'scripts/server/view/image.php';
+
 class Article
 {
     private $article;
@@ -8,7 +10,7 @@ class Article
     private $text;
     private $image;
 
-    function __construct($article, $title, $author, $video, $text, $image=null, $source=null,
+    function __construct($article, $title, $author, $video, $text, $image_id=null, $source=null,
         $img_title=null,$alttext=null)
     {
         $this->article = $article;
@@ -16,7 +18,9 @@ class Article
         $this->author = $author;
         $this->video = $video;
         $this->text = $text;
-        
+        if ($image_id) {
+            $image_id = new Image($image_id, $source, $img_title, $alttext);
+        }
     }
 
     //Access Functions
