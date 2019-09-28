@@ -23,8 +23,8 @@
     <Compile Include="employee_update_page.php" />
     <Compile Include="index.php" />
     <Compile Include="listing.php" />
-    <Compile Include="week3\article_listing.php" />
-    <Compile Include="week3\week3practical.php" />
+    <Compile Include="article_listing.php" />
+    <Compile Include="week3practical.php" />
     <Compile Include="scripts\server\article.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
     <Compile Include="scripts\server\controller\createemployeerec.php" />

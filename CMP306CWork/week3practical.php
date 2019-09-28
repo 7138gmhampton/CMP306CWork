@@ -1,7 +1,7 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-include_once '../config.php';
+include_once 'config.php';
 ?>
 <!DOCTYPE html>
 <html lang="en-gb">
@@ -23,7 +23,8 @@ include_once '../config.php';
 <body>
     <!--Main Navbar-->
     <?php
-    include '../parts/mainbar.html';
+    //include '../parts/mainbar.html';
+    include_once ROOT.'parts/mainbar.html';
     ?>
 
     <!--Summary Cards-->
