@@ -72,7 +72,9 @@ include_once 'config.php';
         $articles = ArticleView::articlesForPoison($_GET['id']);
 
         foreach ($articles as $article)
-            $article->buildCard();
+            if ($article->getImage())
+                $article->buildCardWithPic();
+            else $article->buildCard();
         ?>
     </div>
 
