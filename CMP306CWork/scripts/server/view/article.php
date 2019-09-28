@@ -21,6 +21,7 @@ class Article
         if ($image_id) {
             $image_id = new Image($image_id, $source, $img_title, $alttext);
         }
+        else $this->image = null;
     }
 
     //Access Functions
