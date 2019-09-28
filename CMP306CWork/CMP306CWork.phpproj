@@ -25,6 +25,7 @@
     <Compile Include="listing.php" />
     <Compile Include="article_listing.php" />
     <Compile Include="scripts\server\model\api_image.php" />
+    <Compile Include="scripts\server\view\image.php" />
     <Compile Include="week3practical.php" />
     <Compile Include="scripts\server\article.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
