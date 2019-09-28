@@ -65,11 +65,12 @@ class Article
     {
         echo '<div class="card">';
         echo '  <div class="row no-gutters">';
-        echo '      <div class="col-lg-4">';
-        echo '          <img class="card-img" src="'.$this->image->getSource().'" title ="'.
-                            $this->image->getTitle().'" alt="'.$this->image->getAltText().'" />';
+        echo '      <div class="col-lg-2">';
+        echo '          <img class="card-img" src="'.$this->image->getSource().
+                            '" title ="'.$this->image->getTitle().'" alt="'.
+                            $this->image->getAltText().'" />';
         echo '      </div>';
-        echo '      <div class="col-lg-8">';
+        echo '      <div class="col-lg-10">';
         echo '          <div class="card-header">';
         echo '              <a class="card-title h5" href ="display_article.php?id='.
                                 $this->article.'">'.$this->title.'</a>';

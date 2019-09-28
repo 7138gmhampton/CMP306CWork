@@ -53,6 +53,8 @@
   <ItemGroup>
     <Content Include="createemployee.html" />
     <Content Include="general_styles.css" />
+    <Content Include="images\erd.png" />
+    <Content Include="images\relation_schema.png" />
     <Content Include="parts\footer.html" />
     <Content Include="parts\mainbar.html" />
     <Content Include="scripts\client\common.js" />
