@@ -39,6 +39,23 @@ include_once 'config.php';
         </header>
 
         <!--Carousel of Images-->
+        <div class="container">
+            <div id="carouselImages" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner article-carousel">
+                    <?php
+                    include_once ROOT.'scripts/server/view/view_image.php';
+
+                    $images = ImageView::allForArticle($_GET['id']);
+                    $first = true;
+
+                    foreach ($images as $image) {
+                        $image->buildCarousel($first);
+                        $first = false;
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
 
         <!--Text of Article-->
 

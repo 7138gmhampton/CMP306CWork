@@ -12,3 +12,14 @@
 .navbar-toggler, .navbar-toggler-icon {
     padding: 2.5em !important;
 }
+
+.article-carousel {
+    height: 30em !important;
+    width: 100% !important;
+    background-color: lightgray !important;
+}
+
+.carousel-pic {
+    max-height: 30em !important;
+    width: auto !important;
+}

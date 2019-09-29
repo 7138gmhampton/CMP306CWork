@@ -26,7 +26,7 @@ class Image
         $active =  $first ?  ' active' : '';
 
         echo '<div class="carousel-item'.$active.'">';
-        echo '  <img class="d-block w-100" src="'.$this->source.'" title="'.$this->title.'" '.
+        echo '  <img class="d-block carousel-pic mx-auto" src="'.$this->source.'" title="'.$this->title.'" '.
             'alt="'.$this->alttext.'" />';
         echo '</div>';
     }
