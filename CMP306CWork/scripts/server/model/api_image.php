@@ -29,5 +29,27 @@ class ImageAPI extends Database
         $response = json_encode($result);
         return $response;
     }
+
+    public static function getAllImagesForArticle($article_id)
+    {
+        $command = 'SELECT psn_image.image, psn_image.source, psn_image.title, psn_image.alttext '.
+            'FROM psn_article_image '.
+            'JOIN psn_image ON psn_article_image.image = psn_image.image '.
+            'WHERE article = :id';
+        //$result = null;
+
+        //try {
+        //    $statement = self::prepareStatement($command);
+        //    $statement->bindParam(':id', $article_id);
+
+        //    $statement->execute();
+
+        //    $result = 
+        //}
+
+        $response = self::selectWhere($command, ':id', $article_id);
+
+        return $response;
+    }
 }
 ?>
