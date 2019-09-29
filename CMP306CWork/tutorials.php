@@ -381,6 +381,52 @@ include_once 'config.php';
                             </div>
                         </div>
                     </div>
+
+                    <!--User-->
+                    <div class="card">
+                        <div id="headerUser" class="card-header">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseUser">
+                                    User
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseUser" class="collapse" data-parent="#accordianFields">
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Field</th>
+                                            <th scope="col">Data Type</th>
+                                            <th scope="col">Width</th>
+                                            <th scope="col">Note</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ID Number</td>
+                                            <td>Integer</td>
+                                            <td></td>
+                                            <td>This is auto incremented and the primary key</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Username</td>
+                                            <td>VarChar</td>
+                                            <td>200</td>
+                                            <td>This field must be unique</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Password</td>
+                                            <td>VarChar</td>
+                                            <td>200</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--<table class="table">
                     <thead>
@@ -515,7 +561,7 @@ include_once 'config.php';
                 </table>-->
 
                 <!--User-->
-                <table class="table">
+                <!--<table class="table">
                     <thead>
                         <tr>
                             <th scope="colgroup">User</th>
@@ -547,7 +593,7 @@ include_once 'config.php';
                             <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
 
                 <!--Comment-->
                 <table class="table">
