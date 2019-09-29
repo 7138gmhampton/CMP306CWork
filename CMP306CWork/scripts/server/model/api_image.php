@@ -9,6 +9,7 @@ class ImageAPI extends Database
             'FROM psn_article_image '.
             'JOIN psn_image ON psn_article_image.image = psn_image.image '.
             'WHERE article = :id '.
+            'ORDER BY main DESC '.
             'LIMIT 1';
         $result = null;
 
