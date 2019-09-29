@@ -51,7 +51,7 @@ class Article
     {
         echo '<div class="card">';
         echo '  <div class="card-header">';
-        echo '      <a class="card-title h5" href ="display_article.php?id='.$this->article.'">'.
+        echo '      <a class="card-title h5" href ="article_display.php?id='.$this->article.'">'.
             $this->title.'</a>';
         echo '      <h6 class="card-subtitle">'.$this->author.'</h6>';
         echo '  </div>';
@@ -72,7 +72,7 @@ class Article
         echo '      </div>';
         echo '      <div class="col-lg-10">';
         echo '          <div class="card-header">';
-        echo '              <a class="card-title h5" href ="display_article.php?id='.
+        echo '              <a class="card-title h5" href ="article_display.php?id='.
                                 $this->article.'">'.$this->title.'</a>';
         echo '              <h6 class="card-subtitle">'.$this->author.'</h6>';
         echo '          </div>';
