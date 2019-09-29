@@ -23,3 +23,7 @@
     max-height: 30em !important;
     width: auto !important;
 }
+
+.video-embed {
+    max-height: 20em !important;
+}
