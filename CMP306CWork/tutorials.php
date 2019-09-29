@@ -42,32 +42,32 @@ include_once 'config.php';
     <!--Tabs Content-->
     <div id="tabcontentTutorials" class="tab-content">
         <div class="tab-pane fade" id="tabWeekOne" role="tabpanel">
-            <div class="container mt-3 border">
+            <section class="container mt-3 border">
                 <h2 class="h2">Tutorial Question 1</h2>
                 <p>
                     Bootstrap employs a flexible grid: 12 columns within each row and these components
-            will shrink or grow with the viewport. Elements can be set to take up differing
-            numbers of columns - e.g. a 4-column element will try to fill a third of the row
-            container's width. More complicated arrangements can be achieved by nesting rows,
-            and their attendant columns, within other columns. To prevent smaller/narrower
-            screens becoming overwhelmed, particular columnar arrangements can be set for
-            certain 'classes' of screen width. For example, a row with 4 columns in a row for
-            screens classed as large or bigger can be set to rearrange the items in 2 columns
-            for medium screens and a single column for anything smaller.
+                    will shrink or grow with the viewport. Elements can be set to take up differing
+                    numbers of columns - e.g. a 4-column element will try to fill a third of the row
+                    container's width. More complicated arrangements can be achieved by nesting rows,
+                    and their attendant columns, within other columns. To prevent smaller/narrower
+                    screens becoming overwhelmed, particular columnar arrangements can be set for
+                    certain 'classes' of screen width. For example, a row with 4 columns in a row for
+                    screens classed as large or bigger can be set to rearrange the items in 2 columns
+                    for medium screens and a single column for anything smaller.
                 </p>
-            </div>
-            <div class="container mt-3 border">
+            </section>
+            <section class="container mt-3 border">
                 <h2 class="h2">Tutorial Question 2</h2>
                 <p>
                     Bootstrap has classes that can make deployment of dropdown menus, pagination and
-            navs simple. The 'broadest' menu selections will be included in the navbar which
-            will appear at the top of every page. More specific usages will be applied utilising
-            the Bootstrap classes as necessary. To ensure accurate replication of menus (in
-            particular the main navbar), the menus will be written in separate PHP/HTML files
-            and then 'included' on the required pages using PHP scripting.
+                    navs simple. The 'broadest' menu selections will be included in the navbar which
+                    will appear at the top of every page. More specific usages will be applied utilising
+                    the Bootstrap classes as necessary. To ensure accurate replication of menus (in
+                    particular the main navbar), the menus will be written in separate PHP/HTML files
+                    and then 'included' on the required pages using PHP scripting.
                 </p>
-            </div>
-            <div class="container mt-3 border">
+            </section>
+            <section class="container mt-3 border">
                 <h2 class="h2">Tutorial Question 3</h2>
                 <div class="accordion" id="accordianQuestionThree">
                     <!--Modal Section-->
@@ -184,10 +184,32 @@ include_once 'config.php';
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </div>
         <div id="tabWeekTwo" class="tab-pane fade"  role="tabpanel">
             <p>This is something else</p>
+            
+            <!--Database Diagrams-->
+            <section class="container mt-3 border">
+                <h2 class="h2">Database Diagrams</h2>
+                
+                <!--ERD-->
+                <figure class="figure">
+                    <img src="images/erd.png" class="figure-img img-fluid" />
+                    <figcaption class="figure-caption">
+                        This is an Entity-Relationship diagram pertaing to the relational database
+                        setup for these pages/articles.
+                    </figcaption>
+                </figure>
+
+                <!--Relational Schema-->
+                <figure class="figure">
+                    <img src="images/relation_schema.png" class="figure-img img-fluid" />
+                    <figcaption class="figure-caption">
+                        This the Relational Schema appropriate to the above displayed ERD.
+                    </figcaption>
+                </figure>
+            </section>
         </div>
     </div>
 
