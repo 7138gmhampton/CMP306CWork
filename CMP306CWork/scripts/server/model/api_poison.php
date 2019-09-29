@@ -13,8 +13,9 @@ class PoisonAPI extends Database
         $result = null;
 
         try {
-            $connection = self::makeConnection();
-            $statement = $connection->prepare($command);
+            //$connection = self::makeConnection();
+            //$statement = $connection->prepare($command);
+            $statement = self::prepareStatement($command);
 
             $statement->execute();
 
@@ -39,25 +40,30 @@ class PoisonAPI extends Database
             'INNER JOIN psn_image '.
             'ON psn_poison.main_pic = psn_image.image '.
             'WHERE poison = :id';
-        $result = null;
+        //$result = null;
 
-        if (self::rowCount('psn_poison', 'poison', $id) == 1 ) {
-            try {
-                $connection = self::makeConnection();
-                $statement = $connection->prepare($command);
-                $statement->bindParam(':id', $id);
+        //if (self::rowCount('psn_poison', 'poison', $id) == 1 ) {
+        //    try {
+        //        $connection = self::makeConnection();
+        //        $statement = $connection->prepare($command);
+        //        $statement->bindParam(':id', $id);
 
-                $statement->execute();
+        //        $statement->execute();
 
-                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-            }
-            catch (PDOException $e) {
-                echo 'Error: '.$e->getMessage();
-                return null;
-            }
-        }
+        //        $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        //    }
+        //    catch (PDOException $e) {
+        //        echo 'Error: '.$e->getMessage();
+        //        return null;
+        //    }
+        //}
 
-        $response = json_encode($result);
+        //$response = json_encode($result);
+        $response = null;
+
+        if (self::rowCount('psn_poison', 'poison', $id) == 1) 
+            $response = self::selectWhere($command, ':id', $id);
+
         return $response;
     }
 }
