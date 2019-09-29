@@ -40,7 +40,7 @@ include_once 'config.php';
     </nav>
 
     <!--Tabs Content-->
-    <div class="tab-content" id="tabcontentTutorials">
+    <div id="tabcontentTutorials" class="tab-content">
         <div class="tab-pane fade" id="tabWeekOne" role="tabpanel">
             <div class="container mt-3 border">
                 <h2 class="h2">Tutorial Question 1</h2>
