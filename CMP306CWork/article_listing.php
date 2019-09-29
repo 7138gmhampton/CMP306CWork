@@ -71,6 +71,8 @@ include_once 'config.php';
 
         $articles = ArticleView::articlesForPoison($_GET['id']);
 
+        if (empty($articles)) echo '<h3 class="h3 text-center">No Articles for this Poison</h3>';
+
         foreach ($articles as $article)
             if ($article->getImage())
                 $article->buildCardWithPic();
