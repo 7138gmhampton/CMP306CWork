@@ -13,21 +13,24 @@ class ImageAPI extends Database
             'LIMIT 1';
         $result = null;
 
-        try {
-            $connection = self::makeConnection();
-            $statement = $connection->prepare($command);
-            $statement->bindParam(':id', $article_id);
+        //try {
+        //    $connection = self::makeConnection();
+        //    $statement = $connection->prepare($command);
+        //    $statement->bindParam(':id', $article_id);
 
-            $statement->execute();
+        //    $statement->execute();
 
-            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
-        }
-        catch (PDOException $e) {
-            echo 'Error: '.$e->getMessage();
-            return null;
-        }
+        //    $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        //}
+        //catch (PDOException $e) {
+        //    echo 'Error: '.$e->getMessage();
+        //    return null;
+        //}
 
-        $response = json_encode($result);
+        //$response = json_encode($result);
+
+        $response = self::selectWhere($command, ':id', $article_id);
+
         return $response;
     }
 
