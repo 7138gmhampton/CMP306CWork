@@ -39,7 +39,7 @@ include_once 'config.php';
         </header>
 
         <!--Carousel of Images-->
-        <div class="container">
+        <div class="container d-none d-lg-block">
             <div id="carouselImages" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner article-carousel">
                     <?php
