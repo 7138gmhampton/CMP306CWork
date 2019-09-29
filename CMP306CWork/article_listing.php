@@ -69,7 +69,7 @@ include_once 'config.php';
 
         include_once ROOT.'scripts/server/view/view_article.php';
 
-        $articles = ArticleView::articlesForPoison($_GET['id']);
+        $articles = ArticleView::allForPoison($_GET['id']);
 
         if (empty($articles)) echo '<h3 class="h3 text-center">No Articles for this Poison</h3>';
 

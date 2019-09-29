@@ -5,7 +5,7 @@ require_once ROOT.'scripts/server/view/article.php';
 
 class ArticleView
 {
-    public static function articlesForPoison($poison_id)
+    public static function allForPoison($poison_id)
     {
         $article_data = ArticleAPI::getAllArticlesForPoison($poison_id);
         $article_array = json_decode($article_data, true);
