@@ -523,6 +523,54 @@ include_once 'config.php';
                             </div>
                         </div>
                     </div>
+
+                    <!--Article<>Image-->
+                    <div class="card">
+                        <div id="headerArticleImage" class="card-header">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseArticleImage">
+                                    Article-Image Junction
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseArticleImage" class="collapse" data-parent="#accordianFields">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Field</th>
+                                        <th scope="col">Data Type</th>
+                                        <th scope="col">Width</th>
+                                        <th scope="col">Note</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Image ID Number</td>
+                                        <td>Integer</td>
+                                        <td></td>
+                                        <td>
+                                            This is a foreign key for the Image table
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Article ID Number</td>
+                                        <td>Integer</td>
+                                        <td></td>
+                                        <td>
+                                            This is a foreign key for the Article
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Main Picture</td>
+                                        <td>Booloean</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
                 <!--<table class="table">
                     <thead>
@@ -766,7 +814,7 @@ include_once 'config.php';
                 </table>-->
 
                 <!--Article<>Image-->
-                <table class="table">
+                <!--<table class="table">
                     <thead>
                         <tr>
                             <th scope="colgroup">Article-Image Junction</th>
@@ -802,7 +850,7 @@ include_once 'config.php';
                             <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
             </section>
         </div>
     </div>
