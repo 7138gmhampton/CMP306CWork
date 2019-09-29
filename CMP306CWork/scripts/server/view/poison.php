@@ -42,9 +42,11 @@ class Poison
         echo '      <h6 class="card-subtitle text-muted">' . $this->alternative . '</h6>';
         echo '      <p class="card-text">' . $this->description . '</p>';
         echo '  </div>';
-        echo '  <div class="card-body justify-content-center">';
-        echo '      <a class="btn btn-primary" href="article_listing.php?id='.$this->poison.
-            '">Go to Articles</a>';
+        echo '  <div class="card-footer">';
+        echo '      <div class="card-body text-center">';
+        echo '          <a class="btn btn-primary" href="article_listing.php?id='.$this->poison.
+                            '">Go to Articles</a>';
+        echo '      </div>';
         echo '  </div>';
         echo '</div>';
     }
