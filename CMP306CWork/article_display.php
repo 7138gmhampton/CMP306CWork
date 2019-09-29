@@ -26,9 +26,16 @@ include_once 'config.php';
     <article>
         <!--Title and Author-->
         <header>
-            <?php
-            include_once ROOT.'scripts/server/view/view_article.php';
-            ?>
+            <div class="container">
+                <?php
+                include_once ROOT.'scripts/server/view/view_article.php';
+
+                $article = ArticleView::single($_GET['id']);
+
+                echo '<h1 class="h1">'.$article->getTitle().'</h1>';
+                echo '<h3 class="h3 text-muted">'.$article->getAuthor().'</h3>'
+                ?>
+            </div>
         </header>
 
         <!--Carousel of Images-->
