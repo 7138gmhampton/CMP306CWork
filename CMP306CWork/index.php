@@ -43,6 +43,32 @@ include_once 'config.php';
             </div>
         </nav>-->
 
+        <!--Jumbo Title-->
+        <div class="jumbotron">
+            <h1 class="display-1">CMP306 Coursework</h1>
+            <h2 class="display-2">Gareth M. Hampton</h2>
+        </div>
+
+        <!--Buttons to Weeks and Tutorials-->
+        <div class="container">
+            <div class="row text-center my-3">
+                <div class="col">
+                    <a class="btn btn-primary" href="tutorials.php">Tutorials and Evaluations</a>
+                </div>
+            </div>
+            <div class="row text-center my-3">
+                <div class="col-lg-4">
+                    <a class="btn btn-primary" href="practical_one.php">Week 1</a>
+                </div>
+                <div class="col-lg-4">
+                    <a class="btn btn-primary" href="practical_two.php">Week 2</a>
+                </div>
+                <div class="col-lg-4">
+                    <a class="btn btn-primary" href="practical_three.php">Week 3</a>
+                </div>
+            </div>
+        </div>
+
         <!--<footer>
             <p>Gareth M. Hampton</p>
             <p>0407435</p>
