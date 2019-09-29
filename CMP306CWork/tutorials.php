@@ -213,6 +213,7 @@ include_once 'config.php';
 
             <!--Tables and their Fields-->
             <section class="container mt-3 border">
+                <h2 class="h2">Fields and the Data Types</h2>
                 <div id="accordianFields" class="accordion">
                     <!--Image-->
                     <div class="card">
