@@ -479,6 +479,50 @@ include_once 'config.php';
                             </div>
                         </div>
                     </div>
+
+                    <!--Poison<>Article-->
+                    <div class="card">
+                        <div id="headerPoisonArticle" class="card-header">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapsePoisonArticle">
+                                    Poison-Article Junction
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapsePoisonArcticle" class="collapse" data-parent="#accordianFields">
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Field</th>
+                                            <th scope="col">Data Type</th>
+                                            <th scope="col">Width</th>
+                                            <th scope="col">Note</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Poison ID Number</td>
+                                            <td>Integer</td>
+                                            <td></td>
+                                            <td>
+                                                This is a foreign key for the Poison table
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Article ID Number</td>
+                                            <td>Integer</td>
+                                            <td></td>
+                                            <td>
+                                                This is a foreign key for the Article table
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--<table class="table">
                     <thead>
@@ -689,7 +733,7 @@ include_once 'config.php';
                 </table>-->
 
                 <!--Poison<>Article-->
-                <table class="table">
+                <!--<table class="table">
                     <thead>
                         <tr>
                             <th scope="colgroup">Poison-Article Junction</th>
@@ -719,7 +763,7 @@ include_once 'config.php';
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
 
                 <!--Article<>Image-->
                 <table class="table">
