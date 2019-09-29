@@ -19,5 +19,16 @@ class Image
     public function getSource() { return $this->source; }
     public function getTitle() { return $this->title; }
     public function getAltText() { return $this->alttext; }
+
+    //Other Functions
+    public function buildCarousel($first)
+    {
+        $active =  $first ?  ' active' : '';
+
+        echo '<div class="carousel-item'.$active.'">';
+        echo '  <img class="d-block w-100" src="'.$this->source.'" title="'.$this->title.'" '.
+            'alt="'.$this->alttext.'" />';
+        echo '</div>';
+    }
 }
 ?>
