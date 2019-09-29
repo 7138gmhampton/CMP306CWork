@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include_once 'config.php';
 ?>
 <!DOCTYPE html>
@@ -52,11 +52,11 @@ include_once 'config.php';
         <!--Buttons to Weeks and Tutorials-->
         <div class="container">
             <div class="row text-center my-3">
-                <div class="col">
+                <div class="col page-button">
                     <a class="btn btn-primary" href="tutorials.php">Tutorials and Evaluations</a>
                 </div>
             </div>
-            <div class="row text-center my-3">
+            <div class="row text-center my-3 page-button">
                 <div class="col-lg-4">
                     <a class="btn btn-primary" href="practical_one.php">Week 1</a>
                 </div>
