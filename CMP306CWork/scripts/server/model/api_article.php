@@ -29,5 +29,31 @@ class ArticleAPI extends Database
         $response = json_encode($result);
         return $response;
     }
+
+    public static function getArticleById($article_id)
+    {
+        $command = 'SELECT article, title, author, video, text '.
+            'FROM psn_article '.
+            'WHERE article = :id';
+        $result = null;
+        if (self::rowCount('psn_article', 'article', $article_id) == 1) {
+            try {
+                //$connection = self::makeConnection();
+                $statement = self::prepareStatement($command);
+                $statement->bindParam(':id', $article_id);
+
+                $statement->execute();
+
+                $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+            }
+            catch (PDOException $e) {
+                echo 'Error: '.$e->getMessage();
+                return null;
+            }
+        }
+
+        $response = json_encode($result);
+        return $response;
+    }
 }
 ?>
