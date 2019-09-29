@@ -52,19 +52,19 @@ include_once 'config.php';
         <!--Buttons to Weeks and Tutorials-->
         <div class="container">
             <div class="row text-center my-3">
-                <div class="col page-button">
-                    <a class="btn btn-primary" href="tutorials.php">Tutorials and Evaluations</a>
+                <div class="col">
+                    <a class="btn btn-primary page-button" href="tutorials.php">Tutorials and Evaluations</a>
                 </div>
             </div>
-            <div class="row text-center my-3 page-button">
+            <div class="row text-center my-3 ">
                 <div class="col-lg-4">
-                    <a class="btn btn-primary" href="practical_one.php">Week 1</a>
+                    <a class="btn btn-primary page-button" href="practical_one.php">Week 1</a>
                 </div>
                 <div class="col-lg-4">
-                    <a class="btn btn-primary" href="practical_two.php">Week 2</a>
+                    <a class="btn btn-primary page-button" href="practical_two.php">Week 2</a>
                 </div>
                 <div class="col-lg-4">
-                    <a class="btn btn-primary" href="practical_three.php">Week 3</a>
+                    <a class="btn btn-primary page-button" href="practical_three.php">Week 3</a>
                 </div>
             </div>
         </div>
