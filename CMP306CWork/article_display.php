@@ -66,9 +66,24 @@ include_once 'config.php';
         </div>
 
         <!--Text of Article-->
+        <div class="container my-3">
+            <?php
+            echo '<p>'.$article->getText().'</p>';
+            ?>
+        </div>
 
-        <!--More About Video-->
-
+        <!--'More About' Video-->
+        <footer class="container px-5">
+            <h2 class="h2">Also Related</h2>
+            <div class="embed-responsive embed-responsive-4by3 px-5 mx-5">
+                <?php
+                echo '<iframe src="'.$article->getVideo().'">';
+                ?>
+                <!--<iframe>-->
+                    <p>Apologies the content has failed to load</p>
+                </iframe>
+            </div>
+        </footer>
     </article>
     
     <!--Footer-->
