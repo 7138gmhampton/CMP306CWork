@@ -31,7 +31,7 @@
     <Compile Include="scripts\server\view\image.php" />
     <Compile Include="scripts\server\view\view_image.php" />
     <Compile Include="tutorials.php" />
-    <Compile Include="week3practical.php" />
+    <Compile Include="practical_three.php" />
     <Compile Include="scripts\server\article.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
     <Compile Include="scripts\server\controller\createemployeerec.php" />
@@ -52,8 +52,8 @@
     <Compile Include="scripts\server\view\view_article.php" />
     <Compile Include="scripts\server\view\view_poison.php" />
     <Compile Include="week1comments.php" />
-    <Compile Include="week2practical.php" />
-    <Compile Include="week1practical.php" />
+    <Compile Include="practical_two.php" />
+    <Compile Include="practical_one.php" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="createemployee.html" />
