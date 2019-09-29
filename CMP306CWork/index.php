@@ -1,3 +1,6 @@
+<?php
+include_once 'config.php';
+?>
 <!DOCTYPE html>
 <html lang="en-gb">
     <head>
@@ -40,9 +43,12 @@
             </div>
         </nav>-->
 
-        <footer>
+        <!--<footer>
             <p>Gareth M. Hampton</p>
             <p>0407435</p>
-        </footer>
+        </footer>-->
+        <?php
+        include_once ROOT.'parts/footer.html';
+        ?>
     </body>
 </html>
