@@ -105,7 +105,8 @@ include_once 'config.php';
     </div>
 
     <?php
-    include '../parts/footer.html';
+    //include '../parts/footer.html';
+    include_once ROOT.'parts/footer.html';
     ?>
 </body>
 </html>
