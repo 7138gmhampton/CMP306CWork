@@ -210,6 +210,290 @@ include_once 'config.php';
                     </figcaption>
                 </figure>
             </section>
+
+            <!--Tables and their Fields-->
+            <section class="container mt-3 border">
+                <table class="table">
+                    <!--Image-->
+                    <thead>
+                        <tr><th scope="colgroup">Image</th></tr>
+                        <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Data Type</th>
+                            <th scope="col">Width</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>This is auto incremented and the primary key</td>
+                        </tr>
+                        <tr>
+                            <td>Source</td>
+                            <td>VarChar</td>
+                            <td>500</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Title</td>
+                            <td>VarChar</td>
+                            <td>500</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Alternative Text</td>
+                            <td>VarChar</td>
+                            <td>500</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--Article-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="colgroup">Article</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Data Type</th>
+                            <th scope="col">Width</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>This is auto incremented and the primary key</td>
+                        </tr>
+                        <tr>
+                            <td>Title</td>
+                            <td>VarChar</td>
+                            <td>300</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Author</td>
+                            <td>VarChar</td>
+                            <td>300</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Video</td>
+                            <td>VarChar</td>
+                            <td>500</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Text</td>
+                            <td>VarChar</td>
+                            <td>20,000</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--Poison-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="colgroup">Poison</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Data Type</th>
+                            <th scope="col">Width</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>This is auto incremented and the primary key</td>
+                        </tr>
+                        <tr>
+                            <td>Name</td>
+                            <td>VarChar</td>
+                            <td>300</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Alternative Name</td>
+                            <td>VarChar</td>
+                            <td>300</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td>VarChar</td>
+                            <td>2,000</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Image</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>This is a foreign key for the Image table</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--User-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="colgroup">User</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Data Type</th>
+                            <th scope="col">Width</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>This is auto incremented and the primary key</td>
+                        </tr>
+                        <tr>
+                            <td>Username</td>
+                            <td>VarChar</td>
+                            <td>200</td>
+                            <td>This field must be unique</td>
+                        </tr>
+                        <tr>
+                            <td>Password</td>
+                            <td>VarChar</td>
+                            <td>200</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--Comment-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="colgroup">Comment</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Data Type</th>
+                            <th scope="col">Width</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Article ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>
+                                This is a foreign key for the Article table and part of the 
+                                primary key
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>User ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>
+                                This is a foreign key for the User table and part of the
+                                primary key
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Content</td>
+                            <td>VarChar</td>
+                            <td>2,000</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--Poison<>Article-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="colgroup">Poison-Article Junction</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Data Type</th>
+                            <th scope="col">Width</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Poison ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>
+                                This is a foreign key for the Poison table
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Article ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>
+                                This is a foreign key for the Article table
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!--Article<>Image-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="colgroup">Article-Image Junction</th>
+                        </tr>
+                        <tr>
+                            <th scope="col">Field</th>
+                            <th scope="col">Data Type</th>
+                            <th scope="col">Width</th>
+                            <th scope="col">Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Image ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>
+                                This is a foreign key for the Image table
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Article ID Number</td>
+                            <td>Integer</td>
+                            <td></td>
+                            <td>
+                                This is a foreign key for the Article
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Main Picture</td>
+                            <td>Booloean</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
     </div>
 
