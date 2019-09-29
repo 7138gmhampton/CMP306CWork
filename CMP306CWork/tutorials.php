@@ -30,11 +30,14 @@ include_once 'config.php';
     <!--Tabs Nav-->
     <nav class="container">
         <div class="nav nav-tabs" id="navTutorials" role="tablist">
-            <a class="nav-item nav-link" id="navtabWeekOne" data-toggle="tab" href="#tabWeekOne">
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekOne">
                 Week 1
             </a>
-            <a class="nav-item nav-link" id="navtabWeekTwo" data-toggle="tab" href="#tabWeekTwo">
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTwo">
                 Week 2
+            </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekThree">
+                Week 3
             </a>
         </div>
     </nav>
