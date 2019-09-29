@@ -490,7 +490,7 @@ include_once 'config.php';
                                 </button>
                             </h3>
                         </div>
-                        <div id="collapsePoisonArcticle" class="collapse" data-parent="#accordianFields">
+                        <div id="collapsePoisonArticle" class="collapse" data-parent="#accordianFields">
                             <div class="card-body">
                                 <table class="table">
                                     <thead>
