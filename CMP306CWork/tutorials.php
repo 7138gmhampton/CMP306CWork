@@ -187,8 +187,6 @@ include_once 'config.php';
             </section>
         </div>
         <div id="tabWeekTwo" class="tab-pane fade"  role="tabpanel">
-            <p>This is something else</p>
-            
             <!--Database Diagrams-->
             <section class="container mt-3 border">
                 <h2 class="h2">Database Diagrams</h2>
