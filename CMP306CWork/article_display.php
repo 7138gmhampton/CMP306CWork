@@ -27,7 +27,7 @@ include_once 'config.php';
         <!--Title and Author-->
         <header>
             <?php
-
+            include_once ROOT.'scripts/server/view/view_article.php';
             ?>
         </header>
 

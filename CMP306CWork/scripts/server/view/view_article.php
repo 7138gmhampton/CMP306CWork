@@ -40,5 +40,20 @@ class ArticleView
 
         return $all_articles;
     }
+
+    public static function single($article_id)
+    {
+        //$article_data = ArticleAPI::getArticleById($article_id);
+        $article_array = json_decode(ArticleAPI::getArticleById($article_id), true);
+
+        $article = new Article(
+            $article_array[0]['article'], 
+            $article_array[0]['title'],
+            $article_array[0]['author'],
+            $article_array[0]['video'],
+            $article_array[0]['text']);
+
+        return $article;
+    }
 }
 ?>
