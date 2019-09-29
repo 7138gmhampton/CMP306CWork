@@ -12,7 +12,7 @@ class ArticleView
         $all_articles = array();
 
         foreach ($article_array as $each_article) {
-            $image_data = ImageAPI::getFirstArticleImage($each_article['article']);
+            $image_data = ImageAPI::getMainImageForArticle($each_article['article']);
             $image_array = json_decode($image_data, true);
             if (!$image_array) {
                 $next_article = new Article(

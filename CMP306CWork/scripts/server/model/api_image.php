@@ -3,7 +3,7 @@ require_once ROOT.'scripts/server/model/database.php';
 
 class ImageAPI extends Database
 {
-    public static function getFirstArticleImage($article_id)
+    public static function getMainImageForArticle($article_id)
     {
         $command = 'SELECT psn_image.image, psn_image.source, psn_image.title, psn_image.alttext '.
             'FROM psn_article_image '.
