@@ -186,7 +186,7 @@ include_once 'config.php';
                 </div>
             </div>
         </div>
-        <div class="tab-pane fade" id="tabWeekTwo" role="tabpanel">
+        <div id="tabWeekTwo" class="tab-pane fade"  role="tabpanel">
             <p>This is something else</p>
         </div>
     </div>
