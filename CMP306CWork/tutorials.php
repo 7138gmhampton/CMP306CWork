@@ -427,6 +427,58 @@ include_once 'config.php';
                             </div>
                         </div>
                     </div>
+
+                    <!--Comment-->
+                    <div class="card">
+                        <div id="headerComment" class="card-header">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseComment">
+                                    Comment
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseComment" class="collapse" data-parent="#accordianFields">
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Field</th>
+                                            <th scope="col">Data Type</th>
+                                            <th scope="col">Width</th>
+                                            <th scope="col">Note</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Article ID Number</td>
+                                            <td>Integer</td>
+                                            <td></td>
+                                            <td>
+                                                This is a foreign key for the Article table and part of the
+                                primary key
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>User ID Number</td>
+                                            <td>Integer</td>
+                                            <td></td>
+                                            <td>
+                                                This is a foreign key for the User table and part of the
+                                primary key
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Content</td>
+                                            <td>VarChar</td>
+                                            <td>2,000</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!--<table class="table">
                     <thead>
@@ -596,7 +648,7 @@ include_once 'config.php';
                 </table>-->
 
                 <!--Comment-->
-                <table class="table">
+                <!--<table class="table">
                     <thead>
                         <tr>
                             <th scope="colgroup">Comment</th>
@@ -634,7 +686,7 @@ include_once 'config.php';
                             <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
 
                 <!--Poison<>Article-->
                 <table class="table">
