@@ -18,10 +18,7 @@
   <ItemGroup>
     <Compile Include="article_display.php" />
     <Compile Include="config.php" />
-    <Compile Include="displayall.php" />
-    <Compile Include="displayemployee.php" />
     <Compile Include="display_article.php" />
-    <Compile Include="employee_update_page.php" />
     <Compile Include="index.php" />
     <Compile Include="listing.php" />
     <Compile Include="article_listing.php" />
@@ -35,15 +32,10 @@
     <Compile Include="practical_three.php" />
     <Compile Include="scripts\server\article.php" />
     <Compile Include="scripts\server\article_card_builder.php" />
-    <Compile Include="scripts\server\controller\createemployeerec.php" />
-    <Compile Include="scripts\server\controller\delete_employee.php" />
-    <Compile Include="scripts\server\controller\update_employee.php" />
     <Compile Include="scripts\server\database.php" />
     <Compile Include="scripts\server\listing_card_builder.php" />
-    <Compile Include="scripts\server\model\api-employee.php" />
     <Compile Include="scripts\server\model\api_article.php" />
     <Compile Include="scripts\server\model\api_poison.php" />
-    <Compile Include="scripts\server\model\connection.php" />
     <Compile Include="scripts\server\model\database.php" />
     <Compile Include="scripts\server\poison.php" />
     <Compile Include="scripts\server\poison_card_builder.php" />
@@ -57,7 +49,6 @@
     <Compile Include="practical_one.php" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="createemployee.html" />
     <Content Include="general_styles.css" />
     <Content Include="images\erd.png" />
     <Content Include="images\relation_schema.png" />
@@ -67,7 +58,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
-    <Folder Include="week3\" />
     <Folder Include="scripts\" />
     <Folder Include="parts\" />
     <Folder Include="scripts\client\" />
