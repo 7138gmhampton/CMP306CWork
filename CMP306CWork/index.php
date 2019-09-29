@@ -50,13 +50,13 @@ include_once 'config.php';
         </div>
 
         <!--Buttons to Weeks and Tutorials-->
-        <div class="container">
-            <div class="row text-center my-3">
+        <div class="container my-3">
+            <div class="row text-center">
                 <div class="col">
                     <a class="btn btn-primary page-button" href="tutorials.php">Tutorials and Evaluations</a>
                 </div>
             </div>
-            <div class="row text-center my-3 ">
+            <div class="row text-center">
                 <div class="col-lg-4">
                     <a class="btn btn-primary page-button" href="practical_one.php">Week 1</a>
                 </div>
@@ -65,6 +65,17 @@ include_once 'config.php';
                 </div>
                 <div class="col-lg-4">
                     <a class="btn btn-primary page-button" href="practical_three.php">Week 3</a>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button" href="practical_four.php">Week 4</a>
+                </div>
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button" href="practical_five.php">Week 5</a>
+                </div>
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button" href="practical_six.php">Week 6</a>
                 </div>
             </div>
         </div>
