@@ -186,7 +186,7 @@ include_once 'config.php';
                 </div>
             </section>
         </div>
-        <div id="tabWeekTwo" class="tab-pane fade"  role="tabpanel">
+        <div id="tabWeekTwo" class="tab-pane fade" role="tabpanel">
             <!--Database Diagrams-->
             <section class="container mt-3 border">
                 <h2 class="h2">Database Diagrams</h2>
@@ -851,6 +851,46 @@ include_once 'config.php';
                     </tbody>
                 </table>-->
             </section>
+        </div>
+        <div id="tabWeekThree" class="tab-pane fade" role="tabpanel">
+            <!--MVC Framework-->
+            <div class="container mt-3 border">
+                <h2 class="h2">MVC Framework Appraisal</h2>
+                <p>
+                    To exemplify the utilisation of the Model-View-Controller framework that has 
+                    been applied to site for this practical, the behaviour of the getArticleById 
+                    method will described here. After making use of PDO to connect to the 
+                    database and form a prepared statement; the query is executed. The result 
+                    from the query is then encoded in JSON format - making use of PHP's own 
+                    functions to achieve this. The JSON formatted response is returned to the 
+                    calling code/object: One of the View or Controller classes. The calling 
+                    method/code must then decode the JSON to another format for actual use.<br />
+                    In the site created up to week 3, this operation is instanced on the page 
+                    that displays any article. As the ID will be provided by a 'get' superglobal, 
+                    the method of the View class for articles to return a single article can be 
+                    called. This class can take JSON input and convert it to PHP objects to be 
+                    used directly on the page. It receives its JSON content by calling the 
+                    appropriate API method (see above).<br />
+                    Separating out the code that will submit actual queries/commands to the 
+                    database - or whatever other back-end is utilised - improves the 
+                    encapsulation and abstraction of the data itself. For example, if the 
+                    database were to be moved to another server or a new access provided, only 
+                    the Model code would have to changed (and, with employment of good OOP, 
+                    only in a single place). In fact, due to the fact that the Views and 
+                    Controllers taking input from agnostic formats like JSON and XML, the entire 
+                    API/Model section can be replaced allowing for the use of an entirely new 
+                    technology (e.g. replacing one's own servers with a web service) without 
+                    any major changes to the View/Controller code and, indeed, the pages 
+                    themselves. Additionally, within this framework roles and actions are better 
+                    separated; this will prevent unintended side-effects and allow for better 
+                    controls on passed data. Because the Model section of the framework (i.e. 
+                    API code) provides its data free from any formatting, the returned data can 
+                    be re-used by many View/Controller components without the implementation of 
+                    an interface - reducing code duplication. Due to its separation of 
+                    components, the framework is more apt for parallel development making it 
+                    easier for a group to work on it together.<br />
+                </p>
+            </div>
         </div>
     </div>
 
