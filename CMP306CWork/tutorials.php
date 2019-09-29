@@ -213,8 +213,118 @@ include_once 'config.php';
 
             <!--Tables and their Fields-->
             <section class="container mt-3 border">
-                <table class="table">
+                <div id="accordianFields" class="accordion">
                     <!--Image-->
+                    <div class="card">
+                        <div id="headerImage" class="card-header">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapseImage">
+                                    Image
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseImage" class="collapse" data-parent="#accordianFields">
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Field</th>
+                                            <th scope="col">Data Type</th>
+                                            <th scope="col">Width</th>
+                                            <th scope="col">Note</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ID Number</td>
+                                            <td>Integer</td>
+                                            <td></td>
+                                            <td>This is auto incremented and the primary key</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Source</td>
+                                            <td>VarChar</td>
+                                            <td>500</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Title</td>
+                                            <td>VarChar</td>
+                                            <td>500</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Alternative Text</td>
+                                            <td>VarChar</td>
+                                            <td>500</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Article-->
+                    <div class="card">
+                        <div id="headerArticle" class="card-header">
+                            <h3 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseArticle">
+                                    Article
+                                </button>
+                            </h3>
+                        </div>
+                        <div id="collapseArticle" class="collapse" data-parent="#accordianFields">
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Field</th>
+                                            <th scope="col">Data Type</th>
+                                            <th scope="col">Width</th>
+                                            <th scope="col">Note</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>ID Number</td>
+                                            <td>Integer</td>
+                                            <td></td>
+                                            <td>This is auto incremented and the primary key</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Title</td>
+                                            <td>VarChar</td>
+                                            <td>300</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Author</td>
+                                            <td>VarChar</td>
+                                            <td>300</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Video</td>
+                                            <td>VarChar</td>
+                                            <td>500</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Text</td>
+                                            <td>VarChar</td>
+                                            <td>20,000</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--<table class="table">
                     <thead>
                         <tr><th scope="colgroup">Image</th></tr>
                         <tr>
@@ -250,10 +360,10 @@ include_once 'config.php';
                             <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
 
                 <!--Article-->
-                <table class="table">
+                <!--<table class="table">
                     <thead>
                         <tr>
                             <th scope="colgroup">Article</th>
@@ -297,7 +407,7 @@ include_once 'config.php';
                             <td></td>
                         </tr>
                     </tbody>
-                </table>
+                </table>-->
 
                 <!--Poison-->
                 <table class="table">
