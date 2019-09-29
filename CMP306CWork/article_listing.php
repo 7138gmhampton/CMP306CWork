@@ -49,7 +49,7 @@ include_once 'config.php';
         //include_once ROOT.'scripts/server/view/poison.php';
         include_once ROOT.'scripts/server/view/view_poison.php';
 
-        $poison = PoisonView::singlePoison($_GET['id']);
+        $poison = PoisonView::single($_GET['id']);
 
         echo '<h1 class="h1">'.$poison->getName().' Articles</h1>';
         ?>

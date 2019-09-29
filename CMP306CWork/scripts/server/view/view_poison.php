@@ -4,7 +4,7 @@ require_once ROOT.'scripts/server/view/poison.php';
 
 class PoisonView
 {
-    public static function singlePoison($id)
+    public static function single($id)
     {
         $poison_data = PoisonAPI::getPoisonById($id);
         $poison_array = json_decode($poison_data, true);
@@ -21,7 +21,7 @@ class PoisonView
         return $poison;
     }
 
-    public static function allPoisons()
+    public static function all()
     {
         $poison_data = PoisonAPI::getAllPoisons();
         //var_dump($poison_data);
