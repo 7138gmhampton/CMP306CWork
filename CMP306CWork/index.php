@@ -44,7 +44,7 @@ include_once 'config.php';
         </nav>-->
 
         <!--Jumbo Title-->
-        <div class="jumbotron">
+        <div class="jumbotron d-none d-lg-block">
             <h1 class="display-1">CMP306 Coursework</h1>
             <h2 class="display-2">Gareth M. Hampton</h2>
         </div>
@@ -53,29 +53,29 @@ include_once 'config.php';
         <div class="container my-3">
             <div class="row text-center">
                 <div class="col">
-                    <a class="btn btn-primary page-button" href="tutorials.php">Tutorials and Evaluations</a>
+                    <a class="btn btn-primary page-button my-1" href="tutorials.php">Tutorials and Evaluations</a>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-lg-4">
-                    <a class="btn btn-primary page-button" href="practical_one.php">Week 1</a>
+                    <a class="btn btn-primary page-button my-1" href="practical_one.php">Week 1</a>
                 </div>
                 <div class="col-lg-4">
-                    <a class="btn btn-primary page-button" href="practical_two.php">Week 2</a>
+                    <a class="btn btn-primary page-button my-1" href="practical_two.php">Week 2</a>
                 </div>
                 <div class="col-lg-4">
-                    <a class="btn btn-primary page-button" href="practical_three.php">Week 3</a>
+                    <a class="btn btn-primary page-button my-1" href="practical_three.php">Week 3</a>
                 </div>
             </div>
             <div class="row text-center">
                 <div class="col-lg-4">
-                    <a class="btn btn-primary page-button" href="practical_four.php">Week 4</a>
+                    <a class="btn btn-primary page-button my-1" href="practical_four.php">Week 4</a>
                 </div>
                 <div class="col-lg-4">
-                    <a class="btn btn-primary page-button" href="practical_five.php">Week 5</a>
+                    <a class="btn btn-primary page-button my-1" href="practical_five.php">Week 5</a>
                 </div>
                 <div class="col-lg-4">
-                    <a class="btn btn-primary page-button" href="practical_six.php">Week 6</a>
+                    <a class="btn btn-primary page-button my-1" href="practical_six.php">Week 6</a>
                 </div>
             </div>
         </div>
