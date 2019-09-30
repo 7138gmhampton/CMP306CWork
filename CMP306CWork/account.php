@@ -73,7 +73,7 @@ include_once 'config.php';
                             <div class="form-group">
                                 <label for="#inputRegisterPassword">Password</label>
                                 <input id="inputRegisterPassword" class="form-control" 
-                                       name="username" type="password" />
+                                       name="password" type="password" />
                                 <label for="#inputRegisterConfirm">Confirm Password</label>
                                 <input id="inputRegisterConfirm" class="form-control" 
                                        type="password" />
