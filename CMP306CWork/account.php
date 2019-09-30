@@ -33,7 +33,8 @@ include_once 'config.php';
                         <h3 class="h3">Login</h3>
                     </div>
                     <div class="card-body">
-                        <form id="formLogin">
+                        <form id="formLogin" action="scripts/server/controller/login.php" 
+                              method="post">
                             <div class="form-group">
                                 <label for="#inputLoginEmail">Email Address</label>
                                 <input id="inputLoginEmail" class="form-control" name="email"
