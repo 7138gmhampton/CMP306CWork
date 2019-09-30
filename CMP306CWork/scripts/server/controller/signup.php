@@ -1,12 +1,14 @@
 <?php
-require_once '../../../../config.php';
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+require_once '../../../config.php';
 require_once ROOT.'scripts/server/controller/control_user.php';
 require_once ROOT.'scripts/server/view/view_user.php';
 
 UserController::create($_POST['email'], $_POST['username'], $_POST['password']);
 
 if (UserView::valid($_POST['email'])) {
-    header('Location: ../../../../index.php');
+    header('Location: ../../../index.php');
     die();
 }
 else {
