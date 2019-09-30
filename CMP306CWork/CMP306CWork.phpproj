@@ -59,6 +59,7 @@
     <Content Include="images\relation_schema.png" />
     <Content Include="parts\footer.html" />
     <Content Include="parts\mainbar.html" />
+    <Content Include="scripts\client\account.js" />
     <Content Include="scripts\client\common.js" />
   </ItemGroup>
   <ItemGroup>
