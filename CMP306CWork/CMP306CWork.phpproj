@@ -25,6 +25,7 @@
     <Compile Include="article_listing.php" />
     <Compile Include="scripts\server\controller\control_comment.php" />
     <Compile Include="scripts\server\controller\control_user.php" />
+    <Compile Include="scripts\server\controller\login.php" />
     <Compile Include="scripts\server\controller\signup.php" />
     <Compile Include="scripts\server\model\api_comment.php" />
     <Compile Include="scripts\server\model\api_image.php" />
