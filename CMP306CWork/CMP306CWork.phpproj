@@ -16,6 +16,7 @@
     <IncludeDebugInformation>false</IncludeDebugInformation>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="account.php" />
     <Compile Include="article_display.php" />
     <Compile Include="config.php" />
     <Compile Include="display_article.php" />

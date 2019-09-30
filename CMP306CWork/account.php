@@ -1,0 +1,66 @@
+<?php
+include_once 'config.php';
+?>
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="Gareth M. Hampton" />
+
+    <title>Login/Signup</title>
+
+    <link rel="stylesheet" type="text/css" href="general_styles.css" />
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <!--Bs Js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <!--Main Navbar-->
+    <?php
+    include_once ROOT.'parts/mainbar.html';
+    ?>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <form class="border border-secondary">
+
+                </form>
+            </div>
+            <div class="col-lg-5">
+                <form class="border border-secondary">
+                    <h3 class="h3">Registration</h3>
+                    <div class="form-group">
+                        <label for="#inputRegisterEmail">Email Address</label>
+                        <input id="inputRegisterEmail" class="form-control" type="email" />
+                    </div>
+                    <div class="form-group">
+                        <label for="#inputRegisterUsername">Username</label>
+                        <input id="inputRegisterUsername" class="form-control" type="text" />
+                        <small class="form-text text-muted">This must be unique</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="#inputRegisterPassword">Password</label>
+                        <input id="inputRegisterPassword" class="form-control" type="password" />
+                        <label for="#inputRegisterConfirm">Confirm Password</label>
+                        <input id="inputRegisterConfirm" class="form-control" type="password" />
+                    </div>
+                    <div class="form-group text-center">
+                        <button id="btnRegister" class="btn btn-primary" type="button">
+                            Register
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <?php
+    include_once ROOT.'parts/footer.html';
+    ?>
+</body>
+</html>
