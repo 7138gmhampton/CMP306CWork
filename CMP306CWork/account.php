@@ -42,12 +42,14 @@ include_once 'config.php';
                                 <input id="inputLoginPassword" class="form-control" 
                                        name="password" type="password" />
                             </div>
+                            <div class="form-group">
+                                <button id="btnLogin" class="btn btn-primary" type="button">
+                                    Login
+                                </button>
+                            </div>
                         </form>
                     </div>
                 </div>
-                <form class="border border-secondary">
-
-                </form>
             </div>
             <div class="col-lg-5">
                 <div class="card border border-secondary">
