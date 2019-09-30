@@ -14,11 +14,13 @@ class UserAPI extends Database
         //    $user_array[0]['username'],
         //    $user_array[0]['password']);
 
+        //var_dump($user_array[0]);
+
         try {
             $statement = self::prepareStatement($commmand);
-            $statement->bindParam(':email', $user_array[0]['email']);
-            $statement->bindParam(':username', $user_array[0]['username']);
-            $statement->bindParam(':password', $user_array[0]['password']);
+            $statement->bindParam(':email', $user_array['email']);
+            $statement->bindParam(':username', $user_array['username']);
+            $statement->bindParam(':password', $user_array['password']);
 
             $statement->execute();
         }
