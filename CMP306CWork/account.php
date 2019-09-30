@@ -51,7 +51,7 @@ include_once 'config.php';
                                 </button>
                                 <small id="txtLoginError" class="text-danger">
                                     <?php
-                                    if ($_GET['error'])
+                                    if (isset($_GET['error']))
                                         echo 'Email address/password is incorrect'
                                     ?>
                                 </small>
