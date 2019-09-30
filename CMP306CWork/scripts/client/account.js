@@ -2,7 +2,12 @@
 {
     $('#btnLogin').click(function ()
     {
+        let email = document.getElementById('inputLoginEmail').value;
+        let password = document.getElementById('inputLoginPassword').value;
 
+        if (email == null || password == null)
+            document.getElementById('txtLoginError').innerText = 'Please enter ALL fields...';
+        else document.getElementById('formLogin').submit();
     });
 
     $('#btnRegister').click(function ()
