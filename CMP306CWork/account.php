@@ -54,7 +54,7 @@ include_once 'config.php';
             <div class="col-lg-5">
                 <div class="card border border-secondary">
                     <div class="card-body">
-                        <form>
+                        <form id="formRegister" action="#" method="post">
                             <h3 class="h3">Registration</h3>
                             <div class="form-group">
                                 <label for="#inputRegisterEmail">Email Address</label>
