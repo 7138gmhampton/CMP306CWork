@@ -13,5 +13,11 @@ class User
         $this->username = $username;
         $this->password = $password;
     }
+
+    //Access Functions
+    public function getID() { return $this->user; }
+    public function getEmail() { return $this->email; }
+    public function getUsername() { return $this->username; }
+    public function getPassword() { return $this->password; }
 }
 ?>
