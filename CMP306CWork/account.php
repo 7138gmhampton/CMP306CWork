@@ -58,18 +58,23 @@ include_once 'config.php';
                             <h3 class="h3">Registration</h3>
                             <div class="form-group">
                                 <label for="#inputRegisterEmail">Email Address</label>
-                                <input id="inputRegisterEmail" class="form-control" type="email" />
+                                <input id="inputRegisterEmail" class="form-control" 
+                                       type="email" />
                             </div>
                             <div class="form-group">
                                 <label for="#inputRegisterUsername">Username</label>
-                                <input id="inputRegisterUsername" class="form-control" type="text" />
+                                <input id="inputRegisterUsername" class="form-control" 
+                                       type="text" />
                                 <small class="form-text text-muted">This must be unique</small>
                             </div>
                             <div class="form-group">
                                 <label for="#inputRegisterPassword">Password</label>
-                                <input id="inputRegisterPassword" class="form-control" type="password" />
+                                <input id="inputRegisterPassword" class="form-control" 
+                                       type="password" />
                                 <label for="#inputRegisterConfirm">Confirm Password</label>
-                                <input id="inputRegisterConfirm" class="form-control" type="password" />
+                                <input id="inputRegisterConfirm" class="form-control" 
+                                       type="password" />
+                                <small id="txtRegisterPasswordError" class="text-danger"></small>
                             </div>
                             <div class="form-group text-center">
                                 <button id="btnRegister" class="btn btn-primary" type="button">
