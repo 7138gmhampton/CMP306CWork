@@ -49,6 +49,12 @@ include_once 'config.php';
                                 <button id="btnLogin" class="btn btn-primary" type="button">
                                     Login
                                 </button>
+                                <small id="txtLoginError" class="text-danger">
+                                    <?php
+                                    if ($_GET['error'])
+                                        echo 'Email address/password is incorrect'
+                                    ?>
+                                </small>
                             </div>
                         </form>
                     </div>
