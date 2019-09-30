@@ -33,7 +33,7 @@ include_once 'config.php';
                         <h3 class="h3">Login</h3>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form id="formLogin">
                             <div class="form-group">
                                 <label for="#inputLoginEmail">Email Address</label>
                                 <input id="inputLoginEmail" class="form-control" name="email"
@@ -55,10 +55,12 @@ include_once 'config.php';
             </div>
             <div class="col-lg-5">
                 <div class="card border border-secondary">
+                    <div class="card-header">
+                        <h3 class="h3">Registration</h3>
+                    </div>
                     <div class="card-body">
                         <form id="formRegister" action="scripts/server/controller/signup.php" 
                               method="post">
-                            <h3 class="h3">Registration</h3>
                             <div class="form-group">
                                 <label for="#inputRegisterEmail">Email Address</label>
                                 <input id="inputRegisterEmail" class="form-control" 
