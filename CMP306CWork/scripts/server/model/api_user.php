@@ -27,5 +27,16 @@ class UserAPI extends Database
             return null;
         }
     }
+
+    public static function getUserByEmail($email)
+    {
+        $command = 'SELECT user, email, username, password '.
+            'FROM psn_user '.
+            'WHERE email = :email';
+
+        $response = self::selectWhere($command, ':email', $email);
+
+        return $response;
+    }
 }
 ?>
