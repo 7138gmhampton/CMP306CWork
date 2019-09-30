@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 include_once 'config.php';
 ?>
 <!DOCTYPE html>
@@ -54,23 +56,24 @@ include_once 'config.php';
             <div class="col-lg-5">
                 <div class="card border border-secondary">
                     <div class="card-body">
-                        <form id="formRegister" action="#" method="post">
+                        <form id="formRegister" action="scripts/server/controller/signup.php" 
+                              method="post">
                             <h3 class="h3">Registration</h3>
                             <div class="form-group">
                                 <label for="#inputRegisterEmail">Email Address</label>
                                 <input id="inputRegisterEmail" class="form-control" 
-                                       type="email" />
+                                       name="email" type="email" />
                             </div>
                             <div class="form-group">
                                 <label for="#inputRegisterUsername">Username</label>
                                 <input id="inputRegisterUsername" class="form-control" 
-                                       type="text" />
+                                       name="username" type="text" />
                                 <small class="form-text text-muted">This must be unique</small>
                             </div>
                             <div class="form-group">
                                 <label for="#inputRegisterPassword">Password</label>
                                 <input id="inputRegisterPassword" class="form-control" 
-                                       type="password" />
+                                       name="username" type="password" />
                                 <label for="#inputRegisterConfirm">Confirm Password</label>
                                 <input id="inputRegisterConfirm" class="form-control" 
                                        type="password" />
