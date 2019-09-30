@@ -10,4 +10,4 @@
     else $('#navTutorials a[href="#tabWeekOne"]').tab('show');
 
     $(window).scrollTop(0);
-})
+});

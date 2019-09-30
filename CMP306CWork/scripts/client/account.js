@@ -7,7 +7,12 @@
 
     $('#btnRegister').click(function ()
     {
+        let password = document.getElementById('inputRegisterPassword');
+        let confirmation = document.getElementById('inputRegisterConfirm');
 
+        if (password !== confirmation)
+            document.getElementById('txtRegisterPasswordError').innerText = 'Password and ' +
+                'confirmation do not match!';
     });
 
     $('#inputRegisterUsername').change(function ()
