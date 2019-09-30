@@ -23,37 +23,60 @@ include_once 'config.php';
     include_once ROOT.'parts/mainbar.html';
     ?>
 
-    <div class="container">
+    <div class="container my-3">
         <div class="row">
             <div class="col-lg-7">
+                <div class="card border border-secondary">
+                    <div class="card-header">
+                        <h3 class="h3">Login</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="#inputLoginEmail">Email Address</label>
+                                <input id="inputLoginEmail" class="form-control" name="email"
+                                       type="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="#inputLoginPassword">Password</label>
+                                <input id="inputLoginPassword" class="form-control" 
+                                       name="password" type="password" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
                 <form class="border border-secondary">
 
                 </form>
             </div>
             <div class="col-lg-5">
-                <form class="border border-secondary">
-                    <h3 class="h3">Registration</h3>
-                    <div class="form-group">
-                        <label for="#inputRegisterEmail">Email Address</label>
-                        <input id="inputRegisterEmail" class="form-control" type="email" />
+                <div class="card border border-secondary">
+                    <div class="card-body">
+                        <form>
+                            <h3 class="h3">Registration</h3>
+                            <div class="form-group">
+                                <label for="#inputRegisterEmail">Email Address</label>
+                                <input id="inputRegisterEmail" class="form-control" type="email" />
+                            </div>
+                            <div class="form-group">
+                                <label for="#inputRegisterUsername">Username</label>
+                                <input id="inputRegisterUsername" class="form-control" type="text" />
+                                <small class="form-text text-muted">This must be unique</small>
+                            </div>
+                            <div class="form-group">
+                                <label for="#inputRegisterPassword">Password</label>
+                                <input id="inputRegisterPassword" class="form-control" type="password" />
+                                <label for="#inputRegisterConfirm">Confirm Password</label>
+                                <input id="inputRegisterConfirm" class="form-control" type="password" />
+                            </div>
+                            <div class="form-group text-center">
+                                <button id="btnRegister" class="btn btn-primary" type="button">
+                                    Register
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div class="form-group">
-                        <label for="#inputRegisterUsername">Username</label>
-                        <input id="inputRegisterUsername" class="form-control" type="text" />
-                        <small class="form-text text-muted">This must be unique</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="#inputRegisterPassword">Password</label>
-                        <input id="inputRegisterPassword" class="form-control" type="password" />
-                        <label for="#inputRegisterConfirm">Confirm Password</label>
-                        <input id="inputRegisterConfirm" class="form-control" type="password" />
-                    </div>
-                    <div class="form-group text-center">
-                        <button id="btnRegister" class="btn btn-primary" type="button">
-                            Register
-                        </button>
-                    </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>
