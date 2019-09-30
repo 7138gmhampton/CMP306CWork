@@ -92,5 +92,8 @@ include_once 'config.php';
     <?php
     include_once ROOT.'parts/footer.html';
     ?>
+
+    <!--Other scripts-->
+    <script src="scripts/client/account.js"></script>
 </body>
 </html>
