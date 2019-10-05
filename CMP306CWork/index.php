@@ -1,4 +1,7 @@
-﻿<?php
+<?php
+//Session
+session_start();
+
 include_once 'config.php';
 ?>
 <!DOCTYPE html>
@@ -21,7 +24,7 @@ include_once 'config.php';
     <body>
         <!--Main Navbar-->
         <?php
-        include 'parts/mainbar.html';
+        include 'parts/mainbar.php';
         ?>
         <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <a class="navbar-brand" href="index.php">CMP306</a>

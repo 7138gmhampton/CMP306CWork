@@ -1,4 +1,7 @@
 <?php
+//Session
+session_start();
+
 include_once 'config.php';
 ?>
 <!DOCTYPE html>
@@ -22,7 +25,7 @@ include_once 'config.php';
 <body>
     <!--Main Navbar-->
     <?php
-    include_once ROOT.'parts/mainbar.html';
+    include_once ROOT.'parts/mainbar.php';
     ?>
 
     <!--Tutorials and Evaluations-->

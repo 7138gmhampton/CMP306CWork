@@ -1,6 +1,10 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+//Session
+session_start();
+
 include_once 'config.php';
 ?>
 <!DOCTYPE html>
@@ -22,7 +26,7 @@ include_once 'config.php';
 <body>
     <!--Main Navbar-->
     <?php
-    include ROOT.'parts/mainbar.html';
+    include ROOT.'parts/mainbar.php';
     //echo '<p>Check</p>';
     ?>
 
