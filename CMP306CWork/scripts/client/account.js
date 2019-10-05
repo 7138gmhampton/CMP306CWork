@@ -32,6 +32,8 @@
 
         if (password !== confirmation)
             errors.innerText = 'Password and confirmation do not match!';
+        else if (password.length < 8)
+            errors.innerText = 'Password must be at least 8 characters long.';
         else if (!(special.test(password) && number.test(password) && capital.test(password) && 
             letter.test(password) || password.length > 14))
             errors.innerText = 'Password MUST contain at least one lowercase, Uppercase, ' +
