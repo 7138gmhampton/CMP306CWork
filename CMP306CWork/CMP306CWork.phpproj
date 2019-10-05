@@ -52,7 +52,6 @@
     <Compile Include="scripts\server\view\poison.php" />
     <Compile Include="scripts\server\view\view_article.php" />
     <Compile Include="scripts\server\view\view_poison.php" />
-    <Compile Include="week1comments.php" />
     <Compile Include="practical_two.php" />
     <Compile Include="practical_one.php" />
   </ItemGroup>
