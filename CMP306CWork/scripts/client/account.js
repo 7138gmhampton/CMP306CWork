@@ -14,29 +14,29 @@
     {
         let password = document.getElementById('inputRegisterPassword').value;
         let confirmation = document.getElementById('inputRegisterConfirm').value;
-
         let special = /[!"#\$%&'\(\)\*\+,-\.:;<=>\?@\[\\\]\^_`\{\|\}~]/;
         let number = /\w/;
         let capital = /[A-Z]/;
         let letter = /[a-z]/;
+        let errors = document.getElementById('txtRegisterPasswordError');
 
-        console.log('Password: ' + password);
-        console.log('Confirm: ' + confirmation);
+        //console.log('Password: ' + password);
+        //console.log('Confirm: ' + confirmation);
 
-        console.log('Special: ' + special.test(password));
+        //console.log('Special: ' + special.test(password));
         //console.log('Number: ' + password.test(number));
         //console.log('Capital: ' + password.test(capital));
         //console.log('Letter: ' + password.test(letter));
 
+        errors.innerText = '';
+
         if (password !== confirmation)
-            document.getElementById('txtRegisterPasswordError').innerText = 'Password and ' +
-                'confirmation do not match!';
+            errors.innerText = 'Password and confirmation do not match!';
         else if (!(special.test(password) && number.test(password) && capital.test(password) && 
             letter.test(password) || password.length > 14))
-            document.getElementById('txtRegisterPasswordError').innerText = 'Password MUST ' +
-                'contain at least one lowercase, Uppercase, number and special character ' +
-                '(#, !, ...) OR be at least 15 characters long.';
-        //else document.getElementById('formRegister').submit();
+            errors.innerText = 'Password MUST contain at least one lowercase, Uppercase, ' +
+                'number and special character (#, !, ...) OR be at least 15 characters long.';
+        else document.getElementById('formRegister').submit();
     });
 
     $('#inputRegisterUsername').change(function ()
