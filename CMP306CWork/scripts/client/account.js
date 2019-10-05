@@ -24,15 +24,15 @@
         console.log('Confirm: ' + confirmation);
 
         console.log('Special: ' + special.test(password));
-        console.log('Number: ' + password.test(number));
-        console.log('Capital: ' + password.test(capital));
-        console.log('Letter: ' + password.test(letter));
+        //console.log('Number: ' + password.test(number));
+        //console.log('Capital: ' + password.test(capital));
+        //console.log('Letter: ' + password.test(letter));
 
         if (password !== confirmation)
             document.getElementById('txtRegisterPasswordError').innerText = 'Password and ' +
                 'confirmation do not match!';
-        else if (!(password.test(special) && password.test(number) && password.test(capital) && 
-            password.test(letter) || password.length() > 14))
+        else if (!(special.test(password) && number.test(password) && capital.test(password) && 
+            letter.test(password) || password.length > 14))
             document.getElementById('txtRegisterPasswordError').innerText = 'Password MUST ' +
                 'contain at least one lowercase, Uppercase, number and special character ' +
                 '(#, !, ...) OR be at least 15 characters long.';
