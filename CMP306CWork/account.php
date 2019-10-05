@@ -74,7 +74,7 @@ include_once 'config.php';
                         <h3 class="h3">Registration</h3>
                     </div>
                     <div class="card-body">
-                        <form id="formRegister" action="#" 
+                        <form id="formRegister" action="scripts/server/controller/signup.php" 
                               method="post">
                             <div class="form-group">
                                 <label for="#inputRegisterEmail">Email Address</label>
