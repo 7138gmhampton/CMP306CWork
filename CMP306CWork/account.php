@@ -1,6 +1,14 @@
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
+
+//Session Start & Redirect
+session_start();
+if (isset($_SESSION['uid'])) {
+    header('Location: index.php');
+    die();
+}
+
 include_once 'config.php';
 ?>
 <!DOCTYPE html>
