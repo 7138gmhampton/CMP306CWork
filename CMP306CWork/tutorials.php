@@ -920,8 +920,8 @@ include_once 'config.php';
                 </p>
                 
                 <!--Cracking Table-->
-                <table class="table border border-secondary">
-                    <thead>
+                <table class="table border">
+                    <thead class="thead-light">
                         <tr>
                             <th scope="col">Number of Characters</th>
                             <th scope="col">Elements</th>
