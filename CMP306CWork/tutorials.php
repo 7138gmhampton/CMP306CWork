@@ -989,6 +989,29 @@ include_once 'config.php';
                     after a number of failed access attempts are good candidates.
                 </p>
             </section>
+            <section class="container mt-3 border">
+                <h2 class="h2">Session Timeout</h2>
+                <p>
+                    If one has access to the php.ini for the server, the maximum time for an 
+                    inactive session can be set to 5 mins by changing the gc_maxlifetime 
+                    variable to 600. If this file is not accessible then this variable can be 
+                    set using the statement session.gc_maxlifetime = 600 in the PHP code on the 
+                    page. It must be noted that because this manner of timing out inactive 
+                    sessions relies on the garbage collection function it is not particularly 
+                    reliable. Should there be a low volume of traffic, the garbage collection 
+                    may not be initiated in the server and a session run over the time delimited 
+                    by the above variable. For this reason, if one requires a more strict 
+                    timeout procedure, it is advised that this be stated directly in the code of 
+                    the page (see below for an example).
+                </p>
+                <code>
+                    session_start();<br />
+
+                    if (time() - $_SESSION['last_access'] > 600)<br />
+	                    //Redirect to logout<br />
+                    else $_SESSION['last_access'] = time();<br />
+                </code>
+            </section>
         </div>
     </div>
 
