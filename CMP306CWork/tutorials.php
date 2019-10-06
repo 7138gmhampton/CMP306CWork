@@ -920,7 +920,7 @@ include_once 'config.php';
                 </p>
                 
                 <!--Cracking Table-->
-                <table class="table">
+                <table class="table border border-secondary">
                     <thead>
                         <tr>
                             <th scope="col">Number of Characters</th>
