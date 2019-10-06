@@ -42,6 +42,9 @@ include_once 'config.php';
             <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekThree">
                 Week 3
             </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekFour">
+                Week 4
+            </a>
         </div>
     </nav>
 
@@ -897,6 +900,43 @@ include_once 'config.php';
                     easier for a group to work on it together.<br />
                 </p>
             </div>
+        </div>
+        <div id="tabWeekFour" class="tab-pane fade">
+            <!--Security Evaluation-->
+            <section class="container mt-3 border">
+                <h2 class="h2">Security</h2>
+                <p>
+                    Access to the accounts on this site are protected by a password login. To 
+                    ensure a minimum strength for the password selected by the user, when 
+                    registering certain prerequisites must be met for the password to be 
+                    accepted. All passwords must be at least 8 characters long and those that 
+                    are less than 15 must contain an uppercase, a digit and a symbol. These 
+                    constraints should make brute force password cracking prohibitively 
+                    difficult (see below table) but provides lesser protection against 
+                    dictionary-based attacks. To cover this weakness, the password could be 
+                    checked against a library of common passwords and dictionaries and either 
+                    the user could be notified of this surfeit or the password could be rejected 
+                    outright.
+                </p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Number of Characters</th>
+                            <th scope="col">Elements</th>
+                            <th scope="col">Example</th>
+                            <th scope="col">Time to Brute-Force Crack</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>6</td>
+                            <td>All lower case letters</td>
+                            <td>mexegy</td>
+                            <td>~20s</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </div>
     </div>
 
