@@ -918,6 +918,8 @@ include_once 'config.php';
                     the user could be notified of this surfeit or the password could be rejected 
                     outright.
                 </p>
+                
+                <!--Cracking Table-->
                 <table class="table">
                     <thead>
                         <tr>
@@ -934,8 +936,58 @@ include_once 'config.php';
                             <td>mexegy</td>
                             <td>~20s</td>
                         </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>All lower case letters</td>
+                            <td>vafgawwa</td>
+                            <td>~3 1/2hrs</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>Mixture of lowercase, uppercase, digits and symbols</td>
+                            <td>1BmA`1p;</td>
+                            <td>~1 decade</td>
+                        </tr>
+                        <tr>
+                            <td>15</td>
+                            <td>All lower case letters</td>
+                            <td>nkkwmymkoyghrao</td>
+                            <td>~3,300 years</td>
+                        </tr>
                     </tbody>
                 </table>
+
+                <p>
+                    It should be noted that, during the login process, if the either the email 
+                    address (which is used as an identifier) or the password are entered 
+                    incorrectly, the user is notified of the error but not <em>which</em> 
+                    contains the error. This makes it more for bad actors to ascertain whether 
+                    an email address is even valid (if they have not already ascertained this by 
+                    other means, see below for an exemplar, a likely first step).
+                </p>
+                <p>
+                    This type of user logon necessitates that the server holds email addresses 
+                    with their attendant passwords. This means that should the contents of this 
+                    database come in to the possession of external parties, if everything is in 
+                    plain text, the security of the accounts will be completely compromised. To 
+                    minimise the fallout of such a breach, the passwords are hashed before being 
+                    stored in the database - making use of PHP's provided functions. The default 
+                    hashing function on PHP also includes a 'salt'. This extra piece of randomly 
+                    generated added to a password before it is hashed text ensures that each 
+                    instance of a particular password's hash is unique, thus preventing the 
+                    application of 'rainbow tables' (sets of previously generated hashes of 
+                    common passwords and dictionary words).
+                </p>
+                <p>
+                    Were this site to involve itself with more sensitive data/transactions, e.g. 
+                    handling payment information to sell products, more stringent security 
+                    mechanisms would be advisable. At registration, verification of the email 
+                    address would be needed to ensure that the registering user has access to 
+                    the email account (and isn't a bot either). As unauthorised access to the 
+                    account would now have the potential for greater losses/harms, further 
+                    protections should be added - two-factor authentication and/or a lockout 
+                    after a number of failed access attempts are good candidates.
+                </p>
             </section>
         </div>
     </div>
