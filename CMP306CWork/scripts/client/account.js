@@ -12,13 +12,17 @@
 
     $('#btnRegister').click(function ()
     {
-        let password = document.getElementById('inputRegisterPassword').value;
-        let confirmation = document.getElementById('inputRegisterConfirm').value;
         let special = /[!"#\$%&'\(\)\*\+,-\.:;<=>\?@\[\\\]\^_`\{\|\}~]/;
         let number = /\w/;
         let capital = /[A-Z]/;
         let letter = /[a-z]/;
+        //let valid_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        let email_check = /\S{1,}@\S{1,}\.\S/;
         let errors = document.getElementById('txtRegisterPasswordError');
+        let email = document.getElementById('inputRegisterEmail').value;
+        let username = document.getElementById('inputRegisterUsername').value;
+        let password = document.getElementById('inputRegisterPassword').value;
+        let confirmation = document.getElementById('inputRegisterConfirm').value;
 
         //console.log('Password: ' + password);
         //console.log('Confirm: ' + confirmation);
@@ -38,6 +42,8 @@
             letter.test(password) || password.length > 14))
             errors.innerText = 'Password MUST contain at least one lowercase, Uppercase, ' +
                 'number and special character (#, !, ...) OR be at least 15 characters long.';
+        else if (!email_check.test(email))
+            errors.innerText = 'Invalid email address.';
         else document.getElementById('formRegister').submit();
     });
 
