@@ -9,15 +9,16 @@ class PoisonView extends ViewController
     {
         $poison_data = PoisonAPI::getPoisonById(self::scrub($id));
         $poison_array = json_decode($poison_data, true);
+        $scrubbed_array = self::scrubArray($poison_array);
 
         $poison = new Poison(
-            $poison_array[0]['poison'],
-            $poison_array[0]['name'],
-            $poison_array[0]['alternative'],
-            $poison_array[0]['description'],
-            $poison_array[0]['source'],
-            $poison_array[0]['title'],
-            $poison_array[0]['alttext']);
+            $scrubbed_array[0]['poison'],
+            $scrubbed_array[0]['name'],
+            $scrubbed_array[0]['alternative'],
+            $scrubbed_array[0]['description'],
+            $scrubbed_array[0]['source'],
+            $scrubbed_array[0]['title'],
+            $scrubbed_array[0]['alttext']);
 
         return $poison;
     }
@@ -28,9 +29,10 @@ class PoisonView extends ViewController
         //var_dump($poison_data);
         $poison_array = json_decode($poison_data, true);
         //var_dump($array_of_poisons);
-        $all_poisons = array();
+        $scrubbed_array = self::scrubArray($poison_array);
 
-        foreach ($poison_array as $each_poison) {
+        $all_poisons = array();
+        foreach ($scrubbed_array as $each_poison) {
             //var_dump($each_poison);
             $next_poison = new Poison(
                 $each_poison['poison'],
