@@ -10,18 +10,6 @@ class ViewController
         return $clean;
     }
 
-    protected static function scrubRecord($raw_record)
-    {
-        $clean_record = array();
-
-        foreach ($raw_record as $key => $value) {
-            $clean_value = self::scrub($value);
-            $clean_record[$key] = $clean_value;
-        }
-
-        return $clean_record;
-    }
-
     protected static function scrubArray($raw_array)
     {
         if ($raw_array = null) return null;
