@@ -955,6 +955,16 @@ include_once 'config.php';
                             <td>~3,300 years</td>
                         </tr>
                     </tbody>
+                    <tfoot class="tfoot-light">
+                        <tr>
+                            <td scope="colgroup" colspan="4">
+                                <small>
+                                    Time estimates generated from 
+                                    <a href="https://www.betterbuys.com/estimating-password-cracking-times/">BetterBuys: Estimating Password-Cracking Times</a>
+                                </small>
+                            </td>
+                        </tr>
+                    </tfoot>
                 </table>
 
                 <p>
