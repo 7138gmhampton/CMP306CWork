@@ -1,13 +1,29 @@
 <?php
 class ViewController
 {
-    protected static function scrub($input)
+    protected static function scrub($raw)
     {
-        $clean_input = trim($input);
-        $clean_input = stripslashes($clean_input);
-        $clean_input = htmlspecialchars($clean_input);
+        $clean = trim($raw);
+        $clean = stripslashes($clean);
+        $clean = htmlspecialchars($clean);
 
-        return $clean_input;
+        return $clean;
+    }
+
+    protected static function scrubArray($raw_array)
+    {
+        $clean_array = array();
+
+        foreach ($raw_array as $entry) {
+            $clean_entry = array();
+            foreach ($entry as $key => $value) {
+                $clean_value = self::scrub($value);
+                $clean_entry[$key] = $clean_value;
+            }
+            array_push($clean_entry);
+        }
+
+        return $clean_array;
     }
 }
 ?>
