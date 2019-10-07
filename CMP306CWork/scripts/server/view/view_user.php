@@ -1,12 +1,13 @@
 <?php
+require_once ROOT.'scripts/server/view_controller.php';
 require_once ROOT.'scripts/server/model/api_user.php';
 require_once ROOT.'scripts/server/view/user.php';
 
-class UserView
+class UserView extends ViewController
 {
     public static function valid($email)
     {
-        $user_data = UserAPI::getUserByEmail($email);
+        $user_data = UserAPI::getUserByEmail(self::scrub($email));
         $user_array = json_decode($user_data, true);
 
         $valid = count($user_array) == 1;
@@ -16,7 +17,7 @@ class UserView
 
     public static function singleByEmail($email)
     {
-        $user_data = UserAPI::getUserByEmail($email);
+        $user_data = UserAPI::getUserByEmail(self::scrub($email));
         $user_array = json_decode($user_data, true);
 
         $user = new User(

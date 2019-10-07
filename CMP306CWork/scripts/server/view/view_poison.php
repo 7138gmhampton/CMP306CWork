@@ -1,12 +1,13 @@
 <?php
+require_once ROOT.'scripts/server/view_controller.php';
 require_once ROOT.'scripts/server/model/api_poison.php';
 require_once ROOT.'scripts/server/view/poison.php';
 
-class PoisonView
+class PoisonView extends ViewController
 {
     public static function single($id)
     {
-        $poison_data = PoisonAPI::getPoisonById($id);
+        $poison_data = PoisonAPI::getPoisonById(self::scrub($id));
         $poison_array = json_decode($poison_data, true);
 
         $poison = new Poison(

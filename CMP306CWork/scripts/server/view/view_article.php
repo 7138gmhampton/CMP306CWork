@@ -1,13 +1,14 @@
 <?php
+require_once ROOT.'scripts/server/view_controller.php';
 require_once ROOT.'scripts/server/model/api_article.php';
 include_once ROOT.'scripts/server/model/api_image.php';
 require_once ROOT.'scripts/server/view/article.php';
 
-class ArticleView
+class ArticleView extends ViewController
 {
     public static function allForPoison($poison_id)
     {
-        $article_data = ArticleAPI::getAllArticlesForPoison($poison_id);
+        $article_data = ArticleAPI::getAllArticlesForPoison(self::scrub($poison_id));
         $article_array = json_decode($article_data, true);
         $all_articles = array();
 
@@ -44,7 +45,8 @@ class ArticleView
     public static function single($article_id)
     {
         //$article_data = ArticleAPI::getArticleById($article_id);
-        $article_array = json_decode(ArticleAPI::getArticleById($article_id), true);
+        $article_array = json_decode(ArticleAPI::getArticleById(
+            self::scrub($article_id)), true);
 
         $article = new Article(
             $article_array[0]['article'], 

@@ -1,12 +1,14 @@
 <?php
+require_once ROOT.'scripts/server/view_controller.php';
 require_once ROOT.'scripts/server/model/api_image.php';
 require_once ROOT.'scripts/server/view/image.php';
 
-class ImageView
+class ImageView extends ViewController
 {
     public static function allForArticle($article_id)
     {
-        $image_array = json_decode(ImageAPI::getAllImagesForArticle($article_id), true);
+        $image_array = json_decode(ImageAPI::getAllImagesForArticle(
+            self::scrub($article_id)), true);
         $all_images = array();
 
         foreach ($image_array as $each_image) {
