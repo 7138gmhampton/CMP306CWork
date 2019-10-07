@@ -10,6 +10,15 @@
             'Logout</a>';
         echo '<a class="nav-link d-lg-none mob-nav-text" href="scripts/server/controller/'.
             'logout.php">Logout</a>';
+        echo '<div class="btn-group">';
+        echo '  <button class="btn btn-primary dropdown-toggle" type="button" '.
+            'data-toggle="dropdown">';
+        echo $_SESSION['username'];
+        echo '  </button>';
+        echo '  <div class="dropdown-menu">';
+        echo '      <a class="dropdown-item" href="scripts/server/controller/logout.php">Logout</a>';
+        echo '  </div>';
+        echo '</div>';
     }
     else {
         echo '<a class="nav-link d-none d-lg-block" href="account.php">Login</a>';
