@@ -12,6 +12,8 @@ class ViewController
 
     protected static function scrubArray($raw_array)
     {
+        if ($raw_array = null) return null;
+        
         $clean_array = array();
 
         foreach ($raw_array as $entry) {
