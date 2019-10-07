@@ -12,7 +12,7 @@ class ViewController
 
     protected static function scrubArray($raw_array)
     {
-        if ($raw_array = null) return null;
+        if ($raw_array == null || $raw_array == false) return null;
         
         $clean_array = array();
 
