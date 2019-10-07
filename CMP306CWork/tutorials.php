@@ -1014,13 +1014,13 @@ include_once 'config.php';
                     timeout procedure, it is advised that this be stated directly in the code of 
                     the page (see below for an example).
                 </p>
-                <code>
+                <pre><code>
                     session_start();<br />
 
                     if (time() - $_SESSION['last_access'] > 600)<br />
 	                    //Redirect to logout<br />
                     else $_SESSION['last_access'] = time();<br />
-                </code>
+                </code></pre>
             </section>
         </div>
     </div>
