@@ -1,7 +1,7 @@
 <?php
 require_once ROOT.'scripts/server/model/api_user.php';
 
-class UserController
+class UserController extends Controller
 {
     public static function create($email, $username, $raw_password)
     {
