@@ -20,7 +20,7 @@ class ViewController
                 $clean_value = self::scrub($value);
                 $clean_entry[$key] = $clean_value;
             }
-            array_push($clean_entry);
+            array_push($clean_array, $clean_entry);
         }
 
         return $clean_array;
