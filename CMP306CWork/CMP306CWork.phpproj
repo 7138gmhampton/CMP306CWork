@@ -24,6 +24,7 @@
     <Compile Include="listing.php" />
     <Compile Include="article_listing.php" />
     <Compile Include="practical_four.php" />
+    <Compile Include="scripts\server\controller\controller.php" />
     <Compile Include="scripts\server\controller\control_comment.php" />
     <Compile Include="scripts\server\controller\control_user.php" />
     <Compile Include="scripts\server\controller\login.php" />
