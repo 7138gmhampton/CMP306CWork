@@ -14,5 +14,15 @@ class CommentController extends ViewController
 
         CommentAPI::createComment($comment_data);
     }
+
+    public static function edit($comment_id, $new_content)
+    {
+        $comment_array = array(
+            'comment' => self::scrub($comment_id),
+            'content' => self::scrub($new_content));
+        $comment_data = json_encode($comment_array);
+
+        CommentAPI::updateComment($comment_data);
+    }
 }
 ?>
