@@ -122,7 +122,7 @@ include_once 'config.php';
                     echo '<form id="formComment" '.
                         'action="scripts/server/controller/submit_comment.php" method="post">';
                     echo '<input class="d-none" name="article" value="'.$article->getID().'" />';
-                    echo '<input name="user" value"'.$_SESSION['uid'].'" type="hidden" />';
+                    echo '<input name="user" value="'.$_SESSION['uid'].'" type="hidden" />';
                     echo '  <div class="row">';
                     echo '      <div class="col-lg-10">';
                     echo '          <textarea class="form-control" name="content" rows="2">'.
@@ -135,9 +135,9 @@ include_once 'config.php';
                     echo '</div>';
                 }
                 ?>
-                <form>
+                <!--<form>
 
-                </form>
+                </form>-->
             </section>
         </footer>
     </article>
@@ -146,5 +146,8 @@ include_once 'config.php';
     <?php
     include_once ROOT.'parts/footer.html';
     ?>
+
+    <!--Other Scripts-->
+    <script src="scripts/client/article.js"></script>
 </body>
 </html>
