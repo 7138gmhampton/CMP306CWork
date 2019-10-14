@@ -117,6 +117,24 @@ include_once 'config.php';
                 </table>
 
                 <!--Comment Submission-->
+                <?php
+                if (isset($_SESSION['uid'])) {
+                    echo '<form id="formComment" '.
+                        'action="scripts/server/controller/submit_comment.php" method="post">';
+                    echo '<input class="d-none" name="article" value="'.$article->getID().'" />';
+                    echo '<input name="user" value"'.$_SESSION['uid'].'" type="hidden" />';
+                    echo '  <div class="row">';
+                    echo '      <div class="col-lg-10">';
+                    echo '          <textarea class="form-control" name="content" rows="2">'.
+                        '</textarea>';
+                    echo '      </div>';
+                    echo '      <div class="col-lg-2">';
+                    echo '          <button id="btnComment" class="btn btn-secondary" '.
+                        'type="button">Submit</button>';
+                    echo '      </div>';
+                    echo '</div>';
+                }
+                ?>
                 <form>
 
                 </form>
