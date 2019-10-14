@@ -2,11 +2,14 @@
 {
     $('#btnLogin').click(function ()
     {
+        let email_check = /\S{1,}@\S{1,}\.\S/;
         let email = document.getElementById('inputLoginEmail').value;
         let password = document.getElementById('inputLoginPassword').value;
 
         if (email == null || password == null)
             document.getElementById('txtLoginError').innerText = 'Please enter ALL fields...';
+        else if (!email_check.test(email))
+            document.getElementById('txtLoginError').innerText = 'Invalid email address.';
         else document.getElementById('formLogin').submit();
     });
 
