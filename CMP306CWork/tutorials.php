@@ -45,6 +45,12 @@ include_once 'config.php';
             <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekFour">
                 Week 4
             </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekFive">
+                Week 5
+            </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekSix">
+                Week 6
+            </a>
         </div>
     </nav>
 
@@ -1022,6 +1028,19 @@ include_once 'config.php';
                     else $_SESSION['last_access'] = time();<br />
                 </code></pre>
             </section>
+        </div>
+        <div id="tabWeekFive" class="tab-pane fade"></div>
+        <div id="tabWeekSix" class="tab-pane fade">
+            <!--MVC Aims and Benefits-->
+            <section class="container mt-3 border">
+                <h2 class="h2">MVC Frameworks</h2>
+                <h3 class="h3">Aim</h3>
+                <p></p>
+                <h3 class="h3">Benefits</h3>
+                <p></p>
+            </section>
+            <!--RPC-->
+            <section class="container mt-3 border"></section>
         </div>
     </div>
 
