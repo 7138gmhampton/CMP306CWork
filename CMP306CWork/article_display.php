@@ -117,6 +117,9 @@ include_once 'config.php';
                 </table>
 
                 <!--Comment Submission-->
+                <form>
+
+                </form>
             </section>
         </footer>
     </article>
