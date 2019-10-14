@@ -1035,12 +1035,44 @@ include_once 'config.php';
             <section class="container mt-3 border">
                 <h2 class="h2">MVC Frameworks</h2>
                 <h3 class="h3">Aim</h3>
-                <p></p>
+                <p>
+                    The Model-View-Controller design pattern focusses on dividing the elements 
+                    of data (Model), display (View) and manipulation (Controller) into disparate 
+                    sections. This enhances the separation of concerns and eases development of 
+                    units conforming to the single responsibility principle.
+                </p>
                 <h3 class="h3">Benefits</h3>
-                <p></p>
+                <p>
+                    Due to the improved separations of concerns for a site developed within an 
+                    MVC framework, the various components have better encapsulation and are thus 
+                    more weakly tied to one another. This finer grained modularity engenders 
+                    more material reuse leading to DRYer code that is easier to read and 
+                    maintain.<br />
+                    Additionally, with such separation, re-engineering becomes a more direct 
+                    task. For example, switching to a web service for the data will require 
+                    drastic changes to be made only to the Model components.
+                </p>
             </section>
             <!--RPC-->
-            <section class="container mt-3 border"></section>
+            <section class="container mt-3 border">
+                <h3 class="h3">JSON-RPC</h3>
+                <p>
+                    To utilise Remote Procedure Calls to retrieve and manipulate data, the 
+                    various View and Controller components submit a POST (or alternatively GET) 
+                    request to the remote source containing JSON; XML-RPC is also available. 
+                    Here, the request is submitted using PHP’s cURL library but HTTP submission 
+                    methods would be viable (e.g. AJAX). This remote call is made instead of a 
+                    call to the responsible Model component.
+                </p>
+                <img class="img-fluid" src="images/RPC.png" alt="MVC and Remote Diagram"/>
+                <p>
+                    In order to fulfill the RPC request, the JSON-RPC version; an ID number, the 
+                    function name and any arguments must sent. For creations and updates, this 
+                    necessitates knowing the appropriate keys and allowed input for their 
+                    attendant values. In the cases of retrieval and deletions, the parameters 
+                    will relate to search/limiting criteria.
+                </p>
+            </section>
         </div>
     </div>
 
