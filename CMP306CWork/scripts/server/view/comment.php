@@ -17,6 +17,7 @@ class Comment
     }
 
     //Access Functions
+    public function getUser() { return $this->user; }
 
     //Other Functions
     public function buildRow()
