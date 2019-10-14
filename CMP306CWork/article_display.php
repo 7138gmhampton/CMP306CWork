@@ -79,19 +79,36 @@ include_once 'config.php';
             ?>
         </div>
 
-        <!--'More About' Video-->
+        
         <footer class="container px-5">
-            <h2 class="h2">Also Related</h2>
-            <div class="embed-responsive embed-responsive-4by3 px-5 mx-5">
-                <?php
-                echo '<iframe src="'.$article->getVideo().'">';
-                echo '  <p>Apologies the content has failed to load</p>';
-                echo '</iframe>';
-                ?>
-                <!--<iframe>-->
+            <!--'More About' Video-->
+            <section class="container">
+                <h2 class="h2">Also Related</h2>
+                <div class="embed-responsive embed-responsive-4by3 px-5 mx-5">
+                    <?php
+                    echo '<iframe src="'.$article->getVideo().'">';
+                    echo '  <p>Apologies the content has failed to load</p>';
+                    echo '</iframe>';
+                    ?>
+                    <!--<iframe>-->
                     <!--<p>Apologies the content has failed to load</p>
                 </iframe>-->
-            </div>
+                </div>
+            </section>
+
+            <!--Comments-->
+            <section class="container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th colspan="2">Comments</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </section>
         </footer>
     </article>
     
