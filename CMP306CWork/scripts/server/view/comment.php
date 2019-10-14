@@ -15,5 +15,16 @@ class Comment
         $this->username = $username;
         $this->content = $content;
     }
+
+    //Access Functions
+
+    //Other Functions
+    public function buildRow()
+    {
+        echo '<tr>';
+        echo '  <td>'.$this->username.'</td>';
+        echo '  <td>'.$this->content.'</td>';
+        echo '</tr>';
+    }
 }
 ?>
