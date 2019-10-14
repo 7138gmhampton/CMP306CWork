@@ -35,5 +35,25 @@ class CommentAPI extends Database
             return null;
         }
     }
+
+    public static function updateComment($comment_data)
+    {
+        $command = 'UPDATE psn_comment '.
+            'SET content = :content '.
+            'WHERE comment = :id';
+        $comment_array = json_decode($comment_data, true);
+
+        try {
+            $statement = self::prepareStatement($command);
+            $statement->bindParam(':content', $comment_array['content']);
+            $statement->bindParam(':id', $comment_array['comment']);
+
+            $statement->execute();
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+    }
 }
 ?>
