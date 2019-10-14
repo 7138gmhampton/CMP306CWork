@@ -85,10 +85,12 @@ include_once 'config.php';
             <div class="embed-responsive embed-responsive-4by3 px-5 mx-5">
                 <?php
                 echo '<iframe src="'.$article->getVideo().'">';
+                echo '  <p>Apologies the content has failed to load</p>';
+                echo '</iframe>';
                 ?>
                 <!--<iframe>-->
-                    <p>Apologies the content has failed to load</p>
-                </iframe>
+                    <!--<p>Apologies the content has failed to load</p>
+                </iframe>-->
             </div>
         </footer>
     </article>
