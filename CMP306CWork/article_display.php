@@ -105,9 +105,18 @@ include_once 'config.php';
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        include_once ROOT.'scripts/server/view/view_comment.php';
 
+                        $comments = CommentView::allForArticle($article->getID());
+
+                        foreach ($comments as $each_comment)
+                            $each_comment->buildRow();
+                        ?>
                     </tbody>
                 </table>
+
+                <!--Comment Submission-->
             </section>
         </footer>
     </article>
