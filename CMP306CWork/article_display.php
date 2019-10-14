@@ -111,7 +111,9 @@ include_once 'config.php';
                         $comments = CommentView::allForArticle($article->getID());
 
                         foreach ($comments as $each_comment)
-                            $each_comment->buildRow();
+                            if ($each_comment->getUser() == $_SESSION['uid'])
+                                $each_comment->buildEditableRow();
+                            else $each_comment->buildRow();
                         ?>
                     </tbody>
                 </table>
