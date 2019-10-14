@@ -15,5 +15,25 @@ class CommentAPI extends Database
 
         return $response;
     }
+
+    public static function createComment($comment_data)
+    {
+        $command = 'INSERT INTO psn_comment (article, user, content) '.
+            'VALUES (:article_id, :user_id, :content)';
+        $comment_array = json_decode($comment_data, true);
+
+        try {
+            $statement = self::prepareStatement($command);
+            $statement->bindParam(':article_id', $comment_array['article']);
+            $statement->bindParam(':user_id', $comment_array['user']);
+            $statement->bindParam(':content', $comment_array['content']);
+
+            $statement->execute();
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+    }
 }
 ?>
