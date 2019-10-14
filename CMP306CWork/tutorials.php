@@ -465,22 +465,22 @@ include_once 'config.php';
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td>ID Number</td>
+                                            <td>Integer</td>
+                                            <td></td>
+                                            <td>This is auto incremented and the primary key</td>
+                                        </tr>
+                                        <tr>
                                             <td>Article ID Number</td>
                                             <td>Integer</td>
                                             <td></td>
-                                            <td>
-                                                This is a foreign key for the Article table and part of the
-                                primary key
-                                            </td>
+                                            <td>This is a foreign key for the Article table</td>
                                         </tr>
                                         <tr>
                                             <td>User ID Number</td>
                                             <td>Integer</td>
                                             <td></td>
-                                            <td>
-                                                This is a foreign key for the User table and part of the
-                                primary key
-                                            </td>
+                                            <td>This is a foreign key for the User table</td>
                                         </tr>
                                         <tr>
                                             <td>Content</td>
