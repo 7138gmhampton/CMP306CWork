@@ -25,6 +25,7 @@
     <Compile Include="listing.php" />
     <Compile Include="article_listing.php" />
     <Compile Include="parts\index.php" />
+    <Compile Include="practical_six.php" />
     <Compile Include="practical_five.php" />
     <Compile Include="practical_four.php" />
     <Compile Include="scripts\client\index.php" />

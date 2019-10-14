@@ -124,6 +124,28 @@
                     <a class="dropdown-item mob-nav-text" href="tutorials.php#tabWeekFive">Tutorial</a>
                 </div>
             </li>
+
+            <!--Week Six-->
+            <li class="nav-item dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle" href="#" id="wk6Dropdown" role="button"
+                    data-toggle="dropdown">
+                    Week 5
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="practical_six.php">Practical</a>
+                    <a class="dropdown-item" href="tutorials.php#tabWeekSix">Tutorial</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown d-lg-none">
+                <a class="nav-link dropdown-toggle mob-nav-text" href="#" id="wk6DropdownMob" role="button"
+                    data-toggle="dropdown">
+                    Week 6
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item mob-nav-text" href="practical_six.php">Practical</a>
+                    <a class="dropdown-item mob-nav-text" href="tutorials.php#tabWeekSix">Tutorial</a>
+                </div>
+            </li>
         </ul>
     </div>
 </nav>
