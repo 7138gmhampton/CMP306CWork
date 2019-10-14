@@ -14,7 +14,7 @@ class CommentView extends ViewController
         foreach ($comment_array as $each_comment) {
             $next_comment = new Comment(
                 $each_comment['comment'],
-                $each_comment['article'],
+                self::scrub($article_id),
                 $each_comment['user'],
                 self::scrub($each_comment['username']),
                 self::scrub($each_comment['content']));
