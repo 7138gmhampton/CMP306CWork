@@ -23,5 +23,19 @@ class CommentView extends ViewController
 
         return $all_comments;
     }
+
+    public static function single($comment_id)
+    {
+        $comment_array = json_decode(CommentAPI::getCommentById(self::scrub($comment_id)), true);
+
+        $comment = new Comment(
+            $comment_array[0]['comment'],
+            $comment_array[0]['article'],
+            $comment_array[0]['user'],
+            self::scrub($comment_array[0]['username']),
+            self::scrub($comment_array[0]['content']));
+
+        return $comment;
+    }
 }
 ?>
