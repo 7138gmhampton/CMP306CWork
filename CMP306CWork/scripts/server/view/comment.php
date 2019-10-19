@@ -17,7 +17,9 @@ class Comment
     }
 
     //Access Functions
+    public function getID() { return $this->comment; }
     public function getUser() { return $this->user; }
+    public function getContent() {return $this->content; }
 
     //Other Functions
     public function buildRow()
