@@ -140,6 +140,13 @@ include_once 'config.php';
                 <!--<form>
 
                 </form>-->
+
+                <!--Comment Edits-->
+                <div class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+
+                    </div>
+                </div>
             </section>
         </footer>
     </article>
