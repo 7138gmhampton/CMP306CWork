@@ -20,6 +20,6 @@
         let replacement = document.getElementById('inputReplace').value;
 
         if (replacement === original) $('#btnEditCancel').click();
-        else $('#formEdit').submit();
+        else document.getElementById('formEdit').submit();
     });
 });
