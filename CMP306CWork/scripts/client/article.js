@@ -11,5 +11,6 @@
         //console.log('Comment ' + button_id);
         let user_id = button_id.substring(7);
         //console.log('Comment ' + user_id);
+        $('#modalEdit').modal('show');
     });
 });

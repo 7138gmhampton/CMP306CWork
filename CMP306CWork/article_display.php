@@ -142,7 +142,7 @@ include_once 'config.php';
                 </form>-->
 
                 <!--Comment Edits-->
-                <div class="modal" tabindex="-1" role="dialog">
+                <div id="modalEdit" class="modal" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">
 
                     </div>
