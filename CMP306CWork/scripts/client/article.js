@@ -19,7 +19,7 @@
         let original = document.getElementById('inputOriginal').value;
         let replacement = document.getElementById('inputReplace').value;
 
-        //if (replacement === original) $('#btnEditCancel').click();
-        document.getElementById('formEdit').submit();
+        if (replacement === original) $('#btnEditCancel').click();
+        else document.getElementById('formEdit').submit();
     });
 });
