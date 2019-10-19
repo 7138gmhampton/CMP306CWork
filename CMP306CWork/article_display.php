@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //Error Reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -134,12 +134,10 @@ include_once 'config.php';
                     echo '          <button id="btnComment" class="btn btn-secondary" '.
                         'type="button">Submit</button>';
                     echo '      </div>';
-                    echo '</div>';
+                    echo '  </div>';
+                    echo '</form>';
                 }
                 ?>
-                <!--<form>
-
-                </form>-->
 
                 <!--Comment Edits-->
                 <div id="modalEdit" class="modal" tabindex="-1" role="dialog">
