@@ -16,6 +16,19 @@ class CommentAPI extends Database
         return $response;
     }
 
+    public static function getSingleComment($comment_id)
+    {
+        $command = 'SELECT psn_comment.comment, psn_content, psn_comment.user '.
+            'psn_user.username, psn_comment.article '.
+            'FROM psn_comment '.
+            'JOIN psn_user ON psn_comment.user = psn_user.user '.
+            'WHERE psn_comment.comment = :comment_id';
+
+        $response = self::selectWhere($command, ':comment_id', $comment_id);
+
+        return $response;
+    }
+
     public static function createComment($comment_data)
     {
         $command = 'INSERT INTO psn_comment (article, user, content) '.
