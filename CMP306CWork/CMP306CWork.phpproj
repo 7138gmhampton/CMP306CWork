@@ -46,6 +46,7 @@
     <Compile Include="scripts\server\view\comment.php" />
     <Compile Include="scripts\server\view\image.php" />
     <Compile Include="scripts\server\view\index.php" />
+    <Compile Include="scripts\server\view\show_comment.php" />
     <Compile Include="scripts\server\view\user.php" />
     <Compile Include="scripts\server\view\view_comment.php" />
     <Compile Include="scripts\server\view\view_image.php" />
