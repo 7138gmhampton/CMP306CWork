@@ -37,7 +37,9 @@
 
         errors.innerText = '';
 
-        if (password !== confirmation)
+        if (!(email && username && password))
+            errors.innerText = 'Please complete all fields.';
+        else if (password !== confirmation)
             errors.innerText = 'Password and confirmation do not match!';
         else if (password.length < 8)
             errors.innerText = 'Password must be at least 8 characters long.';
