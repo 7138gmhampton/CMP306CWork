@@ -144,7 +144,30 @@ include_once 'config.php';
                 <!--Comment Edits-->
                 <div id="modalEdit" class="modal" tabindex="-1" role="dialog">
                     <div class="modal-dialog" role="document">
-
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Edit Comment</h5>
+                                <button class="close" type="button" data-dismiss="modal">
+                                    <span>&times;</span>
+                                </button>
+                            </div>
+                            <form id="formEdit" action="scripts/server/controller/edit.php" 
+                                  method="post">
+                                <div class="modal-body">
+                                    <input name="comment" type="hidden" />
+                                    <input id="inputOriginal" type="hidden" />
+                                    <textarea id="inputReplace" class="form-control" name="content" 
+                                              rows="3"></textarea>
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <button id="btnEditCancel" class="btn btn-secondary" type="button" 
+                                        data-dismiss="modal">Cancel</button>
+                                <button id="btnEditSubmit" class="btn btn-primary" type="button">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

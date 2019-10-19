@@ -13,4 +13,13 @@
         //console.log('Comment ' + user_id);
         $('#modalEdit').modal('show');
     });
+
+    $('#btnEditSubmit').click(function ()
+    {
+        let original = document.getElementById('inputOriginal').value;
+        let replacement = document.getElementById('inputReplace').value;
+
+        if (replacement === original) $('#btnEditCancel').click();
+        else $('#formEdit').submit();
+    });
 });
