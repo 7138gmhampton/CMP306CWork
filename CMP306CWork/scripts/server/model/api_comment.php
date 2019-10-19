@@ -16,7 +16,7 @@ class CommentAPI extends Database
         return $response;
     }
 
-    public static function getSingleComment($comment_id)
+    public static function getCommentById($comment_id)
     {
         $command = 'SELECT psn_comment.comment, psn_content, psn_comment.user '.
             'psn_user.username, psn_comment.article '.
