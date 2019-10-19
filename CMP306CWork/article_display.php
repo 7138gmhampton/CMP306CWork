@@ -152,7 +152,7 @@ include_once 'config.php';
                             <form id="formEdit" action="scripts/server/controller/edit.php" 
                                   method="post">
                                 <div class="modal-body">
-                                    <input name="comment" type="hidden" />
+                                    <input id="inputEditId" name="comment" type="hidden" />
                                     <input id="inputOriginal" type="hidden" />
                                     <textarea id="inputReplace" class="form-control" name="content" 
                                               rows="3"></textarea>
