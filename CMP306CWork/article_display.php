@@ -183,7 +183,7 @@ include_once 'config.php';
                                 <form>
                                     <?php
                                     echo '<input id="inputUserId" type="hidden" '.
-                                        'value="'.$user->getID().' />';
+                                        'value="'.$_SESSION['uid'].' />';
                                     ?>
                                     <!--<input id="inputUserId" type="hidden" />-->
                                 </form>
