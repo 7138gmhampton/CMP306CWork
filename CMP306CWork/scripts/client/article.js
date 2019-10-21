@@ -49,7 +49,7 @@
         document.getElementById('inputEditOriginal').value = '';
         document.getElementById('inputEditReplace').value = '';
         $('#modalEdit').modal('hide');
-    })
+    });
 
     //Delete Functions
     $('button[id^="btnDelete"]').click(function (event)
@@ -66,5 +66,11 @@
         let confirmation = (document.getElementById('inputDeleteConfirm').value == 'true');
 
         //AJAX here
+    });
+
+    $('#btnNoDelete').click(function ()
+    {
+        document.getElementById('inputDeleteConfirm').value = 'false';
+        $('#modalDelete').modal('hide');
     });
 });
