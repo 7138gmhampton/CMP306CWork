@@ -5,7 +5,7 @@ class ViewController
     {
         $clean = trim($raw);
         $clean = stripslashes($clean);
-        $clean = htmlspecialchars($clean);
+        $clean = htmlspecialchars($clean, ENT_COMPAT|ENT_HTML5, ini_get('default_charset'), false);
 
         return $clean;
     }
