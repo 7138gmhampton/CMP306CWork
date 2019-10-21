@@ -30,7 +30,6 @@
     <Compile Include="practical_four.php" />
     <Compile Include="scripts\client\index.php" />
     <Compile Include="scripts\index.php" />
-    <Compile Include="scripts\server\controller\controller.php" />
     <Compile Include="scripts\server\controller\control_comment.php" />
     <Compile Include="scripts\server\controller\control_user.php" />
     <Compile Include="scripts\server\controller\edit_comment.php" />
