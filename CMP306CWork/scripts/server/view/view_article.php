@@ -44,7 +44,6 @@ class ArticleView extends ViewController
 
     public static function single($article_id)
     {
-        //$article_data = ArticleAPI::getArticleById($article_id);
         $article_array = json_decode(ArticleAPI::getArticleById(
             self::scrub($article_id)), true);
 
