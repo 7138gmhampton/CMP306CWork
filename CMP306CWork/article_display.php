@@ -152,7 +152,8 @@ include_once 'config.php';
                                     <span>&times;</span>
                                 </button>
                             </div>
-                            <form id="formEdit" action="scripts/server/controller/edit.php" 
+                            <form id="formEdit" 
+                                  action="scripts/server/controller/edit_comment.php" 
                                   method="post">
                                 <div class="modal-body">
                                     <input id="inputEditId" name="comment" type="hidden" />
@@ -162,10 +163,10 @@ include_once 'config.php';
                                 </div>
                             </form>
                             <div class="modal-footer">
-                                <button id="btnEditCancel" class="btn btn-secondary" type="button">
+                                <button id="btnCancelEdit" class="btn btn-secondary" type="button">
                                     Cancel
                                 </button>
-                                <button id="btnEditSubmit" class="btn btn-primary" type="button">
+                                <button id="btnSubmitEdit" class="btn btn-primary" type="button">
                                     Submit
                                 </button>
                             </div>
