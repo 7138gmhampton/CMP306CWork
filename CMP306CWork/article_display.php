@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //Error Reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -180,6 +180,13 @@ include_once 'config.php';
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">Confirm deletion?</h5>
+                                <form>
+                                    <?php
+                                    echo '<input id="inputUserId" type="hidden" '.
+                                        'value="'.$user->getID().' />';
+                                    ?>
+                                    <!--<input id="inputUserId" type="hidden" />-->
+                                </form>
                             </div>
                             <div class="modal-footer">
                                 <button id="btnNoDelete" class="btn btn-secondary" type="button">
