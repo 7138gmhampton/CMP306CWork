@@ -33,21 +33,17 @@ class Comment
 
     public function buildEditableRow()
     {
-        //echo '<form action="">';
         echo '<tr>';
         echo '  <td>'.$this->username.'</td>';
         echo '  <td><textarea class="comment-box" readonly cols="80">'.$this->content.
             '</textarea></td>';
         echo '  <td>';
-        //echo '      <form>';
-        //echo '          <input id="commentId" type="hidden" value="'.$this->comment.'" />';
         echo '      <button id="btnEdit'.$this->comment.'" class="btn btn-primary">'.
             'Edit</button>';
         echo '      <button id="btnDelete'.$this->comment.'" class="btn btn-danger">'.
             'Delete</button>';
         echo '  </td>';
         echo '</tr>';
-        //echo '</form>';
     }
 }
 ?>
