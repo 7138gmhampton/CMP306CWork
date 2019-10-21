@@ -33,7 +33,6 @@
         let comment_id = document.getElementById('inputEditId').value;
 
         if (replacement === original) $('#btnEditCancel').click();
-        //else document.getElementById('formEdit').submit();
         $.post('scripts/server/controller/edit_comment.php', {
             comment: comment_id,
             content: replacement
@@ -56,30 +55,20 @@
     {
         let button_id = event.target.id;
         let comment_id = button_id.substring(9);
-        //let user_id = getCookie('uid');
         let user_id = document.getElementById('inputUserId').value;
-        //console.log('comment_id: ' + comment_id);
-        //console.log('user_id: ' + user_id);
-
+        
         document.getElementById('inputDeleteCommentId').value = button_id.substring(9);
 
         $('#modalDelete').modal('show');
-
-        //let confirmation = (document.getElementById('inputDeleteConfirm').value == 'true');
-
-        //if (confirmation) console.log('Check!');
     });
 
     $('#btnNoDelete').click(function ()
     {
-        //document.getElementById('inputDeleteConfirm').value = 'false';
         $('#modalDelete').modal('hide');
     });
 
     $('#btnYesDelete').click(function ()
     {
-        //document.getElementById('inputDeleteConfirm').value = 'true';
-        //$('#modalDelete').modal('hide');
         let comment_id = document.getElementById('inputDeleteCommentId').value;
         let user_id = document.getElementById('inputUserId').value;
 
