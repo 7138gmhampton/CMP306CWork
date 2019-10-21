@@ -41,8 +41,10 @@ class Comment
         echo '  <td>';
         //echo '      <form>';
         //echo '          <input id="commentId" type="hidden" value="'.$this->comment.'" />';
-        echo '      <button id="btnEdit'.$this->comment.'">Edit</button>';
-        echo '      <button id="btnDelete'.$this->comment.'">Delete</button>';
+        echo '      <button id="btnEdit'.$this->comment.'" class="btn btn-primary">'.
+            'Edit</button>';
+        echo '      <button id="btnDelete'.$this->comment.'" class="btn btn-danger">'.
+            'Delete</button>';
         echo '  </td>';
         echo '</tr>';
         //echo '</form>';
