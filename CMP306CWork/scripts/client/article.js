@@ -61,23 +61,31 @@
         //console.log('comment_id: ' + comment_id);
         //console.log('user_id: ' + user_id);
 
+        document.getElementById('inputDeleteCommentId').value = button_id.substring(9);
+
         $('#modalDelete').modal('show');
 
-        let confirmation = (document.getElementById('inputDeleteConfirm').value == 'true');
+        //let confirmation = (document.getElementById('inputDeleteConfirm').value == 'true');
 
-        if (confirmation) console.log('Check!');
-        //AJAX here
+        //if (confirmation) console.log('Check!');
     });
 
     $('#btnNoDelete').click(function ()
     {
-        document.getElementById('inputDeleteConfirm').value = 'false';
+        //document.getElementById('inputDeleteConfirm').value = 'false';
         $('#modalDelete').modal('hide');
     });
 
     $('#btnYesDelete').click(function ()
     {
-        document.getElementById('inputDeleteConfirm').value = 'true';
-        $('#modalDelete').modal('hide');
+        //document.getElementById('inputDeleteConfirm').value = 'true';
+        //$('#modalDelete').modal('hide');
+        let comment_id = document.getElementById('inputDeleteCommentId').value;
+        let user_id = document.getElementById('inputUserId').value;
+
+        $.post('scripts/server/controller/erase_comment.php', {
+            comment: comment_id,
+            user: user_id
+        }, function () { location.reload(); });
     });
 });
