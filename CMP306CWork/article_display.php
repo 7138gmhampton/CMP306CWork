@@ -186,6 +186,7 @@ include_once 'config.php';
                                         'value="'.$_SESSION['uid'].'" />';
                                     ?>
                                     <!--<input id="inputUserId" type="hidden" />-->
+                                    <input id="inputDeleteConfirm" type="hidden" />
                                 </form>
                             </div>
                             <div class="modal-footer">
