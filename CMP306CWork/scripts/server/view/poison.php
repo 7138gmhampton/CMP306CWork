@@ -55,13 +55,10 @@ class Poison
 function collatePoisons()
 {
     $poison_data = PoisonAPI::getAllPoisons();
-    //var_dump($poison_data);
     $array_of_poisons = json_decode($poison_data, true);
-    //var_dump($array_of_poisons);
     $all_poisons = array();
 
     foreach ($array_of_poisons as $each_poison) {
-        //var_dump($each_poison);
         $next_poison = new Poison(
             $each_poison['poison'], 
             $each_poison['name'], 
@@ -70,8 +67,6 @@ function collatePoisons()
             $each_poison['source'],
             $each_poison['title'],
             $each_poison['alttext']);
-        //$next_poison = new Poison();
-        //foreach ($each_poison as $key => $value) $next_poison->{$key} = $value;
         array_push($all_poisons, $next_poison);
     }
 
