@@ -19,21 +19,12 @@
         let number = /\w/;
         let capital = /[A-Z]/;
         let letter = /[a-z]/;
-        //let valid_email = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         let email_check = /\S{1,}@\S{1,}\.\S/;
         let errors = document.getElementById('txtRegisterPasswordError');
         let email = document.getElementById('inputRegisterEmail').value;
         let username = document.getElementById('inputRegisterUsername').value;
         let password = document.getElementById('inputRegisterPassword').value;
         let confirmation = document.getElementById('inputRegisterConfirm').value;
-
-        //console.log('Password: ' + password);
-        //console.log('Confirm: ' + confirmation);
-
-        //console.log('Special: ' + special.test(password));
-        //console.log('Number: ' + password.test(number));
-        //console.log('Capital: ' + password.test(capital));
-        //console.log('Letter: ' + password.test(letter));
 
         errors.innerText = '';
 
