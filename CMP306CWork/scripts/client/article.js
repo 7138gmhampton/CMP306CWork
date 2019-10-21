@@ -19,10 +19,10 @@
             //console.log('Flag');
             //console.log(data.content);
             document.getElementById('inputEditReplace').value = data.content;
-            $('#modalEdit').modal('show');
+            //$('#modalEdit').modal('show');
         }, 'json');
 
-        //$('#modalEdit').modal('show');
+        $('#modalEdit').modal('show');
     });
 
     $('#btnEditSubmit').click(function ()
@@ -33,4 +33,12 @@
         if (replacement === original) $('#btnEditCancel').click();
         else document.getElementById('formEdit').submit();
     });
+
+    $('#btnEditCancel').click(function ()
+    {
+        document.getElementById('inputEditId').value = '';
+        document.getElementById('inputEditOriginal').value = '';
+        document.getElementById('inputEditReplace').value = '';
+        $('#modalEdit').modal('hide');
+    })
 });

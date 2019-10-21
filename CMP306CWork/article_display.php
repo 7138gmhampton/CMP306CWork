@@ -162,8 +162,9 @@ include_once 'config.php';
                                 </div>
                             </form>
                             <div class="modal-footer">
-                                <button id="btnEditCancel" class="btn btn-secondary" type="button" 
-                                        data-dismiss="modal">Cancel</button>
+                                <button id="btnEditCancel" class="btn btn-secondary" type="button">
+                                    Cancel
+                                </button>
                                 <button id="btnEditSubmit" class="btn btn-primary" type="button">
                                     Submit
                                 </button>
