@@ -29,9 +29,17 @@
     {
         let original = document.getElementById('inputEditOriginal').value;
         let replacement = document.getElementById('inputEditReplace').value;
+        let comment_id = document.getElementById('inputEditId').value;
 
         if (replacement === original) $('#btnEditCancel').click();
-        else document.getElementById('formEdit').submit();
+        //else document.getElementById('formEdit').submit();
+        $.post('scripts/server/controller/edit_comment.php', {
+            comment: comment_id,
+            content: replacement
+        }, function ()
+            {
+                location.reload();
+            });
     });
 
     $('#btnCancelEdit').click(function ()
