@@ -9,12 +9,6 @@ class UserAPI extends Database
         $commmand = 'INSERT INTO psn_user (email, username, password) '.
             'VALUES (:email, :username, :password)';
         $user_array = json_decode($user_data, true);
-        //$user = new User(
-        //    $user_array[0]['email'],
-        //    $user_array[0]['username'],
-        //    $user_array[0]['password']);
-
-        //var_dump($user_array[0]);
 
         try {
             $statement = self::prepareStatement($commmand);
