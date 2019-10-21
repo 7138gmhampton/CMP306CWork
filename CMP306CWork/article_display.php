@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 //Error Reporting
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
@@ -168,6 +168,25 @@ include_once 'config.php';
                                 </button>
                                 <button id="btnSubmitEdit" class="btn btn-primary" type="button">
                                     Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Comment Deletion-->
+                <div id="modalDelete" class="modal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Confirm deletion?</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <button id="btnNoDelete" class="btn btn-secondary" type="button">
+                                    No
+                                </button>
+                                <button id="btnYesDelete" class="btn btn-warning" type="button">
+                                    Yes
                                 </button>
                             </div>
                         </div>
