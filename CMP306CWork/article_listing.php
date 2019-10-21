@@ -27,30 +27,11 @@ include_once 'config.php';
     <!--Main Navbar-->
     <?php
     include ROOT.'parts/mainbar.php';
-    //echo '<p>Check</p>';
     ?>
 
     <!--Title Display-->
     <div class="container">
         <?php
-        //$poison_id = $_GET['id'];
-
-        //include 'scripts/server/database.php';
-        //include 'scripts/server/poison.php';
-
-       //echo '<p>Check</p>';
-
-        //$poison = Database::getPoison($poison_id);
-        //$test = Database::getPoison(2);
-        //$test = Database::getPoisonSummaryClasses();
-
-        //echo '<p>Check '.$test[0]->getName().'</p>';
-
-        //echo $poison->getID();
-
-        //echo '<p>Check</p>';
-
-        //include_once ROOT.'scripts/server/view/poison.php';
         include_once ROOT.'scripts/server/view/view_poison.php';
 
         $poison = PoisonView::single($_GET['id']);
@@ -59,18 +40,9 @@ include_once 'config.php';
         ?>
     </div>
 
-    <?php
-    //echo '<p>Check</p>';
-    ?>
-    
-
     <!--Listing of Articles-->
     <div class="container">
         <?php
-        //include 'scripts/server/article.php';
-
-        //$articles = Database::getArticlesForPoison($_GET['id']);
-
         include_once ROOT.'scripts/server/view/view_article.php';
 
         $articles = ArticleView::allForPoison($_GET['id']);
@@ -85,7 +57,6 @@ include_once 'config.php';
     </div>
 
     <?php
-    //include 'parts/footer.html';
     include_once ROOT.'parts/footer.html';
     ?>
 </body>
