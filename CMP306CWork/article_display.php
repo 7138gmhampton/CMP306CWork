@@ -79,28 +79,6 @@ include_once 'config.php';
             echo '</div>';
         }
         ?>
-        <!--<div class="container d-none d-lg-block">
-            <div id="carouselImages" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner article-carousel">-->
-                    <?php
-                    //$first = true;
-
-                    //foreach ($images as $image) {
-                    //    $image->buildCarousel($first);
-                    //    $first = false;
-                    //}
-                    ?>
-                <!--</div>
-                <a class="carousel-control-prev" href="#carouselImages" role="button" 
-                   data-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#carouselImages" role="button"
-                   data-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
-        </div>-->
 
         <!--Text of Article-->
         <div class="container my-3">
@@ -124,19 +102,6 @@ include_once 'config.php';
                 echo '</section>';
             }
             ?>
-            <!--<section class="container">
-                <h2 class="h2">Also Related</h2>
-                <div class="embed-responsive embed-responsive-4by3 px-5 mx-5">-->
-                    <?php
-                    //echo '<iframe src="'.$article->getVideo().'">';
-                    //echo '  <p>Apologies the content has failed to load</p>';
-                    //echo '</iframe>';
-                    ?>
-                    <!--<iframe>-->
-                    <!--<p>Apologies the content has failed to load</p>
-                </iframe>-->
-                <!--</div>
-            </section>-->
 
             <!--Comments-->
             <section class="container">
@@ -224,9 +189,7 @@ include_once 'config.php';
                                     echo '<input id="inputUserId" type="hidden" '.
                                         'value="'.$_SESSION['uid'].'" />';
                                     ?>
-                                    <!--<input id="inputUserId" type="hidden" />-->
                                     <input id="inputDeleteCommentId" type="hidden" />
-                                    <!--<input id="inputDeleteConfirm" type="hidden" />-->
                                 </form>
                             </div>
                             <div class="modal-footer">
