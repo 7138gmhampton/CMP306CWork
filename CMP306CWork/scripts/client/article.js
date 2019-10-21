@@ -31,8 +31,14 @@
         let comment_id = button_id.substring(9);
         //let user_id = getCookie('uid');
         let user_id = document.getElementById('inputUserId').value;
-        console.log('comment_id: ' + comment_id);
-        console.log('user_id: ' + user_id);
+        //console.log('comment_id: ' + comment_id);
+        //console.log('user_id: ' + user_id);
+
+        $('#modalDelete').modal('show');
+
+        let confirmation = (document.getElementById('inputDeleteConfirm').value == 'true');
+
+        //AJAX here
     })
 
     $('#btnSubmitEdit').click(function ()
