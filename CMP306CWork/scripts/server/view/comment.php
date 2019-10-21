@@ -26,7 +26,8 @@ class Comment
     {
         echo '<tr>';
         echo '  <td>'.$this->username.'</td>';
-        echo '  <td>'.$this->content.'</td>';
+        echo '  <td><textarea class="comment-box" readonly cols="80">'.$this->content.
+            '</textarea></td>';
         echo '</tr>';
     }
 
@@ -35,7 +36,8 @@ class Comment
         //echo '<form action="">';
         echo '<tr>';
         echo '  <td>'.$this->username.'</td>';
-        echo '  <td>'.$this->content.'</td>';
+        echo '  <td><textarea class="comment-box" readonly cols="80">'.$this->content.
+            '</textarea></td>';
         echo '  <td>';
         //echo '      <form>';
         //echo '          <input id="commentId" type="hidden" value="'.$this->comment.'" />';
