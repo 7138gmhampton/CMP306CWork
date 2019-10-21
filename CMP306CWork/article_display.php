@@ -49,21 +49,48 @@ include_once 'config.php';
         </header>
 
         <!--Carousel of Images-->
-        <div class="container d-none d-lg-block">
+        <?php
+        include_once ROOT.'scripts/server/view/view_image.php';
+
+        $images = ImageView::allForArticle($_GET['id']);
+
+        if (count($images) > 0) {
+            echo '<div class="container d-none d-lg-block">';
+            echo '  <div id="carouselImages" class="carousel slide" data-ride="carousel">';
+            echo '      <div class="carousel-inner article-carousel">';
+
+            $first = true;
+
+            foreach ($images as $image) {
+                $image->buildCarousel($first);
+                $first = false;
+            }
+
+            echo '      </div>';
+            echo '          <a class="carousel-control-prev" href="#carouselImages" '.
+                'role="button" data-slide="prev">';
+            echo '              <span class="carousel-control-prev-icon"></span>';
+            echo '          </a>';
+            echo '          <a class="carousel-control-next" href="#carouselImages" '.
+                'role="button" data-slide="next">';
+            echo '              <span class="carousel-control-next-icon"></span>';
+            echo '          </a>';
+            echo '  </div>';
+            echo '</div>';
+        }
+        ?>
+        <!--<div class="container d-none d-lg-block">
             <div id="carouselImages" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner article-carousel">
+                <div class="carousel-inner article-carousel">-->
                     <?php
-                    include_once ROOT.'scripts/server/view/view_image.php';
+                    //$first = true;
 
-                    $images = ImageView::allForArticle($_GET['id']);
-                    $first = true;
-
-                    foreach ($images as $image) {
-                        $image->buildCarousel($first);
-                        $first = false;
-                    }
+                    //foreach ($images as $image) {
+                    //    $image->buildCarousel($first);
+                    //    $first = false;
+                    //}
                     ?>
-                </div>
+                <!--</div>
                 <a class="carousel-control-prev" href="#carouselImages" role="button" 
                    data-slide="prev">
                     <span class="carousel-control-prev-icon"></span>
@@ -73,7 +100,7 @@ include_once 'config.php';
                     <span class="carousel-control-next-icon"></span>
                 </a>
             </div>
-        </div>
+        </div>-->
 
         <!--Text of Article-->
         <div class="container my-3">
