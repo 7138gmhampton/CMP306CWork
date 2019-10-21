@@ -25,7 +25,7 @@
         $('#modalEdit').modal('show');
     });
 
-    $('#btnEditSubmit').click(function ()
+    $('#btnSubmitEdit').click(function ()
     {
         let original = document.getElementById('inputEditOriginal').value;
         let replacement = document.getElementById('inputEditReplace').value;
@@ -34,7 +34,7 @@
         else document.getElementById('formEdit').submit();
     });
 
-    $('#btnEditCancel').click(function ()
+    $('#btnCancelEdit').click(function ()
     {
         document.getElementById('inputEditId').value = '';
         document.getElementById('inputEditOriginal').value = '';
