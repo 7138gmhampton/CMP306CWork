@@ -65,12 +65,19 @@
 
         let confirmation = (document.getElementById('inputDeleteConfirm').value == 'true');
 
+        if (confirmation) console.log('Check!');
         //AJAX here
     });
 
     $('#btnNoDelete').click(function ()
     {
         document.getElementById('inputDeleteConfirm').value = 'false';
+        $('#modalDelete').modal('hide');
+    });
+
+    $('#btnYesDelete').click(function ()
+    {
+        document.getElementById('inputDeleteConfirm').value = 'true';
         $('#modalDelete').modal('hide');
     });
 });
