@@ -24,5 +24,12 @@ class CommentController extends ViewController
 
         CommentAPI::updateComment($comment_data);
     }
+
+    public static function delete($user_id, $comment_id)
+    {
+        $comment_id = self::scrub($comment_id);
+
+        CommentAPI::deleteComment($user_id, $comment_id);
+    }
 }
 ?>
