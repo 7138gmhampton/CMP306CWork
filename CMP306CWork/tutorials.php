@@ -1081,6 +1081,7 @@ include_once 'config.php';
     include_once ROOT.'parts/footer.html';
     ?>
 
-    <script src="scripts/client/common.js"></script>
+    <!--Other scripts-->
+    <script src="scripts/client/tutorial.js"></script>
 </body>
 </html>
