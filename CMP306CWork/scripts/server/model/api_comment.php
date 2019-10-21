@@ -68,5 +68,23 @@ class CommentAPI extends Database
             return null;
         }
     }
+
+    public static function deleteComment($user_id, $comment_id)
+    {
+        $command = 'DELETE FROM psn_comment '.
+            'WHERE comment = :comment_id AND user = :user_id';
+
+        try {
+            $statement = self::prepareStatement($command);
+            $statement->bindParam(':comment_id', $comment_id);
+            $statement->bindParam(':user_id', $user_id);
+
+            $statement->execute();
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+    }
 }
 ?>
