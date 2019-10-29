@@ -35,6 +35,7 @@
     <Compile Include="scripts\server\controller\edit_comment.php" />
     <Compile Include="scripts\server\controller\erase_comment.php" />
     <Compile Include="scripts\server\controller\index.php" />
+    <Compile Include="scripts\server\controller\input_readings.php" />
     <Compile Include="scripts\server\controller\login.php" />
     <Compile Include="scripts\server\controller\logout.php" />
     <Compile Include="scripts\server\controller\signup.php" />
@@ -42,6 +43,7 @@
     <Compile Include="scripts\server\index.php" />
     <Compile Include="scripts\server\model\api_comment.php" />
     <Compile Include="scripts\server\model\api_image.php" />
+    <Compile Include="scripts\server\model\api_iot.php" />
     <Compile Include="scripts\server\model\api_user.php" />
     <Compile Include="scripts\server\model\index.php" />
     <Compile Include="scripts\server\view\comment.php" />
