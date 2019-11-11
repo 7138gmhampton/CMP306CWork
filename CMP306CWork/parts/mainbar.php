@@ -1,15 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand d-none d-lg-block" href="index.php">CMP306</a>
     <a class="navbar-brand d-lg-none mob-brand" href="index.php">CMP306</a>
-    <!--<a class="nav-link d-none d-lg-block" href="account.php">Login</a>
-    <a class="nav-link d-lg-none mob-nav-text" href="account.php">Login</a>-->
     <?php
     if (isset($_SESSION['uid'])) {
-        //echo '<p class="text-light">'.$_SESSION['username'].'</p>';
-        //echo '<a class="nav-link d-none d-lg-block" href="scripts/server/controller/logout.php">'.
-        //    'Logout</a>';
-        //echo '<a class="nav-link d-lg-none mob-nav-text" href="scripts/server/controller/'.
-        //    'logout.php">Logout</a>';
         echo '<div class="btn-group">';
         echo '  <button class="btn btn-primary dropdown-toggle" type="button" '.
             'data-toggle="dropdown">';
