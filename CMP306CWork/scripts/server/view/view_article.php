@@ -56,5 +56,23 @@ class ArticleView extends ViewController
 
         return $article;
     }
+
+    public static function lastFive()
+    {
+        $article_array = json_decode(ArticleAPI::getLastFiveArticles(), true);
+        $these_articles = array();
+
+        foreach ($article_array as $each_article) {
+            $next_article = new Article(
+                $each_article['article'],
+                $each_article['title'],
+                $each_article['author'],
+                $each_article['video'],
+                $each_article['text']);
+            array_push($these_articles, $next_article);
+        }
+
+        return $these_articles;
+    }
 }
 ?>
