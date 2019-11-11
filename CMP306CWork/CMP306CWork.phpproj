@@ -46,6 +46,7 @@
     <Compile Include="scripts\server\model\api_iot.php" />
     <Compile Include="scripts\server\model\api_user.php" />
     <Compile Include="scripts\server\model\index.php" />
+    <Compile Include="scripts\server\view\article_feed.php" />
     <Compile Include="scripts\server\view\comment.php" />
     <Compile Include="scripts\server\view\image.php" />
     <Compile Include="scripts\server\view\index.php" />
