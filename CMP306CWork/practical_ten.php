@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 //Session
 session_start();
 include_once 'config.php';
@@ -22,7 +22,7 @@ include_once 'config.php';
     ?>
 
     <!--RSS Button-->
-    <div class="container">
+    <div class="container my-3 text-center">
         <a class="btn btn-primary" href="https://mayar.abertay.ac.uk/~0407435/CMP306cwk/scripts/server/view/article_feed.php">
             Last Five Articles
         </a>
