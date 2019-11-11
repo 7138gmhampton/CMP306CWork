@@ -28,6 +28,7 @@
     <Compile Include="practical_six.php" />
     <Compile Include="practical_five.php" />
     <Compile Include="practical_four.php" />
+    <Compile Include="practical_ten.php" />
     <Compile Include="scripts\client\index.php" />
     <Compile Include="scripts\index.php" />
     <Compile Include="scripts\server\controller\control_comment.php" />
