@@ -1,4 +1,8 @@
 <?php
+//Error Reporting
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 //Session
 session_start();
 include_once 'config.php';
@@ -25,6 +29,15 @@ include_once 'config.php';
     <div class="container">
         <?php
         //Programmatic listing of Wired newsfeed
+        $wired_rss = file_get_contents('https://www.wired.com/feed/rss');
+        $xml_feed = simplexml_load_string($wired_rss);
+        $xsl_processor = new XSLTProcessor();
+        $xsl_style_sheet = simplexml_load_file('wired_feed.xslt');
+        $xsl_processor->importStylesheet($xsl_style_sheet);
+
+        $display_output = $xsl_processor->transformToXml($xml_feed);
+        echo $display_output;
+        //var_dump($display_output);
         ?>
     </div>
 
