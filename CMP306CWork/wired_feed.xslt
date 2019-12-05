@@ -9,12 +9,32 @@
             <xsl:apply-templates select="@* | node()"/>
         </xsl:copy>
     </xsl:template>-->
-  <xsl:template match="item">
-    <xsl:element name="h3">
-      <!--<xsl:value-of select="title"></xsl:value-of>-->
-      <xsl:element name="p">
-        <xsl:value-of select="title"></xsl:value-of>
-      </xsl:element>
+
+  <xsl:template match="/">
+    <xsl:element name="h1">
+      <xsl:value-of select="channel/description"/>
     </xsl:element>
+    <xsl:apply-templates></xsl:apply-templates>
   </xsl:template>
+  
+  <xsl:template match="item">
+      <xsl:element name="div">
+        <xsl:element name="a">
+          <xsl:attribute name="class">h5</xsl:attribute>
+          <xsl:attribute name="href">
+            <xsl:value-of select="link"/>
+          </xsl:attribute>
+          <xsl:value-of select="title"/>
+        </xsl:element>
+        <xsl:element name="p">
+          <xsl:value-of select="description"/>
+        </xsl:element>
+      </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="channel/title"></xsl:template>
+  <xsl:template match="channel/link"></xsl:template>
+  <xsl:template match="channel/copyright"></xsl:template>
+  <xsl:template match="channel/language"></xsl:template>
+  <xsl:template match="channel/lastBuildDate"></xsl:template>
 </xsl:stylesheet>
