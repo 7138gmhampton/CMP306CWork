@@ -50,6 +50,9 @@ include_once 'config.php';
             <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekSix">
                 Week 6
             </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTen">
+                Week 10
+            </a>
         </div>
     </nav>
 
@@ -791,6 +794,30 @@ include_once 'config.php';
                     necessitates knowing the appropriate keys and allowed input for their 
                     attendant values. In the cases of retrieval and deletions, the parameters 
                     will relate to search/limiting criteria.
+                </p>
+            </section>
+        </div>
+        <div id="tabWeekTen" class="tab-pane fade">
+            <!--RSS-->
+            <section class="container mt-3 border">
+                <h3 class="h3">RSS</h3>
+                <p>
+                    RSS feeds, and the related Atom Syndication Format, are delivered as 
+                    well-formed XML. The root element is the 'rss' - which has the version as an 
+                    attribute - currently 2.0 - with a single 'channel' child. This 'channel' 
+                    element must have, at a minimum, title; description and link child elements 
+                    attached. The elements pertaining to the individual items of the feed's 
+                    material are also appended to this node.
+                </p>
+                    <!--<br />-->
+                <p>
+                    On my site, the RSS feed of the latest five articles is generated through 
+                    the following method. The API acquires the five most recent articles (via a 
+                    LIMIT statement) and arranges them into an associative array. In the PHP 
+                    script, a DOMDocument object is created and the necessary elements, see 
+                    above, appended. Then, utilising a loop, the material elements (the article, 
+                    its title, author and content) are added. Finally, the DOMDocument is 
+                    serialised into well-formed XML and echoed onto the page.
                 </p>
             </section>
         </div>
