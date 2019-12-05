@@ -89,6 +89,7 @@
     <Content Include="scripts\client\article.js" />
     <Content Include="scripts\client\common.js" />
     <Content Include="scripts\client\tutorial.js" />
+    <Content Include="wired_feed.xslt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
