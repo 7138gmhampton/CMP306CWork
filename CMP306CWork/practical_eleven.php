@@ -27,18 +27,20 @@ include_once 'config.php';
 
     <!--News Feed Display-->
     <div class="container">
-        <?php
-        //Programmatic listing of Wired newsfeed
-        $wired_rss = file_get_contents('https://www.wired.com/feed/rss');
-        $xml_feed = simplexml_load_string($wired_rss);
-        $xsl_processor = new XSLTProcessor();
-        $xsl_style_sheet = simplexml_load_file('wired_feed.xslt');
-        $xsl_processor->importStylesheet($xsl_style_sheet);
+        <div class="row row-cols-3">
+            <?php
+            //Programmatic listing of Wired newsfeed
+            $wired_rss = file_get_contents('https://www.wired.com/feed/rss');
+            $xml_feed = simplexml_load_string($wired_rss);
+            $xsl_processor = new XSLTProcessor();
+            $xsl_style_sheet = simplexml_load_file('wired_feed.xslt');
+            $xsl_processor->importStylesheet($xsl_style_sheet);
 
-        $display_output = $xsl_processor->transformToXml($xml_feed);
-        echo $display_output;
-        //var_dump($display_output);
-        ?>
+            $display_output = $xsl_processor->transformToXml($xml_feed);
+            echo $display_output;
+            //var_dump($display_output);
+            ?>
+        </div>
     </div>
 
     <!--Footer-->    
