@@ -85,6 +85,7 @@
     <Content Include="parts\footer.html" />
     <Content Include="parts\mainbar.php" />
     <Content Include="parts\mainbar.html" />
+    <Content Include="rest\.htaccess" />
     <Content Include="scripts\client\account.js" />
     <Content Include="scripts\client\article.js" />
     <Content Include="scripts\client\common.js" />
@@ -93,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />
+    <Folder Include="rest\" />
     <Folder Include="scripts\" />
     <Folder Include="parts\" />
     <Folder Include="scripts\client\" />
