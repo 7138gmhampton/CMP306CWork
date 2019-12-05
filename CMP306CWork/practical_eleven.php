@@ -27,6 +27,9 @@ include_once 'config.php';
 
     <!--News Feed Display-->
     <div class="container">
+        <div class="h1">The Latest Articles from Wired.com</div>
+    </div>
+    <div class="container">
         <div class="row row-cols-3">
             <?php
             //Programmatic listing of Wired newsfeed
