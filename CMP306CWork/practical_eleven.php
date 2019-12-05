@@ -21,6 +21,13 @@ include_once 'config.php';
     include_once ROOT.'parts/mainbar.html';
     ?>
 
+    <!--News Feed Display-->
+    <div class="container">
+        <?php
+        //Programmatic listing of Wired newsfeed
+        ?>
+    </div>
+
     <!--Footer-->    
     <?php
     include_once ROOT.'parts/footer.html';
