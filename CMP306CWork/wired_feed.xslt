@@ -11,28 +11,40 @@
     </xsl:template>-->
 
   <xsl:template match="/">
-    <xsl:element name="h1">
+    <!--<xsl:element name="h1">
       <xsl:value-of select="channel/description"/>
-    </xsl:element>
+    </xsl:element>-->
     <xsl:apply-templates></xsl:apply-templates>
   </xsl:template>
   
   <xsl:template match="item">
+    <xsl:element name="div">
+      <xsl:attribute name="class">col-4</xsl:attribute>
       <xsl:element name="div">
-        <xsl:element name="a">
-          <xsl:attribute name="class">h5</xsl:attribute>
-          <xsl:attribute name="href">
-            <xsl:value-of select="link"/>
-          </xsl:attribute>
-          <xsl:value-of select="title"/>
+        <xsl:attribute name="class">card</xsl:attribute>
+        <xsl:element name="div">
+          <xsl:attribute name="class">card-header</xsl:attribute>
+          <xsl:element name="a">
+            <xsl:attribute name="class">card-title</xsl:attribute>
+            <xsl:attribute name="href">
+              <xsl:value-of select="link"/>
+            </xsl:attribute>
+            <xsl:value-of select="title"/>
+          </xsl:element>
         </xsl:element>
-        <xsl:element name="p">
-          <xsl:value-of select="description"/>
+
+        <xsl:element name="div">
+          <xsl:attribute name="class">card-body</xsl:attribute>
+          <xsl:element name="p">
+            <xsl:value-of select="description"/>
+          </xsl:element>
         </xsl:element>
       </xsl:element>
+    </xsl:element>
   </xsl:template>
 
   <xsl:template match="channel/title"></xsl:template>
+  <xsl:template match="channel/description"></xsl:template>
   <xsl:template match="channel/link"></xsl:template>
   <xsl:template match="channel/copyright"></xsl:template>
   <xsl:template match="channel/language"></xsl:template>
