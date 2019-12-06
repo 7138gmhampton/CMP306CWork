@@ -22,5 +22,29 @@ class IoTAPI extends Database
             return null;
         }
     }
+
+    public static function getMostRecentReadings($how_many)
+    {
+        $command = 'SELECT device, sensors '.
+            'FROM iot_reading '.
+            'ORDER BY timestamp DESC '.
+            'LIMIT :how_many';
+
+        try {
+            $statement = self::prepareStatement($command);
+            $statement->bindParam(':how_many', $how_many);
+
+            $statement->execute();
+
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+
+        $response = json_encode($result);
+        return $response;
+    }
 }
 ?>
