@@ -14,6 +14,7 @@ class IoTView extends ViewController
         foreach ($readings_array as $each_reading) {
             $sensors = json_decode($each_reading['sensors'], true);
             $next_reading = new Reading(
+                $each_reading['timestamp'],
                 $each_reading['device'],
                 $sensors['voltage'],
                 $sensors['internal'],
