@@ -55,11 +55,13 @@
     <Compile Include="scripts\server\view\comment.php" />
     <Compile Include="scripts\server\view\image.php" />
     <Compile Include="scripts\server\view\index.php" />
+    <Compile Include="scripts\server\view\reading.php" />
     <Compile Include="scripts\server\view\show_comment.php" />
     <Compile Include="scripts\server\view\user.php" />
     <Compile Include="scripts\server\view\view_comment.php" />
     <Compile Include="scripts\server\view\view_image.php" />
     <Compile Include="scripts\server\view\view_user.php" />
+    <Compile Include="scripts\server\view\view_iot.php" />
     <Compile Include="scripts\server\view_controller.php" />
     <Compile Include="tutorials.php" />
     <Compile Include="practical_three.php" />
