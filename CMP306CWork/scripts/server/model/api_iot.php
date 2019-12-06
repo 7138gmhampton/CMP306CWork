@@ -1,5 +1,5 @@
 <?php
-require_once '../../../config.php';
+//require_once '../../../config.php';
 require_once ROOT.'scripts/server/model/database.php';
 
 class IoTAPI extends Database
@@ -27,12 +27,12 @@ class IoTAPI extends Database
     {
         $command = 'SELECT device, sensors '.
             'FROM iot_reading '.
-            'ORDER BY timestamp DESC '.
+            'ORDER BY timestamp DESC ';
             'LIMIT :how_many';
 
         try {
             $statement = self::prepareStatement($command);
-            $statement->bindParam(':how_many', $how_many);
+            $statement->bindParam(':how_many', $how_many, PDO::PARAM_INT);
 
             $statement->execute();
 
