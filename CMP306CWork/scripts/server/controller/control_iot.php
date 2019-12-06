@@ -1,5 +1,6 @@
 <?php
 require_once '../../../config.php';
+require_once ROOT.'scripts/server/view_controller.php';
 require_once ROOT.'scripts/server/model/api_iot.php';
 
 class IoTController extends ViewController
