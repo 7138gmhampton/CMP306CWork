@@ -25,7 +25,7 @@ class IoTAPI extends Database
 
     public static function getMostRecentReadings($how_many)
     {
-        $command = 'SELECT device, sensors '.
+        $command = 'SELECT timestamp, device, sensors '.
             'FROM iot_reading '.
             'ORDER BY timestamp DESC ';
             'LIMIT :how_many';
