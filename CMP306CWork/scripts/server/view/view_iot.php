@@ -23,5 +23,12 @@ class IoTView extends ViewController
 
         return $all_readings;
     }
+
+    public static function current()
+    {
+        $most_recent = self::recent(1);
+
+        return $most_recent[0];
+    }
 }
 ?>
