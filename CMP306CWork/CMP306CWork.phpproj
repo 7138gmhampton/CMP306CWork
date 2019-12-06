@@ -24,6 +24,7 @@
     <Compile Include="index.php" />
     <Compile Include="listing.php" />
     <Compile Include="article_listing.php" />
+    <Compile Include="mobile_current.php" />
     <Compile Include="parts\index.php" />
     <Compile Include="practical_eleven.php" />
     <Compile Include="practical_six.php" />
