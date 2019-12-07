@@ -43,6 +43,7 @@
     <Compile Include="scripts\server\controller\control_user.php" />
     <Compile Include="scripts\server\controller\edit_comment.php" />
     <Compile Include="scripts\server\controller\erase_comment.php" />
+    <Compile Include="scripts\server\view\get_current_reading.php" />
     <Compile Include="scripts\server\controller\index.php" />
     <Compile Include="scripts\server\controller\input_readings.php" />
     <Compile Include="scripts\server\controller\login.php" />
@@ -97,6 +98,7 @@
     <Content Include="scripts\client\account.js" />
     <Content Include="scripts\client\article.js" />
     <Content Include="scripts\client\common.js" />
+    <Content Include="scripts\client\mobile_always_current.js" />
     <Content Include="scripts\client\mobile_ten_latest.js" />
     <Content Include="scripts\client\tutorial.js" />
     <Content Include="wired_feed.xslt" />
