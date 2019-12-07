@@ -26,13 +26,16 @@ require_once 'config.php';
 <body class="ui-mobile-viewport ui-overlay-a">
     <div class="ui-page ui-page-theme ui-page-active" data-role="page">
         <div class="ui-header ui-bar-inherit" data-role="header" role="banner">
-            <h1 class="ui-title" role="heading">Current Reading</h1>
+            <h1 class="ui-title" role="heading">Ten Latest - Graph</h1>
         </div>
         <div class="ui-content" role="main">
-            
+            <canvas id="canvasGraph"></canvas>
         </div>
     </div>
 
-    <script src="scripts/client/mobile_always_current.js"></script>
+    <!--CDN-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <!--Other Scripts-->
+    <script src="scripts/client/mobile_graph.js"></script>
 </body>
 </html>
