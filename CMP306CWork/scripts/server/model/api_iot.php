@@ -27,13 +27,14 @@ class IoTAPI extends Database
     {
         $command = 'SELECT timestamp, device, sensors '.
             'FROM iot_reading '.
-            'ORDER BY timestamp DESC ';
+            'ORDER BY timestamp DESC '.
             'LIMIT :how_many';
 
         try {
             $statement = self::prepareStatement($command);
             $statement->bindParam(':how_many', $how_many, PDO::PARAM_INT);
 
+            //$statement->debugDumpParams();
             $statement->execute();
 
             $result = $statement->fetchAll(PDO::FETCH_ASSOC);
