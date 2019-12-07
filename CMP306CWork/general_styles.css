@@ -35,3 +35,11 @@
 .comment-box {
     width: 100%
 }
+
+.most-row {
+    color: forestgreen !important;
+}
+
+.least-row {
+    color: darkred;
+}

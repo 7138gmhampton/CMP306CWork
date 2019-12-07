@@ -96,6 +96,7 @@
     <Content Include="scripts\client\account.js" />
     <Content Include="scripts\client\article.js" />
     <Content Include="scripts\client\common.js" />
+    <Content Include="scripts\client\mobile_ten_latest.js" />
     <Content Include="scripts\client\tutorial.js" />
     <Content Include="wired_feed.xslt" />
   </ItemGroup>
