@@ -59,6 +59,7 @@
     <Compile Include="scripts\server\model\index.php" />
     <Compile Include="scripts\server\view\article_feed.php" />
     <Compile Include="scripts\server\view\comment.php" />
+    <Compile Include="scripts\server\view\get_ten_latest.php" />
     <Compile Include="scripts\server\view\image.php" />
     <Compile Include="scripts\server\view\index.php" />
     <Compile Include="scripts\server\view\reading.php" />
@@ -100,6 +101,7 @@
     <Content Include="scripts\client\article.js" />
     <Content Include="scripts\client\common.js" />
     <Content Include="scripts\client\mobile_always_current.js" />
+    <Content Include="scripts\client\mobile_graph.js" />
     <Content Include="scripts\client\mobile_ten_latest.js" />
     <Content Include="scripts\client\tutorial.js" />
     <Content Include="wired_feed.xslt" />
