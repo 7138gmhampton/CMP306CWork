@@ -43,11 +43,11 @@ require_once 'config.php';
             <div class="ui-body">
                 <p id="textDevice"></p>
                 <?php
-                include_once ROOT.'scripts/server/view/view_iot.php';
+                //include_once ROOT.'scripts/server/view/view_iot.php';
 
-                $current = IoTView::current();
+                //$current = IoTView::current();
 
-                echo '<p>'.$current->getId().'</p>';
+                //echo '<p>'.$current->getId().'</p>';
                 ?>
             </div>
 
@@ -56,7 +56,7 @@ require_once 'config.php';
             <div class="ui-body">
                 <p id="textVoltage"></p>
                 <?php
-                echo '<p>'.$current->getVoltage().'V</p>';
+                //echo '<p>'.$current->getVoltage().'V</p>';
                 ?>
             </div>
 
@@ -65,7 +65,7 @@ require_once 'config.php';
             <div class="ui-body">
                 <p id="textLight"></p>
                 <?php
-                echo '<p>'.$current->getLight().'</p>';
+                //echo '<p>'.$current->getLight().'</p>';
                 ?>
             </div>
 
@@ -75,9 +75,9 @@ require_once 'config.php';
                 <p id="textInternal"></p>
                 <p id="textExternal"></p>
                 <?php
-                echo '<p>'.$current->getIntTemp().'&degC</p>';
-                echo '<p>Internal</p>';
-                echo '<p>'.$current->getExtTemp().'&degC</p>';
+                //echo '<p>'.$current->getIntTemp().'&degC</p>';
+                //echo '<p>Internal</p>';
+                //echo '<p>'.$current->getExtTemp().'&degC</p>';
                 ?>
             </div>
         </div>
