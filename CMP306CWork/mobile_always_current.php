@@ -41,6 +41,7 @@ require_once 'config.php';
             <!--Device ID-->
             <h2 class="ui-bar ui-bar-a">Device ID</h2>
             <div class="ui-body">
+                <p id="textDevice"></p>
                 <?php
                 include_once ROOT.'scripts/server/view/view_iot.php';
 
@@ -53,6 +54,7 @@ require_once 'config.php';
             <!--Voltage-->
             <h2 class="ui-bar ui-bar-a">Voltage</h2>
             <div class="ui-body">
+                <p id="textVoltage"></p>
                 <?php
                 echo '<p>'.$current->getVoltage().'V</p>';
                 ?>
@@ -61,6 +63,7 @@ require_once 'config.php';
             <!--Light Level-->
             <h2 class="ui-bar ui-bar-a">Light Level</h2>
             <div class="ui-body">
+                <p id="textLight"></p>
                 <?php
                 echo '<p>'.$current->getLight().'</p>';
                 ?>
@@ -69,6 +72,8 @@ require_once 'config.php';
             <!--Temperatures-->
             <h2 class="ui-bar ui-bar-a">Temperatures</h2>
             <div class="ui-body">
+                <p id="textInternal"></p>
+                <p id="textExternal"></p>
                 <?php
                 echo '<p>'.$current->getIntTemp().'&degC</p>';
                 echo '<p>Internal</p>';
@@ -77,5 +82,7 @@ require_once 'config.php';
             </div>
         </div>
     </div>
+
+    <script src="scripts/client/mobile_always_current.js"></script>
 </body>
 </html>
