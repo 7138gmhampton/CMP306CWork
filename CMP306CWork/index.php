@@ -81,6 +81,28 @@ include_once 'config.php';
                     <a class="btn btn-primary page-button my-1" href="practical_six.php">Week 6</a>
                 </div>
             </div>
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button my-1" href="practical_seven.php">Week 7</a>
+                </div>
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button my-1" href="practical_eight.php">Week 8</a>
+                </div>
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button my-1" href="practical_nine.php">Week 9</a>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button my-1" href="practical_ten.php">Week 10</a>
+                </div>
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button my-1" href="practical_eleven.php">Week 11</a>
+                </div>
+                <div class="col-lg-4">
+                    <a class="btn btn-primary page-button my-1" href="practical_twelve.php">Week 12</a>
+                </div>
+            </div>
         </div>
 
         <!--<footer>
