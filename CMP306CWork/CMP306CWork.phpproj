@@ -24,6 +24,7 @@
     <Compile Include="index.php" />
     <Compile Include="listing.php" />
     <Compile Include="article_listing.php" />
+    <Compile Include="mobile_graph.php" />
     <Compile Include="mobile_always_current.php" />
     <Compile Include="mobile_ten_latest.php" />
     <Compile Include="mobile_current.php" />
