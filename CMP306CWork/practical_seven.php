@@ -12,10 +12,11 @@ include_once 'config.php';
     <title></title>
 
     <link rel="stylesheet" type="text/css" href="general_styles.css" />
-
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 </head>
 <body>
-    <!--Main Navbar-->
+    <!--Main Navbar-->    
     <?php
     include_once ROOT.'parts/mainbar.php';
     ?>
@@ -25,32 +26,37 @@ include_once 'config.php';
         <div class="row text-center">
             <div class="col-6-md">
                 <h3 class="h3">Red</h3>
-                <a class="btn btn-primary" 
+                <a class="btn btn-primary"
                    href="https://agent.electricimp.com/muY_i1VpM46A?state=1&colour=red">
                     On
                 </a>
                 <a class="btn btn-secondary"
-                    href="https://agent.electricimp.com/muY_i1VpM46A?state=0&colour=red">
+                   href="https://agent.electricimp.com/muY_i1VpM46A?state=0&colour=red">
                     Off
                 </a>
             </div>
             <div class="col-6-md">
                 <h3 class="h3">Red</h3>
                 <a class="btn btn-primary"
-                    href="https://agent.electricimp.com/muY_i1VpM46A?state=1&colour=green">
+                   href="https://agent.electricimp.com/muY_i1VpM46A?state=1&colour=green">
                     On
                 </a>
                 <a class="btn btn-secondary"
-                    href="https://agent.electricimp.com/muY_i1VpM46A?state=0&colour=green">
+                   href="https://agent.electricimp.com/muY_i1VpM46A?state=0&colour=green">
                     Off
                 </a>
             </div>
         </div>
     </div>
 
-    <!--Footer-->
+    <!--Footer-->    
     <?php
     include_once ROOT.'parts/footer.html';
     ?>
+
+    <!--Bs Js-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>
