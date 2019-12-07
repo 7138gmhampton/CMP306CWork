@@ -29,7 +29,7 @@ require_once 'config.php';
             <h1 class="ui-title" role="heading">Latest Readings</h1>
         </div>
         <div class="ui-content" role="main">
-            <table data-role="table" class="ui-responsive">
+            <table id="tableReads" data-role="table" class="ui-responsive">
                 <thead>
                     <tr>
                         <th data-priority="1">Time</th>
