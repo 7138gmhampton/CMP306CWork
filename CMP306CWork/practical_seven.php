@@ -25,26 +25,30 @@ include_once 'config.php';
     <div class="container">
         <div class="row text-center">
             <div class="col-6-md">
-                <h3 class="h3">Red</h3>
-                <a class="btn btn-primary"
-                   href="https://agent.electricimp.com/muY_i1VpM46A?state=1&colour=red">
-                    On
-                </a>
-                <a class="btn btn-secondary"
-                   href="https://agent.electricimp.com/muY_i1VpM46A?state=0&colour=red">
-                    Off
-                </a>
+                <div class="container m-3">
+                    <h3 class="h3">Red</h3>
+                    <a class="btn btn-primary"
+                        href="https://agent.electricimp.com/muY_i1VpM46A?state=1&colour=red">
+                        On
+                    </a>
+                    <a class="btn btn-secondary"
+                        href="https://agent.electricimp.com/muY_i1VpM46A?state=0&colour=red">
+                        Off
+                    </a>
+                </div>
             </div>
             <div class="col-6-md">
-                <h3 class="h3">Red</h3>
-                <a class="btn btn-primary"
-                   href="https://agent.electricimp.com/muY_i1VpM46A?state=1&colour=green">
-                    On
-                </a>
-                <a class="btn btn-secondary"
-                   href="https://agent.electricimp.com/muY_i1VpM46A?state=0&colour=green">
-                    Off
-                </a>
+                <div class="container m-3">
+                    <h3 class="h3">Green</h3>
+                    <a class="btn btn-primary"
+                        href="https://agent.electricimp.com/muY_i1VpM46A?state=1&colour=green">
+                        On
+                    </a>
+                    <a class="btn btn-secondary"
+                        href="https://agent.electricimp.com/muY_i1VpM46A?state=0&colour=green">
+                        Off
+                    </a>
+                </div>
             </div>
         </div>
     </div>
