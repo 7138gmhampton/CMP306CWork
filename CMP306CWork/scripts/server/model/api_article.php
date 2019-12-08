@@ -51,5 +51,29 @@ class ArticleAPI extends Database
         $response = json_encode($result);
         return $response;
     }
+
+    public static function getRecent($how_many)
+    {
+        $command = 'SELECT article, title, author, video, text '.
+            'FROM psn_article '.
+            'ORDER BY article DESC '.
+            'LIMIT :how_many';
+
+        try {
+            $statement = self::prepareStatement($command);
+            $statement->bindParam(':how_many', $how_many, PDO::PARAM_INT);
+
+            $statement->execute();
+
+            $result = $statement->fetchAll(PDO::FETCH_ASSOC);
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+
+        $response = json_encode($result);
+        return $response;
+    }
 }
 ?>
