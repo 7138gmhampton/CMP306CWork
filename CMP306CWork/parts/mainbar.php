@@ -162,6 +162,28 @@
                 </div>
             </li>
 
+            <!--Week Nine-->
+            <li class="nav-item dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle" href="#" id="wk9Dropdown" role="button"
+                    data-toggle="dropdown">
+                    Week 9
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="practical_nine.php">Practical</a>
+                    <a class="dropdown-item" href="tutorials.php#tabWeekNine">Tutorial</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown d-lg-none">
+                <a class="nav-link dropdown-toggle mob-nav-text" href="#" id="wk9DropdownMob" role="button"
+                    data-toggle="dropdown">
+                    Week 9
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item mob-nav-text" href="practical_nine.php">Practical</a>
+                    <a class="dropdown-item mob-nav-text" href="tutorials.php#tabWeekNine">Tutorial</a>
+                </div>
+            </li>
+
             <!--Week Ten-->
             <li class="nav-item dropdown d-none d-lg-block">
                 <a class="nav-link dropdown-toggle" href="#" id="wk10Dropdown" role="button"
