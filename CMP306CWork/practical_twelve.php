@@ -28,7 +28,7 @@ include_once 'config.php';
                     <!--<li><button class="list-group-item list-group-item-action" value="42">Example of something to put in here</button></li>-->
                 </ul>
             </div>
-            <div class="col-md-8"></div>
+            <div id="divSummary" class="col-md-8"></div>
         </div>
     </div>
 
