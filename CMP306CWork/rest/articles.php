@@ -18,7 +18,23 @@ function get_article($id)
     echo $response;
 }
 
+function get_articles()
+{
+    $all_articles = ArticleView::recent();
+    $articles_array = array();
+
+    foreach ($all_articles as $each_article)
+        array_push($articles_array, $each_article->getAssocArray());
+
+    $response = json_encode($articles_array);
+    echo $response;
+}
+
 switch ($_SERVER['REQUEST_METHOD']) {
-    case 'GET': get_article($_GET['id']); break;
+    case 'GET': 
+        if (isset($_GET['id']))
+            get_article($_GET['id']);
+        else get_articles();
+        break;
 }
 ?>
