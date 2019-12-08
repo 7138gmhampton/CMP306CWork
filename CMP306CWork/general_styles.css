@@ -43,3 +43,8 @@
 .least-row {
     color: darkred;
 }
+
+.mobile-footer-button {
+    text-align: center !important;
+    display: block !important;
+}
