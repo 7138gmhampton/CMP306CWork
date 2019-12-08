@@ -48,7 +48,7 @@ class ArticleView extends ViewController
             self::scrub($article_id)), true);
 
         $article = new Article(
-            $article_array[0]['article'], 
+            $article_array[0]['article'],
             $article_array[0]['title'],
             $article_array[0]['author'],
             $article_array[0]['video'],
@@ -78,7 +78,19 @@ class ArticleView extends ViewController
     public static function recent($how_many = 100)
     {
         $article_array = json_decode(ArticleAPI::getRecent($how_many), true);
+        $all_articles = array();
 
+        foreach ($article_array as $each_article) {
+            $next_article = new Article(
+                $each_article['article'],
+                $each_article['title'],
+                $each_article['author'],
+                $each_article['video'],
+                $each_article['text']);
+            array_push($all_articles, $next_article);
+        }
+
+        return $all_articles;
     }
 }
 ?>
