@@ -74,5 +74,11 @@ class ArticleView extends ViewController
 
         return $these_articles;
     }
+
+    public static function recent($how_many = 100)
+    {
+        $article_array = json_decode(ArticleAPI::getRecent($how_many), true);
+
+    }
 }
 ?>

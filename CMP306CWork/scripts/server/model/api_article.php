@@ -52,7 +52,7 @@ class ArticleAPI extends Database
         return $response;
     }
 
-    public static function getRecent($how_many = 100)
+    public static function getRecent($how_many)
     {
         $command = 'SELECT article, title, author, video, text '.
             'FROM psn_article '.
