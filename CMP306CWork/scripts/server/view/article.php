@@ -82,5 +82,18 @@ class Article
         echo '      </div>';
         echo '  </div>';
     }
+
+    public function getAssocArray()
+    {
+        $assoc_array = array(
+            'article' => $this->article,
+            'title'=>$this->title,
+            'author'=>$this->author,
+            'video'=>$this->video,
+            'text'=>$this->text,
+            'image'=>$this->image);
+
+        return $assoc_array;
+    }
 }
 ?>
