@@ -48,3 +48,12 @@
     text-align: center !important;
     display: block !important;
 }
+
+.articles-list {
+    max-height: 60em !important;
+    overflow: scroll !important;
+}
+
+.article-summary-display {
+    max-height: 60em !important;
+}
