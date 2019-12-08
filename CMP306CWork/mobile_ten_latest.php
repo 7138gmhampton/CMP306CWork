@@ -15,6 +15,7 @@ require_once 'config.php';
 
     <title>CMP306 Week 9 Most Recent</title>
 
+    <link rel="stylesheet" href="general_styles.css" />
     <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.5/_assets/css/jqm-demos.css" />
     <link rel="shortcut icon" href="https://demos.jquerymobile.com/1.4.5/favicon.ico" />
