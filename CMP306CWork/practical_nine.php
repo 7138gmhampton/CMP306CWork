@@ -22,7 +22,7 @@ include_once 'config.php';
 
     <!--Mobile Section-->
     <div class="container text-center">
-        <a class="btn btn-primary" href="mobile_current.php">Go to Mobile Section</a>
+        <a class="btn btn-primary mt-3" href="mobile_current.php">Go to Mobile Section</a>
     </div>
 
     <!--Footer-->
