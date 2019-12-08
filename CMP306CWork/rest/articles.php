@@ -1,6 +1,7 @@
 <?php
 require_once '../config.php';
 require_once ROOT.'scripts/server/view/view_article.php';
+require_once ROOT.'scripts/server/controller/control_article.php';
 
 function get_article($id)
 {
@@ -30,11 +31,30 @@ function get_articles()
     echo $response;
 }
 
+function put_article($title, $author, $video, $text)
+{
+    ArticleController::create($title, $author, $video, $text);
+}
+
 switch ($_SERVER['REQUEST_METHOD']) {
-    case 'GET': 
+    case 'GET':
         if (isset($_GET['id']))
             get_article($_GET['id']);
         else get_articles();
+        break;
+    case 'PUT':
+        put_article(
+            $_PUT['title'],
+            $_PUT['author'],
+            $_PUT['video'],
+            $_PUT['text']);
+        break;
+    case 'POST':
+        put_article(
+            $_POST['title'],
+            $_POST['author'],
+            $_POST['video'],
+            $_POST['text']);
         break;
 }
 ?>
