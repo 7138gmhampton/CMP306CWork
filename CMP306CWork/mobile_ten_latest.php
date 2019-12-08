@@ -56,6 +56,11 @@ require_once 'config.php';
                     ?>
                 </tbody>
             </table>
+            <p>
+                The row with the greatest difference between the external and internal temperature 
+                is coloured <b class="most-row">green</b> and that with the least 
+                <b class="least-row">red</b>.
+            </p>
         </div>
         <?php
         include 'parts/mobile_footer.html';
