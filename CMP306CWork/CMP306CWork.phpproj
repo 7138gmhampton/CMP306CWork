@@ -31,6 +31,7 @@
     <Compile Include="mobile_other.php" />
     <Compile Include="parts\index.php" />
     <Compile Include="practical_eleven.php" />
+    <Compile Include="practical_nine.php" />
     <Compile Include="practical_seven.php" />
     <Compile Include="practical_six.php" />
     <Compile Include="practical_five.php" />
