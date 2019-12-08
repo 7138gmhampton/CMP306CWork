@@ -15,6 +15,7 @@ require_once 'config.php';
 
     <title>CMP306 Week 9 Ten Latest Graphed</title>
 
+    <link rel="stylesheet" href="general_styles.css" />
     <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.5/_assets/css/jqm-demos.css" />
     <link rel="shortcut icon" href="https://demos.jquerymobile.com/1.4.5/favicon.ico" />
@@ -25,12 +26,18 @@ require_once 'config.php';
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
     <div class="ui-page ui-page-theme ui-page-active" data-role="page">
+        <?php
+        include 'parts/mobile_panel.html';
+        ?>
         <div class="ui-header ui-bar-inherit" data-role="header" role="banner">
             <h1 class="ui-title" role="heading">Ten Latest - Graph</h1>
         </div>
         <div class="ui-content" role="main">
             <canvas id="canvasGraph"></canvas>
         </div>
+        <?php
+        include 'parts/mobile_footer.html';
+        ?>
     </div>
 
     <!--CDN-->

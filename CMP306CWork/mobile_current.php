@@ -28,6 +28,9 @@ require_once 'config.php';
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
     <div class="ui-page ui-page-theme ui-page-active" data-role="page">
+        <?php
+        include 'parts/mobile_panel.html';
+        ?>
         <div class="ui-header ui-bar-inherit" data-role="header" role="banner">
             <h1 class="ui-title" role="heading">Current Reading</h1>
         </div>
@@ -70,6 +73,9 @@ require_once 'config.php';
                 ?>
             </div>
         </div>
+        <?php
+        include 'parts/mobile_footer.html';
+        ?>
     </div>
 </body>
 </html>
