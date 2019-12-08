@@ -108,6 +108,7 @@
     <Content Include="scripts\client\mobile_always_current.js" />
     <Content Include="scripts\client\mobile_graph.js" />
     <Content Include="scripts\client\mobile_ten_latest.js" />
+    <Content Include="scripts\client\practical_twelve.js" />
     <Content Include="scripts\client\tutorial.js" />
     <Content Include="wired_feed.xslt" />
   </ItemGroup>
