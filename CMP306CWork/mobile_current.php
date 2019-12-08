@@ -10,7 +10,7 @@ require_once 'config.php';
 <head>
     <meta charset="utf-8" />
     <meta name="author" content="Gareth M. Hampton" />
-    <base href="https://demos.jquerymobile.com/1.4.5/pages-single-page/" />
+    <!--<base href="https://demos.jquerymobile.com/1.4.5/pages-single-page/" />-->
     <meta name="viewport" content="width = device-width, initial-scale = 1" />
 
     <title>CMP306 Week 9 Most Recent</title>
@@ -18,12 +18,19 @@ require_once 'config.php';
     <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
-    <link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css" />
+    <!--<link rel="stylesheet" href="../css/themes/default/jquery.mobile-1.4.5.min.css" />
     <link rel="stylesheet" href="../_assets/css/jqm-demos.css" />
     <link rel="shortcut icon" href="../favicon.ico" />
     <script src="../js/jquery.js"></script>
     <script src="../_assets/js/index.js"></script>
-    <script src="../js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../js/jquery.mobile-1.4.5.min.js"></script>-->
+    <link rel="stylesheet" href="general_styles.css" />
+    <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.5/css/themes/default/jquery.mobile-1.4.5.min.css" />
+    <link rel="stylesheet" href="https://demos.jquerymobile.com/1.4.5/_assets/css/jqm-demos.css" />
+    <link rel="shortcut icon" href="https://demos.jquerymobile.com/1.4.5/favicon.ico" />
+    <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.js"></script>
+    <script src="https://demos.jquerymobile.com/1.4.5/_assets/js/index.js"></script>
+    <script src="https://demos.jquerymobile.com/1.4.5/js/jquery.mobile-1.4.5.min.js"></script>
     
 </head>
 <body class="ui-mobile-viewport ui-overlay-a">
