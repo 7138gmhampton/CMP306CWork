@@ -1,8 +1,4 @@
 <?php
-//Error Reporting
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
 require_once 'config.php';
 ?>
 <!--<!DOCTYPE html>-->
@@ -10,7 +6,6 @@ require_once 'config.php';
 <head>
     <meta charset="utf-8" />
     <meta name="author" content="Gareth M. Hampton" />
-    <!--<base href="https://demos.jquerymobile.com/1.4.5/pages-single-page/" />-->
     <meta name="viewport" content="width = device-width, initial-scale = 1" />
 
     <title>CMP306 Week 9 Most Recent</title>
