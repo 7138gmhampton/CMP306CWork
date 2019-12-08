@@ -75,5 +75,26 @@ class ArticleAPI extends Database
         $response = json_encode($result);
         return $response;
     }
+
+    public static function createArticle($article_data)
+    {
+        $command = 'INSERT INTO psn_article (title, author, video, text) '.
+            'VALUES (:title, :author, :video, :text)';
+        $article_array = json_decode($article_data, true);
+
+        try {
+            $statement = self::prepareStatement($command);
+            $statement->bindParam(':title',$article_array['title']);
+            $statement->bindParam(':author',$article_array['author']);
+            $statement->bindParam(':video',$article_array['video']);
+            $statement->bindParam(':text',$article_array['text']);
+
+            $statement->execute();
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+    }
 }
 ?>
