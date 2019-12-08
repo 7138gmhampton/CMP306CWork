@@ -40,6 +40,7 @@
     <Compile Include="rest\articles.php" />
     <Compile Include="scripts\client\index.php" />
     <Compile Include="scripts\index.php" />
+    <Compile Include="scripts\server\controller\control_article.php" />
     <Compile Include="scripts\server\controller\control_comment.php" />
     <Compile Include="scripts\server\controller\control_iot.php" />
     <Compile Include="scripts\server\controller\control_user.php" />
