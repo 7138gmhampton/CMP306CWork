@@ -35,5 +35,6 @@ $(document).ready(function ()
 
     //alert('Most: ' + greatest + ' | Least: ' + least);
     //alert('Most at: ' + most_index + ' | Least at: ' + least_index);
-    //setRowClass(most_index, 'most-row');
+    setRowClass(most_index, 'most-row');
+    setRowClass(least_index, 'least-row');
 });
