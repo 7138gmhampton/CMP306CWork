@@ -37,6 +37,7 @@
     <Compile Include="practical_five.php" />
     <Compile Include="practical_four.php" />
     <Compile Include="practical_ten.php" />
+    <Compile Include="practical_twelve.php" />
     <Compile Include="rest\articles.php" />
     <Compile Include="scripts\client\index.php" />
     <Compile Include="scripts\index.php" />
