@@ -162,6 +162,28 @@
                 </div>
             </li>
 
+            <!--Week Eight-->
+            <li class="nav-item dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle" href="#" id="wk8Dropdown" role="button"
+                    data-toggle="dropdown">
+                    Week 8
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="practical_eight.php">Practical</a>
+                    <a class="dropdown-item" href="tutorials.php#tabWeekEight">Tutorial</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown d-lg-none">
+                <a class="nav-link dropdown-toggle mob-nav-text" href="#" id="wk8DropdownMob" role="button"
+                    data-toggle="dropdown">
+                    Week 8
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item mob-nav-text" href="practical_eight.php">Practical</a>
+                    <a class="dropdown-item mob-nav-text" href="tutorials.php#tabWeekEight">Tutorial</a>
+                </div>
+            </li>
+
             <!--Week Nine-->
             <li class="nav-item dropdown d-none d-lg-block">
                 <a class="nav-link dropdown-toggle" href="#" id="wk9Dropdown" role="button"
@@ -203,6 +225,50 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item mob-nav-text" href="practical_ten.php">Practical</a>
                     <a class="dropdown-item mob-nav-text" href="tutorials.php#tabWeekTen">Tutorial</a>
+                </div>
+            </li>
+
+            <!--Week Eleven-->
+            <li class="nav-item dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle" href="#" id="wk11Dropdown" role="button"
+                    data-toggle="dropdown">
+                    Week 11
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="practical_eleven.php">Practical</a>
+                    <a class="dropdown-item" href="tutorials.php#tabWeekEleven">Tutorial</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown d-lg-none">
+                <a class="nav-link dropdown-toggle mob-nav-text" href="#" id="wk11DropdownMob" role="button"
+                    data-toggle="dropdown">
+                    Week 11
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item mob-nav-text" href="practical_eleven.php">Practical</a>
+                    <a class="dropdown-item mob-nav-text" href="tutorials.php#tabWeekEleven">Tutorial</a>
+                </div>
+            </li>
+
+            <!--Week Twelve-->
+            <li class="nav-item dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle" href="#" id="wk12Dropdown" role="button"
+                    data-toggle="dropdown">
+                    Week 12
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="practical_twelve.php">Practical</a>
+                    <a class="dropdown-item" href="tutorials.php#tabWeekTwelve">Tutorial</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown d-lg-none">
+                <a class="nav-link dropdown-toggle mob-nav-text" href="#" id="wk12DropdownMob" role="button"
+                    data-toggle="dropdown">
+                    Week 12
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item mob-nav-text" href="practical_twelve.php">Practical</a>
+                    <a class="dropdown-item mob-nav-text" href="tutorials.php#tabWeekTwelve">Tutorial</a>
                 </div>
             </li>
         </ul>
