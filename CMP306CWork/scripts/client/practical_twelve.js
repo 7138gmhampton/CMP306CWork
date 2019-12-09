@@ -77,4 +77,30 @@ function clickListen()
 $(document).ready(function ()
 {
     populateList();
+
+    $('#btSubmit').click(function ()
+    {
+        let article_form_data = new FormData(document.getElementById('formArticleCreate'));
+        let article_submission = {
+            'title': $('#txtTitle').val(),
+            'author': $('#txtAuthor').val(),
+            'video': $('#txtVideo').val(),
+            'text': $('#txtText').val()
+        }
+
+        //$.ajax('rest/articles.php',
+        //    {
+        //        method: 'PUT',
+        //        data: JSON.stringify(article_form_data),
+        //        contentType: 'json'
+        //    })
+        $.post('rest/articles.php', { data: article_submission });
+    });
+
+    $('#formArticleCreate').submit(function (sender)
+    {
+        sender.preventDefault();
+        //$.post('rest/articles.php', { data: $(this).serialize() });
+        $.post('rest/articles.php', $(this).serialize());
+    })
 });
