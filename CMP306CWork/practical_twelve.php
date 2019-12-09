@@ -35,7 +35,7 @@ include_once 'config.php';
     <!--Article Creation Form-->
     <div class="container border">
         <h1 class="h1">Add Article</h1>
-        <form>
+        <form id="formArticleCreate">
             <div class="form-group">
                 <label for="txtTitle">Title</label>
                 <input id="txtTitle" name="title" class="form-control" />
@@ -45,11 +45,15 @@ include_once 'config.php';
                 <input id="txtAuthor" name="author" class="form-control" />
             </div>
             <div class="form-group">
+                <label for="txtVideo">Video</label>
+                <input id="txtVideo" name="video" class="form-control" />
+            </div>
+            <div class="form-group">
                 <label for="txtText">Text</label>
                 <textarea id="txtText" name="text" class="form-control" rows="7"></textarea>
             </div>
             <div class="form-group text-center">
-                <button id="btnSubmit" class="btn btn-primary">Submit</button>
+                <button id="btnSubmit" class="btn btn-primary" type="submit">Submit</button>
                 <button class="btn btn-secondary" type="reset">Clear</button>
             </div>
         </form>
