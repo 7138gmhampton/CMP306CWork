@@ -5,7 +5,6 @@
         let list = document.getElementById('listArticles');
 
         for (let iii = 0; iii < data.length; ++iii) {
-            //let item = document.createElement('li');
             let button = document.createElement('button');
             let title = document.createTextNode(data[iii].title);
 
@@ -13,7 +12,6 @@
             button.setAttribute('class', 'list-group-item list-group-item-action');
 
             button.appendChild(title);
-            //item.appendChild(button);
             list.appendChild(button);
         }
 
@@ -56,11 +54,6 @@ function displayArticle(id)
         let summary = document.getElementById('divSummary');
         while (summary.firstChild) summary.removeChild(summary.firstChild);
 
-        //let article_body = document.createElement('p');
-        //article_body.appendChild(document.createTextNode(data.text));
-
-        //summary.appendChild(formHeader(data.title, data.author));
-        //summary.appendChild(article_body);
         summary.append(formArticle(data.title, data.author, data.text));
     }, 'json');
 }
@@ -80,7 +73,6 @@ $(document).ready(function ()
 
     $('#btSubmit').click(function ()
     {
-        let article_form_data = new FormData(document.getElementById('formArticleCreate'));
         let article_submission = {
             'title': $('#txtTitle').val(),
             'author': $('#txtAuthor').val(),
@@ -88,19 +80,12 @@ $(document).ready(function ()
             'text': $('#txtText').val()
         }
 
-        //$.ajax('rest/articles.php',
-        //    {
-        //        method: 'PUT',
-        //        data: JSON.stringify(article_form_data),
-        //        contentType: 'json'
-        //    })
         $.post('rest/articles.php', { data: article_submission });
     });
 
     $('#formArticleCreate').submit(function (sender)
     {
         sender.preventDefault();
-        //$.post('rest/articles.php', { data: $(this).serialize() });
         $.post('rest/articles.php', $(this).serialize());
     })
 });
