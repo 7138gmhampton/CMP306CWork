@@ -49,11 +49,18 @@
     display: block !important;
 }
 
-.articles-list {
-    max-height: 60em !important;
-    overflow: scroll !important;
-}
+/*.articles-list {
+    max-height: 20em !important;
+    overflow-y: scroll !important;
+}*/
 
-.article-summary-display {
-    max-height: 60em !important;
+/*.article-summary-display {
+    max-height: 10em !important;
+    overflow-y: scroll;
+
+}*/
+
+.article-summary {
+    max-height: 20em !important;
+    overflow-y: scroll;
 }
