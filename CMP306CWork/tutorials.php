@@ -50,8 +50,23 @@ include_once 'config.php';
             <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekSix">
                 Week 6
             </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekSeven">
+                Week 7
+            </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekEight">
+                Week 8
+            </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekNine">
+                Week 9
+            </a>
             <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTen">
                 Week 10
+            </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekEleven">
+                Week 11
+            </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTwelve">
+                Week 12
             </a>
         </div>
     </nav>
