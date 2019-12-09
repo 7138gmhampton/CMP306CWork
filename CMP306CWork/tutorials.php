@@ -788,6 +788,9 @@ include_once 'config.php';
                 </p>
             </section>
         </article>
+        <article id="tabWeekSeven" class="tab-pane fade"></article>
+        <article id="tabWeekEight" class="tab-pane fade"></article>
+        <article id="tabWeekNine" class="tab-pane fade"></article>
         <article id="tabWeekTen" class="tab-pane fade">
             <!--RSS-->
             <section class="container mt-3 border border-secondary">
@@ -812,6 +815,8 @@ include_once 'config.php';
                 </p>
             </section>
         </article>
+        <article id="tabWeekEleven" class="tab-pane fade"></article>
+        <article id="tabWeekTwelve" class="tab-pane fade"></article>
     </div>
 
     <!--Footer-->
