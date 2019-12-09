@@ -32,42 +32,18 @@ include_once 'config.php';
     <!--Tabs Nav-->
     <nav class="container">
         <div class="nav nav-tabs" id="navTutorials" role="tablist">
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekOne">
-                Week 1
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTwo">
-                Week 2
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekThree">
-                Week 3
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekFour">
-                Week 4
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekFive">
-                Week 5
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekSix">
-                Week 6
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekSeven">
-                Week 7
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekEight">
-                Week 8
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekNine">
-                Week 9
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTen">
-                Week 10
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekEleven">
-                Week 11
-            </a>
-            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTwelve">
-                Week 12
-            </a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekOne">Week 1</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTwo">Week 2</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekThree">Week 3</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekFour">Week 4</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekFive">Week 5</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekSix">Week 6</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekSeven">Week 7</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekEight">Week 8</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekNine">Week 9</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTen">Week 10</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekEleven">Week 11</a>
+            <a class="nav-item nav-link" data-toggle="tab" href="#tabWeekTwelve">Week 12</a>
         </div>
     </nav>
 
