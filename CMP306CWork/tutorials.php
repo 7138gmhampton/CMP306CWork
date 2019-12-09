@@ -743,7 +743,123 @@ include_once 'config.php';
                 </code></pre>
             </section>
         </article>
-        <article id="tabWeekFive" class="tab-pane fade"></article>
+        <article id="tabWeekFive" class="tab-pane fade">
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">Form Security</h3>
+                <p>
+                    The registration and login forms have multiple layers to the deployment of 
+                    security on their utilisation. Firstly, at the level of the client, various 
+                    validity checks are made on the form data using JavaScript/jQuery functions. 
+                    This ensures that when the form is submitted there are no empty fields and 
+                    the contents are appropriate - e.g. the email address is of the correct 
+                    pattern. This is imperative for the submission of passwords for new 
+                    accounts. The verification check disallows passwords shorter than eight 
+                    characters and for passwords under fifteen characters, the inclusion of at 
+                    least one lowercase letter, uppercase letter, numeral and symbol are 
+                    mandated. This gradation is to all the use of pass phrases as an 
+                    alternative.
+                </p>
+                <p>
+                    At the Controller level - i.e. login and register scripts in PHP - the 
+                    submissions are  further processed by sanitising the components that may 
+                    have been input by the user. This sanitisation is achieved through the 
+                    application of PHP's built-in functions to trim excess white space, escape 
+                    salshes and character integra to HTML. This sanitisation protects against 
+                    various script injection attacks. Please note, the View side of the 
+                    framework also undertakes such protections to prevent second-order attacks.
+                </p>
+                <p>
+                    Finally, at the Model level, through the employment of PDO, the commands 
+                    submitted to the database are done so with prepared statements. This ensures 
+                    that SQL injections are ineffective.
+                </p>
+            </section>
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">Weaknesses of this Site</h3>
+                <div id="accordionWeakness" class="accordion">
+                    <div class="card">
+                        <div id="cardheadPwordDict" class="card-header">
+                            <h4 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                        data-target="#collapsePwordDict">
+                                    Password Dictionary Check
+                                </button>
+                            </h4>
+                        </div>
+                        <div id="collapsePwordDict" class="collapse show" 
+                             data-parent="#accordionWeakness">
+                            <div class="card-body">
+                                Though the current protections ameliorate the effect of brute 
+                                force solving the users&rsquo; passwords, there is little 
+                                countermeasure to dictionary attacks. This could be relieved by 
+                                check prospective passwords against lists of the most common and 
+                                either disallowing them or otherwise &lsquo;nudging&rsquo; the 
+                                user to select a different password.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div id="cardheadEmailVerify" class="card-header">
+                            <h4 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseEmailVerify">
+                                    Email Verification
+                                </button>
+                            </h4>
+                        </div>
+                        <div id="collapseEmailVerify" class="collapse"
+                            data-parent="#accordionWeakness">
+                            <div class="card-body">
+                                The email address provided by the user at registration is not 
+                                checked for authenticity. A simple verification email containing 
+                                a prepared link could be sent to the address provided before an 
+                                account is considered active.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div id="cardheadCaptcha" class="card-header">
+                            <h4 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseCaptcha">
+                                    CAPTCHA
+                                </button>
+                            </h4>
+                        </div>
+                        <div id="collapseCaptcha" class="collapse"
+                            data-parent="#accordionWeakness">
+                            <div class="card-body">
+                                At present, there are no checks to ensure that accounts are not 
+                                created by bots. Through the use of a system such as CAPTCHA, 
+                                this vulnerability could be lessened.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div id="cardheadLogging" class="card-header">
+                            <h4 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"
+                                    data-target="#collapseLogging">
+                                    Logging
+                                </button>
+                            </h4>
+                        </div>
+                        <div id="collapseLogging" class="collapse"
+                            data-parent="#accordionWeakness">
+                            <div class="card-body">
+                                Currently, none of the interactions between the components 
+                                produces any activity logs. These would be most critical for the 
+                                interactions between the API and the database to determine the 
+                                sequence of events that led to a loss or breach.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </article>
         <article id="tabWeekSix" class="tab-pane fade">
             <!--MVC Aims and Benefits-->
             <section class="container mt-3 border border-secondary">
