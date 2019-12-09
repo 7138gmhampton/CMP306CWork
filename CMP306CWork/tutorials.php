@@ -816,7 +816,41 @@ include_once 'config.php';
             </section>
         </article>
         <article id="tabWeekEleven" class="tab-pane fade"></article>
-        <article id="tabWeekTwelve" class="tab-pane fade"></article>
+        <article id="tabWeekTwelve" class="tab-pane fade">
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">Representational State Transfer (REST)</h3>
+                <p>
+                    In this site, the resources can be accessed via a REST interface by 
+                    submitting requests to the appropriate PHP script - hereafter, the reseource 
+                    script - found in the 'rest' folder. To get an article and its pertinent 
+                    information, for instance, a request with a URL ending in 
+                    '/rest/articles.php' must be sent. Any attendant responses are returned as 
+                    JSON objects.
+                </p>
+                <p>
+                    The resource scripts contain a switch statement that allows different 
+                    requests methods to be utilised for different operations. For example, the 
+                    GET method can return a single or many resources and the PUT/POST methods 
+                    can create resources. The functions that are called from the switch 
+                    statement then make use of the pre-existing MVC framework to achieve their 
+                    respective objectives.
+                </p>
+                <p>
+                    The functionality of this REST API has been demonstrated through the 
+                    implementation of an 'admin' page that can be used to view the hundred most 
+                    recent articles and summaries of their contents. There is also a form to add 
+                    new articles. This page uses AJAX requests, through the REST interface, to 
+                    populate the list of articles; the summary display of any selected article 
+                    and submission of any new articles.
+                </p>
+                <p>
+                    To improve the security of this interface, it could be made a requirement of 
+                    any of the functions that their submissions must be accompanied by some 
+                    permission indicator. This could a fixed indicator but would be safer if 
+                    based on a session key or other derived token.
+                </p>
+            </section>
+        </article>
     </div>
 
     <!--Footer-->
