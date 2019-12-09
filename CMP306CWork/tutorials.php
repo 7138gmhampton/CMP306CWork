@@ -49,7 +49,7 @@ include_once 'config.php';
 
     <!--Tabs Content-->
     <div id="tabcontentTutorials" class="tab-content">
-        <div class="tab-pane fade" id="tabWeekOne" role="tabpanel">
+        <article class="tab-pane fade" id="tabWeekOne" role="tabpanel">
             <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Tutorial Question 1</h2>
                 <p>
@@ -193,8 +193,8 @@ include_once 'config.php';
                     </div>
                 </div>
             </section>
-        </div>
-        <div id="tabWeekTwo" class="tab-pane fade" role="tabpanel">
+        </article>
+        <article id="tabWeekTwo" class="tab-pane fade" role="tabpanel">
             <!--Database Diagrams-->
             <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Database Diagrams</h2>
@@ -580,8 +580,8 @@ include_once 'config.php';
                     </div>
                 </div>
             </section>
-        </div>
-        <div id="tabWeekThree" class="tab-pane fade" role="tabpanel">
+        </article>
+        <article id="tabWeekThree" class="tab-pane fade" role="tabpanel">
             <!--MVC Framework-->
             <div class="container mt-3 border border-secondary">
                 <h2 class="h2">MVC Framework Appraisal</h2>
@@ -620,8 +620,8 @@ include_once 'config.php';
                     easier for a group to work on it together.<br />
                 </p>
             </div>
-        </div>
-        <div id="tabWeekFour" class="tab-pane fade">
+        </article>
+        <article id="tabWeekFour" class="tab-pane fade">
             <!--Security Evaluation-->
             <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Security</h2>
@@ -742,9 +742,9 @@ include_once 'config.php';
                     else $_SESSION['last_access'] = time();<br />
                 </code></pre>
             </section>
-        </div>
-        <div id="tabWeekFive" class="tab-pane fade"></div>
-        <div id="tabWeekSix" class="tab-pane fade">
+        </article>
+        <article id="tabWeekFive" class="tab-pane fade"></article>
+        <article id="tabWeekSix" class="tab-pane fade">
             <!--MVC Aims and Benefits-->
             <section class="container mt-3 border border-secondary">
                 <h2 class="h2">MVC Frameworks</h2>
@@ -787,8 +787,8 @@ include_once 'config.php';
                     will relate to search/limiting criteria.
                 </p>
             </section>
-        </div>
-        <div id="tabWeekTen" class="tab-pane fade">
+        </article>
+        <article id="tabWeekTen" class="tab-pane fade">
             <!--RSS-->
             <section class="container mt-3 border border-secondary">
                 <h3 class="h3">RSS</h3>
@@ -811,7 +811,7 @@ include_once 'config.php';
                     serialised into well-formed XML and echoed onto the page.
                 </p>
             </section>
-        </div>
+        </article>
     </div>
 
     <!--Footer-->
