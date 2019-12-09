@@ -36,6 +36,19 @@ function formHeader(title_text, author_text)
     return header;
 }
 
+function formArticle(title_text, author_text, body_text)
+{
+    let article = document.createElement('article');
+    article.setAttribute('class', 'h-100');
+
+    article.appendChild(formHeader(title_text, author_text));
+    let article_body = document.createElement('p');
+    article_body.append(body_text);
+    article.append(article_body);
+
+    return article;
+}
+
 function displayArticle(id)
 {
     $.get('rest/articles.php?id=' + id, function (data)
@@ -43,11 +56,12 @@ function displayArticle(id)
         let summary = document.getElementById('divSummary');
         while (summary.firstChild) summary.removeChild(summary.firstChild);
 
-        let article_body = document.createElement('p');
-        article_body.appendChild(document.createTextNode(data.text));
+        //let article_body = document.createElement('p');
+        //article_body.appendChild(document.createTextNode(data.text));
 
-        summary.appendChild(formHeader(data.title, data.author));
-        summary.appendChild(article_body);
+        //summary.appendChild(formHeader(data.title, data.author));
+        //summary.appendChild(article_body);
+        summary.append(formArticle(data.title, data.author, data.text));
     }, 'json');
 }
 
@@ -56,6 +70,7 @@ function clickListen()
     $('#listArticles button').click(function ()
     {
         console.log($(this).attr('value'));
+        displayArticle($(this).attr('value'));
     });
 }
 
