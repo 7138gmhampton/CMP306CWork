@@ -21,7 +21,7 @@ include_once 'config.php';
     ?>
 
     <!--Article Summary-->
-    <div class="container border border-secondary my-3">
+    <section class="container border border-secondary my-3">
         <h1 class="h1">Recent Articles</h1>
         <div class="row">
             <div class="col-md-4 article-summary">
@@ -29,11 +29,11 @@ include_once 'config.php';
             </div>
             <div id="divSummary" class="col-md-8 article-summary"></div>
         </div>
-    </div>
+    </section>
     
 
     <!--Article Creation Form-->
-    <div class="container border border-secondary my-3">
+    <section class="container border border-secondary my-3">
         <h1 class="h1">Add Article</h1>
         <form id="formArticleCreate">
             <div class="form-group">
@@ -57,7 +57,7 @@ include_once 'config.php';
                 <button class="btn btn-secondary" type="reset">Clear</button>
             </div>
         </form>
-    </div>
+    </section>
 
     <!--Footer-->
     <?php
