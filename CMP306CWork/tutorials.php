@@ -74,7 +74,7 @@ include_once 'config.php';
     <!--Tabs Content-->
     <div id="tabcontentTutorials" class="tab-content">
         <div class="tab-pane fade" id="tabWeekOne" role="tabpanel">
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Tutorial Question 1</h2>
                 <p>
                     Bootstrap employs a flexible grid: 12 columns within each row and these components
@@ -88,7 +88,7 @@ include_once 'config.php';
                     for medium screens and a single column for anything smaller.
                 </p>
             </section>
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Tutorial Question 2</h2>
                 <p>
                     Bootstrap has classes that can make deployment of dropdown menus, pagination and
@@ -99,7 +99,7 @@ include_once 'config.php';
                     and then 'included' on the required pages using PHP scripting.
                 </p>
             </section>
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Tutorial Question 3</h2>
                 <div class="accordion" id="accordianQuestionThree">
                     <!--Modal Section-->
@@ -220,7 +220,7 @@ include_once 'config.php';
         </div>
         <div id="tabWeekTwo" class="tab-pane fade" role="tabpanel">
             <!--Database Diagrams-->
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Database Diagrams</h2>
                 
                 <!--ERD-->
@@ -242,7 +242,7 @@ include_once 'config.php';
             </section>
 
             <!--Tables and their Fields-->
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Fields and the Data Types</h2>
                 <div id="accordianFields" class="accordion">
                     <!--Image-->
@@ -607,7 +607,7 @@ include_once 'config.php';
         </div>
         <div id="tabWeekThree" class="tab-pane fade" role="tabpanel">
             <!--MVC Framework-->
-            <div class="container mt-3 border">
+            <div class="container mt-3 border border-secondary">
                 <h2 class="h2">MVC Framework Appraisal</h2>
                 <p>
                     To exemplify the utilisation of the Model-View-Controller framework that has 
@@ -647,7 +647,7 @@ include_once 'config.php';
         </div>
         <div id="tabWeekFour" class="tab-pane fade">
             <!--Security Evaluation-->
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Security</h2>
                 <p>
                     Access to the accounts on this site are protected by a password login. To 
@@ -664,7 +664,7 @@ include_once 'config.php';
                 </p>
                 
                 <!--Cracking Table-->
-                <table class="table border">
+                <table class="table border border-secondary">
                     <thead class="thead-light">
                         <tr>
                             <th scope="col">Number of Characters</th>
@@ -743,7 +743,7 @@ include_once 'config.php';
                     after a number of failed access attempts are good candidates.
                 </p>
             </section>
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h2 class="h2">Session Timeout</h2>
                 <p>
                     If one has access to the php.ini for the server, the maximum time for an 
@@ -770,7 +770,7 @@ include_once 'config.php';
         <div id="tabWeekFive" class="tab-pane fade"></div>
         <div id="tabWeekSix" class="tab-pane fade">
             <!--MVC Aims and Benefits-->
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h2 class="h2">MVC Frameworks</h2>
                 <h3 class="h3">Aim</h3>
                 <p>
@@ -792,7 +792,7 @@ include_once 'config.php';
                 </p>
             </section>
             <!--RPC-->
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h3 class="h3">JSON-RPC</h3>
                 <p>
                     To utilise Remote Procedure Calls to retrieve and manipulate data, the 
@@ -814,7 +814,7 @@ include_once 'config.php';
         </div>
         <div id="tabWeekTen" class="tab-pane fade">
             <!--RSS-->
-            <section class="container mt-3 border">
+            <section class="container mt-3 border border-secondary">
                 <h3 class="h3">RSS</h3>
                 <p>
                     RSS feeds, and the related Atom Syndication Format, are delivered as 
