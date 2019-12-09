@@ -25,13 +25,13 @@ include_once 'config.php';
         <h1 class="h1">Recent Articles</h1>
         <div class="row">
             <div class="col-md-4 article-summary">
-                <ul id="listArticles" class="list-group">
+                <div id="listArticles" class="list-group">
                     <!--<li><button class="list-group-item list-group-item-action" value="42">Example of something to put in here</button></li>-->
-                </ul>
+                </div>
             </div>
             <div id="divSummary" class="col-md-8 article-summary">
-                <article class="h-100">
-                    <!--<header>
+                <!--<article class="h-100">
+                    <header>
                         <h2 class="h2">Example Title</h2>
                         <p>Example Author</p>
                     </header>
@@ -45,8 +45,8 @@ include_once 'config.php';
                         Aliquam malesuada bibendum arcu vitae elementum curabitur. Malesuada proin libero nunc consequat interdum varius. Nam aliquam sem et tortor consequat. Nisi quis eleifend quam adipiscing vitae proin sagittis. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. At volutpat diam ut venenatis tellus in metus. Lectus arcu bibendum at varius vel pharetra vel. Nunc aliquet bibendum enim facilisis gravida neque convallis a cras. Eget dolor morbi non arcu risus. Imperdiet nulla malesuada pellentesque elit eget gravida. Scelerisque fermentum dui faucibus in. Aliquam ut porttitor leo a diam. Risus sed vulputate odio ut enim. Mollis nunc sed id semper risus in hendrerit.
                         <br />
                         Lacinia at quis risus sed vulputate odio. Scelerisque fermentum dui faucibus in ornare. Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum. Sed risus pretium quam vulputate dignissim suspendisse in est. Convallis convallis tellus id interdum velit laoreet. Augue lacus viverra vitae congue. Quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus mattis. Feugiat vivamus at augue eget arcu dictum. Massa vitae tortor condimentum lacinia quis. Mi sit amet mauris commodo quis imperdiet massa. Leo integer malesuada nunc vel risus commodo viverra maecenas accumsan. Commodo quis imperdiet massa tincidunt nunc. Diam maecenas ultricies mi eget mauris pharetra et ultrices neque. Venenatis tellus in metus vulputate eu scelerisque. Imperdiet dui accumsan sit amet nulla facilisi. Ipsum dolor sit amet consectetur. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Massa sed elementum tempus egestas sed sed risus. Interdum velit laoreet id donec ultrices tincidunt.
-                    </p>-->
-                </article>
+                    </p>
+                </article>-->
             </div>
         </div>
     </div>
