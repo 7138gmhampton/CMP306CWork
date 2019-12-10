@@ -1159,7 +1159,40 @@ takereading();
                 </p>
             </section>
         </article>
-        <article id="tabWeekEleven" class="tab-pane fade"></article>
+        <article id="tabWeekEleven" class="tab-pane fade">
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">XSL Transformation</h3>
+                <p>
+                    This page loads the RSS feed from Wired.com using PHP's built-in functions. 
+                    This feed, which exists in th PHP script as an XML object, is transform to a 
+                    HTML compliant layout utilising the XSL (eXtensible Stylesheet Language) 
+                    processor. This applies a set of declarative commands outline in a separate 
+                    XSLT file. The XSLT stylesheet contains templates that indicate that 
+                    necessary transformations that the processor should undertake, e.g. 
+                    adding/removing nodes; setting attributes; etc. 
+                </p>
+                <p>
+                    After this transformation is applied, the RSS/XML is applied directly to 
+                    the page.
+                </p>
+            </section>
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">Advantages of XSL</h3>
+                <ul>
+                    <li>
+                        As mentioned above, after a transformation has been applied, the XML is 
+                        in a form suitable for injection into the target (in this case 
+                        HTML-compliant). This means that a single source of data can be 
+                        dynamically utilised by many outputs by each terminator having their 
+                        own stylesheet.
+                    </li>
+                    <li>
+                        XSL provides XPath: a means of accessing the nodes and elements of XML 
+                        via a hierarchical expression.
+                    </li>
+                </ul>
+            </section>
+        </article>
         <article id="tabWeekTwelve" class="tab-pane fade">
             <section class="container mt-3 border border-secondary">
                 <h3 class="h3">Representational State Transfer (REST)</h3>
