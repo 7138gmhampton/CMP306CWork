@@ -95,6 +95,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="general_styles.css" />
+    <Content Include="images\dfd.jpg" />
     <Content Include="images\erd.png" />
     <Content Include="images\relation_schema.png" />
     <Content Include="images\RPC.png" />

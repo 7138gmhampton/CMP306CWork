@@ -1045,7 +1045,63 @@ takereading();
                 </pre>
             </section>
         </article>
-        <article id="tabWeekEight" class="tab-pane fade"></article>
+        <article id="tabWeekEight" class="tab-pane fade">
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">IoT Data Flow</h3>
+                <figure class="figure">
+                    <img src="images/dfd.jpg" class="figure-img img-fluid" />
+                    <figcaption class="figure-caption">
+                        Data Flow Diagram for the Sensor Device
+                    </figcaption>
+                </figure>
+                <p>
+                    This diagrams shows that the various sensors input their information as 
+                    reading on their attached pins. The 'device' component then converts these 
+                    readings to appropriate units, groups these and appends its identifier 
+                    before passing it to the 'agent'. The main function of the 'agent' is to 
+                    encode the reading as JSON object before it is attached to a Http POST and 
+                    sent to the PHP script. The script submits a command to the database 
+                    containing the reading it received.
+                </p>
+            </section>
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">Non-relational Database</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Field</th>
+                            <th>Data Type</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Device Identifier</td>
+                            <td>VARCHAR</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Time Stamp</td>
+                            <td>Date/Time</td>
+                            <td>Is set as the time the record is generated</td>
+                        </tr>
+                        <tr>
+                            <td>Sensor Reading</td>
+                            <td>VARCHAR</td>
+                            <td>The contents of this field are in the form of a JSON object</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>
+                    This database makes use of a non-relational reference by storing all of the 
+                    sensor readings in a single field. To ensure that such readings are 
+                    recoverable, they are stored in the field as a JSON object. This 'NoSQL' 
+                    manner of storage has some advantages. These include being able to change 
+                    the manner of storing the data without a comprehensive restructure, 
+                    scalability and the graceful handling of sub-par data.
+                </p>
+            </section>
+        </article>
         <article id="tabWeekNine" class="tab-pane fade"></article>
         <article id="tabWeekTen" class="tab-pane fade">
             <!--RSS-->
