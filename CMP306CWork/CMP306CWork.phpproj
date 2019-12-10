@@ -28,7 +28,6 @@
     <Compile Include="mobile_always_current.php" />
     <Compile Include="mobile_ten_latest.php" />
     <Compile Include="mobile_current.php" />
-    <Compile Include="mobile_other.php" />
     <Compile Include="parts\index.php" />
     <Compile Include="practical_eight.php" />
     <Compile Include="practical_eleven.php" />
