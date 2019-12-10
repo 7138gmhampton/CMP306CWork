@@ -1102,7 +1102,39 @@ takereading();
                 </p>
             </section>
         </article>
-        <article id="tabWeekNine" class="tab-pane fade"></article>
+        <article id="tabWeekNine" class="tab-pane fade">
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">jQuery Mobile</h3>
+                <h4 class="h5">Current Reading</h4>
+                <p>
+                    This page utilises PHP scripts to draw the most recent reading from the MVC 
+                    framework. To make it suitable for viewing on a mobile, the responsive CSS 
+                    class; scripts and elements (e.g. ui-bar and ui-body) are employed.
+                </p>
+                <h4 class="h5">Ten Latest Readings</h4>
+                <p>
+                    Again utilising the existing MVC framework the ten latest readings are 
+                    acquired. This is then arranged as a table and the entries with the greatest 
+                    and least difference between its two temperatures are highlighted. By 
+                    marking the table with the appropriate data-role attribute, JQM sets it as a 
+                    responsive 'reflow' table - when in a narrower screen the table is 
+                    rearranged into a vertical list format.
+                </p>
+                <h4 class="h5">Asynchronous Current Reading</h4>
+                <p>
+                    For this version of the current display, the metrics are acquired through an 
+                    AJAX request that is called on a set interval to keep them up to date. The 
+                    display is otherwise identical to the first page above.
+                </p>
+                <h4 class="h5">Graph of Ten Latest</h4>
+                <p>
+                    First when this page loads, an AJAX request is sent for the ten most recent 
+                    readings. The temperatures from these readings are then displayed in a graph 
+                    through the use of ChartJS. ChartJS is JavaScript library that can be used 
+                    to display datasets in various graphs and charts.
+                </p>
+            </section>
+        </article>
         <article id="tabWeekTen" class="tab-pane fade">
             <!--RSS-->
             <section class="container mt-3 border border-secondary">
