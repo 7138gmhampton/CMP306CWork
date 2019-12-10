@@ -904,7 +904,147 @@ include_once 'config.php';
                 </p>
             </section>
         </article>
-        <article id="tabWeekSeven" class="tab-pane fade"></article>
+        <article id="tabWeekSeven" class="tab-pane fade">
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">Internet of Things Sensors</h3>
+                <p>
+                    This system recorded the values of four different metrics - system voltage, 
+                    light level, external and internal temperatures. Recording both the voltage 
+                    and the light level were achieved within built-in functions of the Electric 
+                    Imp API.
+                </p>
+                <p>
+                    For the temperatures, thermistors attached across voltage dividers were 
+                    employed to determine the temperatures. These thermistors were both negative 
+                    coefficient and thus their resistance would fall higher temperatures. The 
+                    temperature was calculated from a given resistance with the the following 
+                    equation: 
+                </p>
+                <p>
+                    $$T = { &beta; \over \ln(R/r_&infin;) }$$
+                </p>
+                <p>
+                    Where \(&beta;\) is the beta parameter - a trait of the thermistor, found on 
+                    its datasheet - \(R\) is the measured resistance in &Omega; and 
+                    \(r_&infin; = {R_0}e^{-&beta;/T_0}\), \(R_0\) and \(T_0\) being the 
+                    resistance of the thermistor and temperature at 25&deg;C. The function in 
+                    the code to calculate this was:
+                </p>
+                <pre class="border border-primary px-3">
+                    <code>
+function tempfromresistance(resistance)
+{
+    local temperature=beta_param math.log(resistance/r_sub_inf);
+    return temperature;
+}
+                    </code>
+                </pre>
+                <p>
+                    As the API can only read voltage from its pins, this could be converted - 
+                    due to the presence of a voltage divider - with th following function:
+                </p>
+                <pre class="border border-primary px-3">
+                    <code>
+function resistancefromvoltage(voltage)
+{
+    local resistance=(voltage_system * standard_resistance voltage) - standard_resistance;
+    return resistance;
+}
+                    </code>
+                </pre>
+                <p>
+                    The operation of the various sensors was qualitatively tested - e.g. the 
+                    temperature sensors were warmed and it was confirmed that the recorded 
+                    temperature increased. Thes tests produced expected changes in both 
+                    direction and magnitude. It was noted, however, that the temperatures 
+                    recorded were higher than expected by ~10&degC. If this device were to be 
+                    prepared for deployment, it would have to undergo calibration to produce 
+                    reliable outputs.
+                </p>
+            </section>
+            <section class="container mt-3 border border-secondary">
+                <h3 class="h3">Complete Code</h3>
+                <pre class="pre-scrollable">
+                    <code>
+//Hardware Setup
+id &lt;- hardware.getdeviceid();
+external &lt;- hardware.pin8;
+external.configure(analog_in);
+internal &lt;- hardware.pin9;
+internal.configure(analog_in);
+led5 &lt;- hardware.pin5;
+led7 &lt;- hardware.pin7;
+led5.configure(digital_out);
+led7.configure(digital_out);
+
+//Constants
+const pin_range=65535.0;
+const beta_param=3988;
+const standard_temp=298.15;
+const r_sub_inf=0.0155223;
+const standard_resistance=10000.0;
+voltage_system &lt;- hardware.voltage();
+
+function setled(options)
+{
+    led &lt;- options.led;
+    if (options.led== "red")
+        led &lt- led5;
+    else led &lt;- led7;
+    led.write(options.state);
+    server.log("light:" + options.state);
+}
+
+function resistancefromvoltage(voltage)
+{
+    local resistance=(voltage_system * standard_resistance voltage) - standard_resistance;
+    return resistance;
+}
+
+function tempfromresistance(resistance)
+{
+    local temperature=beta_param math.log(resistance/r_sub_inf);
+    return temperature;
+}
+
+function readtemperature(pin_read)
+{
+    local voltage=pin_read * voltage_system pin_range;
+    local resistance=resistanceFromVoltage(voltage);
+    local temperature=tempFromResistance(resistance);
+    return temperature;
+}
+
+function takereading()
+{
+    //Readings
+    local temperature_external=readTemperature(external.read());
+    local temperature_internal=readTemperature(internal.read());
+    local light_level=hardware.lightlevel();
+
+    //Log to server/database
+    local c8str=format("%.01f", temperature_external - 273.15);
+    local c9str=format("%.01f", temperature_internal - 273.15);
+    local voltage_text=format("%.01f", voltage_system);
+    local light_text=format("%", light_level);
+    local sensor_reading={
+        "device": id,
+        "external": c8str,
+        "internal": c9str,
+        "voltage": voltage_text,
+        "light": light_text
+        };
+
+    agent.send("reading", sensor_reading);
+    imp.wakeup(20, takereading);
+}
+
+agent.on("led", setled);
+takereading();
+                    </code>
+                </pre>
+            </section>
+        </article>
         <article id="tabWeekEight" class="tab-pane fade"></article>
         <article id="tabWeekNine" class="tab-pane fade"></article>
         <article id="tabWeekTen" class="tab-pane fade">
@@ -974,6 +1114,9 @@ include_once 'config.php';
     include_once ROOT.'parts/footer.html';
     ?>
 
+    <!--CDN-->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <!--Other scripts-->
     <script src="scripts/client/tutorial.js"></script>
 </body>
