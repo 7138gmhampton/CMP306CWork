@@ -47,6 +47,7 @@ require_once 'config.php';
                         echo '  <th>'.$reading->getTime().'</th>';
                         echo '  <td>'.$reading->getIntTemp().'/'.$reading->getExtTemp().'</td>';
                         echo '  <td>'.$reading->getLight().'</td>';
+                        echo '</tr>';
                     }
                     ?>
                 </tbody>
