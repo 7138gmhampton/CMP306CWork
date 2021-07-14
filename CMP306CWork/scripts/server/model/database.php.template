@@ -1,0 +1,220 @@
+<?php
+class Database
+{
+    private static $server = '';
+    private static $user = '';
+    private static $password = '';
+
+    private static function makeConnection()
+    {
+        $connection = new PDO('mysql:host='.self::$server.';dbname='.self::$user,self::$user,
+            self::$password);
+        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $connection;
+    }
+
+    private static function rowCount($table, $where, $equals)
+    {
+        $command = 'SELECT COUNT('.$where.') FROM '.$table.' WHERE '.$where.' = :value';
+        $num_of_rows = 0;
+
+        try {
+            $connection = self::makeConnection();
+            $statement = $connection->prepare($command);
+            //$statement->bindParam(':field', $where);
+            //$statement->bindParam(':table', $table);
+            $statement->bindParam(':value', $equals);
+
+            $statement->execute();
+
+            $num_of_rows = $statement->fetchColumn();
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+
+        //$num_of_rows = intval($num_of_rows);
+        return $num_of_rows;
+    }
+
+    public static function getSummaries()
+    {
+        $command = 'SELECT name, alternative, main_pic, description FROM poison';
+        $result = null;
+
+        try {
+            $connection = self::makeConnection();
+            $statement = $connection->prepare($command);
+
+            $statement->execute();
+
+            $result = $statement->fetchAll();
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+
+        return $result;
+    }
+
+    public static function getPoisonSummaries()
+    {
+        $command = 'SELECT psn_poison.name, psn_poison.alternative, psn_poison.description, '.
+            'psn_image.source, psn_image.title, psn_image.alttext '.
+            'FROM psn_poison '.
+            'INNER JOIN psn_image '.
+            'ON psn_poison.main_pic = psn_image.image';
+        $result = null;
+
+        try {
+            $connection = self::makeConnection();
+            $statement = $connection->prepare($command);
+
+            $statement->execute();
+
+            $result = $statement->fetchAll();
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+
+        return $result;
+    }
+
+    public static function getPoisonSummaryClasses()
+    {
+        $command = 'SELECT psn_poison.poison, psn_poison.name, psn_poison.alternative, '.
+            'psn_poison.description, psn_image.source, psn_image.title, psn_image.alttext '.
+            'FROM psn_poison '.
+            'INNER JOIN psn_image '.
+            'ON psn_poison.main_pic = psn_image.image';
+        $result = null;
+
+        try {
+            $connection = self::makeConnection();
+            $statement = $connection->prepare($command);
+
+            $statement->execute();
+
+            $result = $statement->fetchAll(PDO::FETCH_CLASS,'Poison');
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+
+        return $result;
+    }
+
+    public static function getArticleGroups()
+    {
+        $command = 'SELECT name, main_pic, pic_title, description, article_page FROM article_type';
+        $result = null;
+
+        try {
+            $connection = self::makeConnection();
+            $statement = $connection->prepare($command);
+
+            $statement->execute();
+
+            $result = $statement->fetchAll();
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+
+        return $result;
+    }
+
+    public static function getPoison($id)
+    {
+        $command = 'SELECT psn_poison.poison, psn_poison.name, psn_poison.alternative, '.
+            'psn_poison.description, psn_image.source, psn_image.title, psn_image.alttext '.
+            'FROM psn_poison '.
+            'INNER JOIN psn_image '.
+            'ON psn_poison.main_pic = psn_image.image '.
+            'WHERE poison = :id';
+        $result = null;
+        //$check = self::rowCount('psn_poison', 'poison', 1);
+        //echo $check;
+
+        if (self::rowCount('psn_poison', 'poison', $id) == 1) {
+            try {
+                $connection = self::makeConnection();
+                $statement = $connection->prepare($command);
+                $statement->bindParam(':id', $id);
+
+                $statement->execute();
+
+                $result = $statement->fetchAll(PDO::FETCH_CLASS,'Poison');
+            }
+            catch (PDOException $e) {
+                echo 'Error: '.$e->getMessage();
+                return null;
+            }
+        }
+
+        return $result;
+    }
+
+    public static function getPoisonClass($id)
+    {
+
+    }
+
+    public static function getArticle($id)
+    {
+        $command = 'SELECT title, author, video, text FROM psn_article WHERE article = :id';
+        $result = null;
+
+        if (self::rowCount('psn_article', 'article', $id) == 1) {
+            try {
+                $connection = self::makeConnection();
+                $statement = $connection->prepare($command);
+                $statement->bindParam(':id', $id);
+
+                $statement->execute();
+
+                $result = $statement->fetch(PDO::FETCH_ASSOC);
+            }
+            catch (PDOException $e) {
+                echo 'Error: '.$e->getMessage();
+                return null;
+            }
+        }
+
+        return $result;
+    }
+
+    public static function getArticlesForPoison($poison_id)
+    {
+        $command = 'SELECT psn_poison_article.article, psn_article.title, psn_article.author, '.
+            'psn_article.video, psn_article.text '.
+            'FROM psn_poison_article '.
+            'JOIN psn_article ON psn_poison_article.article = psn_article.article '.
+            'WHERE psn_poison_article.poison = :poison_id';
+        $result = null;
+
+        try {
+            $connection = self::makeConnection();
+            $statement = $connection->prepare($command);
+            $statement->bindParam(':poison_id', $poison_id);
+
+            $statement->execute();
+
+            $result = $statement->fetchAll(PDO::FETCH_CLASS, 'Article');
+        }
+        catch (PDOException $e) {
+            echo 'Error: '.$e->getMessage();
+            return null;
+        }
+
+        return $result;
+    }
+}
+?>
